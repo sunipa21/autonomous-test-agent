@@ -1,4 +1,18 @@
-🚀 Project: Secure AI QA Agent (Text-to-Test Platform)📖 OverviewThis is a full-stack application that uses Generative AI to autonomously explore web applications and generate test cases. It features a Zero-Trust Security Architecture where user credentials are injected locally and never shared with the AI model.Stack:Frontend: HTML5, Tailwind CSS, JavaScript (Vanilla)Backend: Python FastAPIAI/Automation: LangChain, Browser-Use, PlaywrightSupported Models: Gemini 2.0, GPT-4o, Claude 3.5, Local Fara-7B📂 File StructureThe AI should generate the following directory structure:ai-test-agent/
+🚀 Project: Secure AI QA Agent (Text-to-Test Platform)📖 OverviewThis is a full-stack application that uses Generative AI to autonomously explore web applications and generate test cases. It features a Zero-Trust Security Architecture where user credentials are injected locally and never shared with the AI model.Stack:Frontend: HTML5, Tailwind CSS, JavaScript (Vanilla)Backend: Python FastAPIAI/Automation: LangChain, Browser-Use, PlaywrightSupported Models: Gemini 2.0, GPT-4o, Claude 3.5, Local Fara-7B
+
+## 🎥 Demo Videos
+
+### Exploratory Steps
+Watch the AI agent autonomously exploring the web application and generating test cases:
+
+![Exploratory Steps Demo](Exploratory%20Steps.mp4)
+
+### Execution of Generated Test Steps
+See the AI agent executing the generated test cases:
+
+![Execution of Test Steps Demo](Execution%20of%20Generated%20Test%20Steps.mp4)
+
+📂 File StructureThe AI should generate the following directory structure:ai-test-agent/
 ├── .env                   # Secrets & Config
 ├── requirements.txt       # Dependencies
 ├── config.py              # Config Loader

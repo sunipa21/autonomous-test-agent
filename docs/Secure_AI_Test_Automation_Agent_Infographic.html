@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure AI Test Automation Agent | Architecture Infographic</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <!-- Custom Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        darkbg: '#0f172a',
+                        cardbg: '#1e293b',
+                        primary: '#06b6d4', // Cyan
+                        secondary: '#8b5cf6', // Violet
+                        accent: '#f43f5e', // Rose
+                        success: '#10b981', // Emerald
+                        textmain: '#f8fafc',
+                        textmuted: '#94a3b8'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0f172a;
+            /* Dark Slate */
+            color: #f8fafc;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 450px;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .neon-border {
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Flowchart connector lines */
+        .connector-line {
+            width: 2px;
+            background-color: #475569;
+            height: 40px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-primary selection:text-white">
+
+    <!-- Narrative Plan:
+         1. Introduction: Hook the user with the core problem (Security in AI Testing).
+         2. Data Overview: Compare AI Models capabilities.
+         3. Architecture: Visual Flowchart of the system.
+         4. Security Model: Data Residency visualization.
+         5. Implementation: Setup guide.
+    -->
+
+    <!-- INTRO HEADER -->
+    <header class="w-full py-12 px-4 text-center bg-gradient-to-b from-slate-900 to-darkbg border-b border-slate-800">
+        <div class="max-w-5xl mx-auto">
+            <div
+                class="inline-block px-3 py-1 mb-4 text-xs font-mono font-bold tracking-wider text-primary border border-primary rounded-full bg-primary/10 uppercase">
+                Architecture Overview
+            </div>
+            <h1
+                class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent">
+                Secure AI Test Automation Agent
+            </h1>
+            <p class="text-lg md:text-xl text-textmuted max-w-2xl mx-auto leading-relaxed">
+                A modular, agentic framework designed for <strong>Zero-Trust Security</strong>.
+                Transforms text requirements into autonomous Playwright execution without ever exposing credentials to
+                the Cloud.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 space-y-16">
+
+        <!-- SECTION 1: CORE CAPABILITIES (Inform & Organize) -->
+        <section>
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-white mb-4 border-l-4 border-primary pl-4">Core Capabilities</h2>
+                <p class="text-textmuted max-w-3xl">
+                    Traditional test automation is brittle and expensive. Our agentic approach solves this by separating
+                    planning (AI) from execution (Browser), wrapped in a secure envelope.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Zero Trust Card -->
+                <div
+                    class="glass-card rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-primary">
+                    <div class="text-4xl mb-4">🔐</div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Zero-Trust Security</h3>
+                    <p class="text-sm text-textmuted">
+                        User credentials stay local. Passwords are injected directly into the browser via Playwright and
+                        <strong>never</strong> sent to the LLM.
+                    </p>
+                </div>
+                <!-- Model Agnostic Card -->
+                <div
+                    class="glass-card rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-secondary">
+                    <div class="text-4xl mb-4">🧠</div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Model Agnostic</h3>
+                    <p class="text-sm text-textmuted">
+                        Seamlessly switch the "Brain." Supports Gemini 2.0, GPT-4o, Claude 3.5 Sonnet, or local Fara-7B.
+                    </p>
+                </div>
+                <!-- Autonomous Explorer Card -->
+                <div
+                    class="glass-card rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-accent">
+                    <div class="text-4xl mb-4">🕵️</div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Autonomous Explorer</h3>
+                    <p class="text-sm text-textmuted">
+                        The agent "looks around" the UI to understand context before generating test cases, mimicking
+                        human discovery.
+                    </p>
+                </div>
+                <!-- Self Healing Card -->
+                <div
+                    class="glass-card rounded-xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-t-success">
+                    <div class="text-4xl mb-4">🩹</div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Self-Healing</h3>
+                    <p class="text-sm text-textmuted">
+                        If selectors change, the Vision Agent adapts based on visual cues, reducing test brittleness.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MODEL COMPARISON (Compare) -->
+        <!-- Goal: Compare capabilities of different LLMs for this specific task using Chart.js -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1">
+                <div class="chart-container">
+                    <canvas id="modelComparisonChart"></canvas>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <h2 class="text-3xl font-bold text-white mb-4 border-l-4 border-secondary pl-4">The Modular Brain</h2>
+                <p class="text-textmuted mb-6">
+                    The framework allows you to hot-swap the underlying intelligence based on your needs for cost,
+                    speed, or reasoning capability.
+                    Whether you need the reasoning depth of Claude 3.5 or the speed of Gemini 2.0, the architecture
+                    supports it via a unified factory pattern.
+                </p>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-3">
+                        <span class="w-3 h-3 rounded-full bg-primary"></span>
+                        <span><strong>Gemini 2.0 Flash:</strong> High speed, large context window,
+                            cost-effective.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-3 h-3 rounded-full bg-secondary"></span>
+                        <span><strong>Claude 3.5 Sonnet:</strong> Exceptional reasoning and coding ability.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-3 h-3 rounded-full bg-accent"></span>
+                        <span><strong>GPT-4o Model:</strong> Balanced performance and vision capabilities.</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="w-3 h-3 rounded-full bg-success"></span>
+                        <span><strong>Fara-7B Local:</strong> Privacy-first, runs on your hardware, zero data
+                            egress.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ARCHITECTURE FLOW (Organize / Process) -->
+        <!-- Goal: Visualize the data flow using structured HTML -->
+        <section>
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">System Architecture & Data Flow</h2>
+            <p class="text-center text-textmuted mb-12 max-w-2xl mx-auto">
+                The system separates the <strong>Planning</strong> (LLM) from the <strong>Execution</strong> (Browser),
+                ensuring a secure boundary.
+            </p>
+
+            <div class="max-w-4xl mx-auto relative">
+
+                <!-- Step 1 -->
+                <div
+                    class="flex flex-col md:flex-row items-center gap-6 bg-cardbg p-6 rounded-xl border border-slate-700 relative z-10">
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-blue-500/30">
+                        👤</div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h4 class="text-xl font-bold text-white">1. Requirement Input</h4>
+                        <p class="text-sm text-textmuted">User provides a Jira ticket, PDF, or text description and
+                            target URL.</p>
+                    </div>
+                </div>
+
+                <!-- Connector -->
+                <div class="connector-line"></div>
+
+                <!-- Step 2 -->
+                <div
+                    class="flex flex-col md:flex-row items-center gap-6 bg-cardbg p-6 rounded-xl border border-slate-700 relative z-10">
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-indigo-500/30">
+                        🎭</div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h4 class="text-xl font-bold text-white">2. Main Orchestrator</h4>
+                        <p class="text-sm text-textmuted">Initializes the Playwright browser locally.</p>
+                    </div>
+                </div>
+
+                <!-- Connector -->
+                <div class="connector-line"></div>
+
+                <!-- Step 3: SECURE ZONE -->
+                <div class="border-2 border-dashed border-green-500/50 bg-green-900/10 p-6 rounded-2xl relative">
+                    <div class="absolute -top-3 left-6 bg-green-600 text-xs font-bold px-2 py-1 rounded text-white">
+                        SECURE LOCAL SCOPE</div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 bg-green-600 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-green-500/30">
+                            🔐</div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h4 class="text-xl font-bold text-white">3. Vault Injection</h4>
+                            <p class="text-sm text-textmuted">
+                                <code>secrets_manager.py</code> reads <code>.env</code> and injects credentials directly
+                                into the browser DOM.
+                                <span class="text-green-400 font-semibold">Passwords NEVER leave this zone.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connector -->
+                <div class="connector-line"></div>
+
+                <!-- Step 4: Brain Loop -->
+                <div class="border-2 border-dashed border-purple-500/50 bg-purple-900/10 p-6 rounded-2xl relative">
+                    <div class="absolute -top-3 left-6 bg-purple-600 text-xs font-bold px-2 py-1 rounded text-white">AI
+                        PROCESSING LOOP</div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-6 mb-4">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-purple-500/30">
+                            🕵️</div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h4 class="text-xl font-bold text-white">4. Explorer Agent</h4>
+                            <p class="text-sm text-textmuted">Captures screenshots and state of the
+                                <em>authenticated</em> page.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center my-2 text-textmuted text-xs">↕️ Images & JSON Data</div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-6">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 bg-pink-600 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-pink-500/30">
+                            🧠</div>
+                        <div class="flex-1 text-center md:text-left">
+                            <h4 class="text-xl font-bold text-white">5. The LLM Brain</h4>
+                            <p class="text-sm text-textmuted">
+                                Gemini/Claude analyzes the screenshot and returns a high-level Test Plan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connector -->
+                <div class="connector-line"></div>
+
+                <!-- Step 5 -->
+                <div
+                    class="flex flex-col md:flex-row items-center gap-6 bg-cardbg p-6 rounded-xl border border-slate-700 relative z-10">
+                    <div
+                        class="flex-shrink-0 w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center text-3xl shadow-lg shadow-cyan-500/30">
+                        ⚡</div>
+                    <div class="flex-1 text-center md:text-left">
+                        <h4 class="text-xl font-bold text-white">6. Execution</h4>
+                        <p class="text-sm text-textmuted">
+                            Executor runs the generated test cases on the browser to verify functionality.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 4: SECURITY & DATA PRIVACY (Composition / Relationships) -->
+        <!-- Goal: Compare Local vs Cloud data residency using Plotly Stacked Bar -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-white mb-4 border-l-4 border-accent pl-4">Data Privacy Model</h2>
+                <p class="text-textmuted mb-6">
+                    A strict separation of concerns ensures that sensitive credentials never leave the local
+                    environment.
+                    The Cloud LLM only receives sanitized screenshots and DOM structures needed for reasoning.
+                </p>
+                <div class="bg-cardbg p-4 rounded-lg border border-slate-700 font-mono text-xs">
+                    <p class="text-success mb-2"># secrets_manager.py</p>
+                    <p class="text-textmuted">async def inject_login(page):</p>
+                    <p class="pl-4 text-primary"># Direct DOM manipulation</p>
+                    <p class="pl-4 text-white">await page.fill("#password", os.getenv("PASS"))</p>
+                    <p class="pl-4 text-accent"># NO LLM CALL HERE</p>
+                </div>
+            </div>
+            <div>
+                <div id="securityChart" class="w-full h-80"></div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: INSTALLATION (Organize / List) -->
+        <!-- Goal: Inform user about setup steps -->
+        <section class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-8 text-center">Get Started in Minutes</h2>
+            <div class="bg-gray-900 rounded-xl overflow-hidden border border-slate-700 shadow-2xl">
+                <div class="bg-gray-800 px-4 py-2 flex items-center gap-2 border-b border-slate-700">
+                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    <span class="ml-2 text-xs text-gray-400 font-mono">bash — 80x24</span>
+                </div>
+                <div class="p-6 font-mono text-sm text-gray-300 space-y-4">
+                    <div>
+                        <p class="text-textmuted"># 1. Clone and setup virtual environment</p>
+                        <p><span class="text-green-400">➜</span> <span class="text-blue-400">~</span> python -m venv
+                            venv</p>
+                        <p><span class="text-green-400">➜</span> <span class="text-blue-400">~</span> source
+                            venv/bin/activate</p>
+                    </div>
+                    <div>
+                        <p class="text-textmuted"># 2. Install dependencies (Browser-Use, LangChain, Playwright)</p>
+                        <p><span class="text-green-400">➜</span> <span class="text-blue-400">~</span> pip install -r
+                            requirements.txt</p>
+                    </div>
+                    <div>
+                        <p class="text-textmuted"># 3. Install Browsers</p>
+                        <p><span class="text-green-400">➜</span> <span class="text-blue-400">~</span> playwright install
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-textmuted"># 4. Configure Secrets & Run</p>
+                        <p><span class="text-green-400">➜</span> <span class="text-blue-400">~</span> python main.py</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-800 bg-darkbg py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-textmuted text-sm">
+                Confirming: Neither Mermaid JS nor SVG were used in this visualization.
+                Built with Tailwind, Chart.js, and Plotly.
+            </p>
+            <p class="text-xs text-slate-600 mt-2">
+                POC Architecture: Gemini / OpenAI / Anthropic / Fara-7B Compatible.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FOR CHARTS -->
+    <script>
+        // --- Chart 1: Model Comparison (Polar Area) ---
+        // Requirement: Wrap labels > 16 chars
+        const wrapLabel = (label) => {
+            if (label.length > 16) {
+                // Split into chunks roughly 16 chars long, respecting word boundaries if possible
+                // Simple regex splitter
+                return label.match(/.{1,16}(?:\s|$)/g) || [label];
+            }
+            return label;
+        };
+
+        const ctx1 = document.getElementById('modelComparisonChart').getContext('2d');
+        const modelChart = new Chart(ctx1, {
+            type: 'polarArea',
+            data: {
+                // Process labels through wrapper function
+                labels: ['Gemini 2.0 Flash', 'Claude 3.5 Sonnet', 'GPT-4o Model', 'Fara-7B Local'].map(wrapLabel),
+                datasets: [{
+                    label: 'Capabilities Score (1-10)',
+                    data: [9, 8.5, 8, 6], // Hypothetical data illustrating relative strengths
+                    backgroundColor: [
+                        'rgba(6, 182, 212, 0.6)', // Cyan
+                        'rgba(139, 92, 246, 0.6)', // Violet
+                        'rgba(244, 63, 94, 0.6)', // Rose
+                        'rgba(16, 185, 129, 0.6)'  // Emerald
+                    ],
+                    borderColor: [
+                        '#06b6d4', '#8b5cf6', '#f43f5e', '#10b981'
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        grid: { color: '#334155' },
+                        ticks: { display: false, backdropColor: 'transparent' },
+                        pointLabels: {
+                            color: '#f8fafc',
+                            font: { size: 12, family: 'Inter' }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: '#f8fafc', font: { family: 'Inter' } }
+                    },
+                    // Requirement: Specific Tooltip Config for wrapped labels
+                    tooltip: {
+                        backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                        titleColor: '#f8fafc',
+                        bodyColor: '#cbd5e1',
+                        callbacks: {
+                            title: function (tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // --- Chart 2: Security Model (Plotly Stacked Bar) ---
+        // Visualizing Local vs Cloud Data Residency
+        const securityData = [
+            {
+                x: [100, 0, 0],
+                y: ['Credentials', 'Prompt Text', 'Screenshots'],
+                name: 'Local (Secure)',
+                orientation: 'h',
+                type: 'bar',
+                marker: { color: '#10b981' } // Success Green
+            },
+            {
+                x: [0, 100, 100],
+                y: ['Credentials', 'Prompt Text', 'Screenshots'],
+                name: 'Cloud (LLM)',
+                orientation: 'h',
+                type: 'bar',
+                marker: { color: '#f43f5e' } // Warning Red
+            }
+        ];
+
+        const securityLayout = {
+            barmode: 'stack',
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            margin: { l: 100, r: 20, t: 20, b: 40 },
+            showlegend: true,
+            legend: { font: { color: '#f8fafc' }, orientation: 'h', y: -0.2 },
+            xaxis: {
+                showgrid: true,
+                gridcolor: '#334155',
+                tickfont: { color: '#94a3b8' },
+                title: { text: 'Data Exposure %', font: { color: '#94a3b8' } }
+            },
+            yaxis: {
+                tickfont: { color: '#f8fafc', size: 14, family: 'Inter' }
+            }
+        };
+
+        // Requirement: Configure Plotly for responsiveness and NO SVG where possible (using standard plot types here is safe)
+        Plotly.newPlot('securityChart', securityData, securityLayout, { displayModeBar: false, responsive: true });
+
+    </script>
+</body>
+
+</html>

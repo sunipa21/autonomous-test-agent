@@ -1,0 +1,8 @@
+{
+  "suite_name": "Smoke Test A - Nov-29",
+  "generated_at": "2025-11-30T00:57:20.534740",
+  "test_count": 1,
+  "scripts": [
+    "generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py"
+  ]
+}

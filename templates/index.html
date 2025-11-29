@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>🧪 Secure AI QA Agent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Glassmorphism utilities */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        body {
+            background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-slate-100 font-sans h-screen overflow-hidden flex flex-col">
+
+    <!-- Navbar -->
+    <nav class="glass z-50 px-6 py-4 flex justify-between items-center shadow-lg">
+        <div class="flex items-center gap-3">
+            <div
+                class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center shadow-brand-500/20 shadow-lg">
+                <i class="fas fa-robot text-white text-lg"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white">Secure QA Agent</h1>
+                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Zero-Trust Architecture</p>
+            </div>
+        </div>
+        <div class="flex items-center gap-4">
+            <div
+                class="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-slate-400">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                System Operational
+            </div>
+            <a href="#" class="text-slate-400 hover:text-white transition-colors"><i
+                    class="fab fa-github text-xl"></i></a>
+        </div>
+    </nav>
+
+    <div class="flex flex-1 overflow-hidden relative">
+
+        <!-- Sidebar: Configuration -->
+        <div class="w-full md:w-[400px] glass-panel border-r border-slate-800 flex flex-col z-40 shadow-2xl">
+            <div class="p-6 border-b border-slate-800/50">
+                <h2 class="text-sm font-semibold text-brand-400 uppercase tracking-wider mb-1">Configuration</h2>
+                <p class="text-xs text-slate-500">Setup your test environment securely.</p>
+            </div>
+
+            <div class="flex-1 overflow-y-auto p-6 space-y-6">
+                <form id="genForm" class="space-y-5">
+                    <div class="space-y-1">
+                        <label class="text-xs font-medium text-slate-300 ml-1">Test Suite Name</label>
+                        <input type="text" id="suiteName" value="Smoke Test A"
+                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 outline-none transition-all placeholder-slate-600 text-white">
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-xs font-medium text-slate-300 ml-1">Target Application URL</label>
+                        <div class="relative">
+                            <i class="fas fa-globe absolute left-3.5 top-3 text-slate-500 text-xs"></i>
+                            <input type="url" id="url" value="https://saucedemo.com"
+                                class="w-full bg-slate-800/50 border border-slate-700 rounded-lg pl-9 pr-4 py-2.5 text-sm focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 outline-none transition-all placeholder-slate-600 text-brand-300">
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-800/30 border border-slate-700/50 space-y-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <i class="fas fa-shield-alt text-brand-400"></i>
+                            <span class="text-xs font-semibold text-slate-300">Secure Credentials</span>
+                        </div>
+                        <div class="grid grid-cols-1 gap-3">
+                            <div class="space-y-1">
+                                <label class="text-[10px] uppercase font-bold text-slate-500 ml-1">Username</label>
+                                <input type="text" id="username" value="standard_user"
+                                    class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:border-brand-500 outline-none text-slate-300">
+                            </div>
+                            <div class="space-y-1">
+                                <label class="text-[10px] uppercase font-bold text-slate-500 ml-1">Password</label>
+                                <input type="password" id="password" value="secret_sauce"
+                                    class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:border-brand-500 outline-none text-slate-300">
+                            </div>
+                        </div>
+                        <p class="text-[10px] text-slate-500 italic"><i class="fas fa-info-circle mr-1"></i> Injected
+                            locally. Never sent to AI.</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-xs font-medium text-slate-300 ml-1">Exploration Goal</label>
+                        <textarea id="desc" rows="4"
+                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 outline-none transition-all placeholder-slate-600 text-slate-300 resize-none"
+                            placeholder="Describe what the agent should test...">Verify the shopping cart flow: Add an item and proceed to checkout.</textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div class="p-6 border-t border-slate-800/50 bg-slate-900/30">
+                <button form="genForm" type="submit" id="genBtn"
+                    class="group w-full bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-brand-500/20 transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+                    <i class="fas fa-rocket group-hover:animate-bounce"></i>
+                    <span>Launch Explorer Agent</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content: Results -->
+        <div class="flex-1 bg-slate-900/50 relative overflow-hidden flex flex-col">
+            <!-- Background decoration -->
+            <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                <div
+                    class="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] rounded-full bg-brand-500/5 blur-[100px]">
+                </div>
+                <div
+                    class="absolute bottom-[10%] left-[10%] w-[300px] h-[300px] rounded-full bg-purple-500/5 blur-[80px]">
+                </div>
+            </div>
+
+            <div class="flex-1 overflow-y-auto p-8 relative z-10">
+                <div class="max-w-5xl mx-auto">
+                    <div class="flex justify-between items-end mb-6">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Test Results</h2>
+                            <p class="text-slate-400 text-sm mt-1">Generated test cases and execution status.</p>
+                        </div>
+                        <div id="suiteBadge"
+                            class="hidden px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs text-brand-300 font-mono">
+                            <!-- Suite Name populated here -->
+                        </div>
+                    </div>
+
+                    <!-- Empty State -->
+                    <div id="emptyState"
+                        class="flex flex-col items-center justify-center h-[400px] border-2 border-dashed border-slate-800 rounded-2xl bg-slate-800/20">
+                        <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-4">
+                            <i class="fas fa-flask text-slate-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-slate-300">No Tests Generated Yet</h3>
+                        <p class="text-slate-500 text-sm mt-2 max-w-xs text-center">Configure the agent in the sidebar
+                            and click "Launch Explorer Agent" to start.</p>
+                    </div>
+
+                    <!-- Loader -->
+                    <div id="loader" class="hidden flex flex-col items-center justify-center h-[400px]">
+                        <div class="relative w-20 h-20">
+                            <div class="absolute top-0 left-0 w-full h-full border-4 border-slate-700 rounded-full">
+                            </div>
+                            <div
+                                class="absolute top-0 left-0 w-full h-full border-4 border-brand-500 rounded-full border-t-transparent animate-spin">
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-medium text-white mt-6">AI Agent is Exploring...</h3>
+                        <p class="text-slate-400 text-sm mt-2 animate-pulse">Navigating UI • Identifying Elements •
+                            Generating Scenarios</p>
+                        <div class="mt-8 w-64 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                            <div class="h-full bg-brand-500 animate-progress origin-left"></div>
+                        </div>
+                        <style>
+                            @keyframes progress {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                50% {
+                                    width: 70%;
+                                }
+
+                                100% {
+                                    width: 100%;
+                                }
+                            }
+
+                            .animate-progress {
+                                animation: progress 20s infinite linear;
+                            }
+                        </style>
+                    </div>
+
+                    <!-- Results Table -->
+                    <div id="tableContainer"
+                        class="hidden rounded-xl overflow-hidden border border-slate-700/50 shadow-2xl bg-slate-800/40 backdrop-blur-sm">
+                        <table class="w-full text-left border-collapse">
+                            <thead
+                                class="bg-slate-900/80 text-slate-400 uppercase text-[10px] tracking-wider font-semibold">
+                                <tr>
+                                    <th class="p-4 border-b border-slate-700/50">ID</th>
+                                    <th class="p-4 border-b border-slate-700/50">Test Scenario</th>
+                                    <th class="p-4 border-b border-slate-700/50">Status</th>
+                                    <th class="p-4 border-b border-slate-700/50 text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody" class="divide-y divide-slate-700/50"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('genForm');
+        const loader = document.getElementById('loader');
+        const tableContainer = document.getElementById('tableContainer');
+        const emptyState = document.getElementById('emptyState');
+        const tbody = document.getElementById('tableBody');
+        const suiteBadge = document.getElementById('suiteBadge');
+        let currentSuite = "";
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            loader.classList.remove('hidden');
+            tableContainer.classList.add('hidden');
+            emptyState.classList.add('hidden');
+            document.getElementById('genBtn').disabled = true;
+            document.getElementById('genBtn').classList.add('opacity-50', 'cursor-not-allowed');
+
+            const payload = {
+                suite_name: document.getElementById('suiteName').value,
+                url: document.getElementById('url').value,
+                description: document.getElementById('desc').value,
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            };
+            currentSuite = payload.suite_name;
+            suiteBadge.innerText = currentSuite;
+            suiteBadge.classList.remove('hidden');
+
+            try {
+                const res = await fetch('/api/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json();
+
+                console.log('Server response:', data); // Debug log
+
+                if (data.status === 'success') {
+                    if (data.test_cases && Array.isArray(data.test_cases)) {
+                        renderTable(data.test_cases);
+                        tableContainer.classList.remove('hidden');
+                    } else {
+                        alert("Error: No test cases returned from server");
+                        emptyState.classList.remove('hidden');
+                    }
+                } else {
+                    alert("Error: " + (data.message || "Unknown error"));
+                    emptyState.classList.remove('hidden');
+                }
+            } catch (err) {
+                console.error('Fetch error:', err); // Debug log
+                alert("Network Error: " + err);
+                emptyState.classList.remove('hidden');
+            } finally {
+                loader.classList.add('hidden');
+                document.getElementById('genBtn').disabled = false;
+                document.getElementById('genBtn').classList.remove('opacity-50', 'cursor-not-allowed');
+            }
+        });
+
+        function renderTable(cases) {
+            console.log('renderTable called with:', cases);
+            console.log('Is array?', Array.isArray(cases));
+
+            tbody.innerHTML = '';
+
+            if (!cases) {
+                console.error('cases is null or undefined');
+                alert('Error: No cases data received');
+                return;
+            }
+
+            if (!Array.isArray(cases)) {
+                console.error('cases is not an array, type:', typeof cases);
+                alert('Error: Invalid data format received');
+                return;
+            }
+
+            if (cases.length === 0) {
+                console.warn('cases array is empty');
+                alert('No test cases were generated');
+                return;
+            }
+
+            cases.forEach((tc, index) => {
+                console.log(`Processing test case ${index}:`, tc);
+                const row = document.createElement('tr');
+                row.className = "hover:bg-slate-700/30 transition-colors group";
+                const stepsHtml = tc.steps.map(s => `
+                    <div class="flex items-start gap-2 text-xs text-slate-400 mb-1">
+                        <i class="fas fa-chevron-right text-[8px] mt-[3px] text-slate-600"></i>
+                        <span>${s}</span>
+                    </div>
+                `).join('');
+
+                row.innerHTML = `
+                    <td class="p-4 align-top">
+                        <span class="font-mono text-xs text-brand-400 bg-brand-900/30 px-2 py-1 rounded border border-brand-500/20">${tc.id}</span>
+                    </td>
+                    <td class="p-4 align-top">
+                        <div class="font-semibold text-slate-200 text-sm mb-2">${tc.title}</div>
+                        <div class="pl-2 border-l border-slate-700/50">${stepsHtml}</div>
+                    </td>
+                    <td class="p-4 align-top">
+                        <span id="status-${tc.id}" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium bg-slate-700 text-slate-300 border border-slate-600">
+                            <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                            Ready
+                        </span>
+                    </td>
+                    <td class="p-4 align-top text-right">
+                        <button onclick="runTest('${tc.id}')" class="bg-slate-800 hover:bg-brand-600 hover:text-white text-slate-300 border border-slate-600 hover:border-brand-500 px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-2 ml-auto">
+                            <i class="fas fa-play text-[10px]"></i> Run Test
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        async function runTest(id) {
+            const badge = document.getElementById(`status-${id}`);
+            badge.className = "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium bg-yellow-500/10 text-yellow-500 border border-yellow-500/20";
+            badge.innerHTML = `<i class="fas fa-circle-notch fa-spin"></i> Running...`;
+
+            try {
+                const res = await fetch('/api/execute', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ suite_name: currentSuite, test_case_id: id })
+                });
+                const data = await res.json();
+
+                if (data.result && data.result.includes("PASS")) {
+                    badge.className = "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium bg-green-500/10 text-green-500 border border-green-500/20";
+                    badge.innerHTML = `<i class="fas fa-check"></i> Passed`;
+                } else {
+                    badge.className = "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium bg-red-500/10 text-red-500 border border-red-500/20";
+                    badge.innerHTML = `<i class="fas fa-times"></i> Failed`;
+                }
+            } catch (err) {
+                badge.className = "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-medium bg-red-500/10 text-red-500 border border-red-500/20";
+                badge.innerHTML = `Error`;
+            }
+        }
+    </script>
+</body>
+
+</html>

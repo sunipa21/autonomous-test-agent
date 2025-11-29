@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+jinja2
+python-multipart
+langchain-google-genai
+langchain-openai
+langchain-anthropic
+browser-use
+playwright
+python-dotenv
+pydantic
+colorama

@@ -1,0 +1,1951 @@
+2025-11-29 18:30:05,941 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:30:05,941 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:30:16,363 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:30:16,363 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:39:34,867 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:39:34,867 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:39:44,982 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:39:44,982 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:41:09,701 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:41:09,701 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:41:19,801 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:41:19,801 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:45:37,235 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:45:37,235 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:45:47,687 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:45:47,687 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:48:10,256 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:48:10,256 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:48:20,034 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:48:20,034 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:49:28,177 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:49:28,177 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:50:10,973 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:50:10,973 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:50:20,462 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:50:20,462 - server - ERROR - Agent returned None for generation request.
+2025-11-29 18:55:09,319 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:55:09,319 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:56:11,819 - server - INFO - Successfully generated 3 test cases for suite 'Smoke Test A'.
+2025-11-29 18:56:11,819 - server - INFO - Successfully generated 3 test cases for suite 'Smoke Test A'.
+2025-11-29 18:58:42,860 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:58:42,860 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 18:59:51,795 - server - INFO - Successfully generated 2 test cases for suite 'Smoke Test A'.
+2025-11-29 18:59:51,795 - server - INFO - Successfully generated 2 test cases for suite 'Smoke Test A'.
+2025-11-29 19:03:06,090 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:03:06,090 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:03:31,305 - server - WARNING - Failed to parse JSON from agent output for suite 'Smoke Test A'. Raw result: As a QA Automation Architect, I have verified the shopping cart flow from adding an item to completing the checkout process. Below is the list of test cases, including identified element IDs, as reque...
+2025-11-29 19:03:31,305 - server - WARNING - Failed to parse JSON from agent output for suite 'Smoke Test A'. Raw result: As a QA Automation Architect, I have verified the shopping cart flow from adding an item to completing the checkout process. Below is the list of test cases, including identified element IDs, as reque...
+2025-11-29 19:06:14,083 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:06:14,083 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:07:40,348 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:07:40,348 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:09:45,458 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:09:45,458 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:11:37,091 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:11:37,091 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:15:59,924 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:15:59,924 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:16:17,862 - server - WARNING - Failed to parse JSON from agent output for suite 'Smoke Test A'. Raw result: As a QA Automation Architect, I have verified the shopping cart flow on the Swag Labs application and identified the necessary steps and element IDs for automation. Below is the list of test cases in ...
+2025-11-29 19:16:17,862 - server - WARNING - Failed to parse JSON from agent output for suite 'Smoke Test A'. Raw result: As a QA Automation Architect, I have verified the shopping cart flow on the Swag Labs application and identified the necessary steps and element IDs for automation. Below is the list of test cases in ...
+2025-11-29 19:18:15,831 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:18:15,831 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:18:42,976 - server - ERROR - Crash occurred in generate_tests: Expecting ',' delimiter: line 1 column 539 (char 538). Report saved to logs/crashes/crash_20251129_191842.txt
+2025-11-29 19:18:42,976 - server - ERROR - Crash occurred in generate_tests: Expecting ',' delimiter: line 1 column 539 (char 538). Report saved to logs/crashes/crash_20251129_191842.txt
+2025-11-29 19:20:45,802 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:20:45,802 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:21:59,131 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:21:59,131 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:24:46,184 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:24:46,184 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:25:25,594 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:25:25,594 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:31:02,739 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:31:02,739 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:32:20,055 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:32:20,055 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:38:46,166 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:38:46,166 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:39:23,159 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:39:23,159 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:46:29,085 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:46:29,085 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:47:41,609 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:47:41,609 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:47:41,612 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 19:47:41,612 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 19:47:41,612 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_add_and_verify_sauce_labs_backpack_in_cart.py
+2025-11-29 19:47:41,612 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_add_and_verify_sauce_labs_backpack_in_cart.py
+2025-11-29 19:47:41,613 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 19:47:41,613 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 19:54:47,110 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:47,110 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:47,113 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:47,113 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:47,865 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:47,865 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:47,865 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:47,865 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:49,494 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:49,494 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:49,495 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:49,495 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:50,004 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:50,004 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:50,004 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:50,004 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:50,445 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:50,445 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:54:50,445 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:50,445 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:54:52,363 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:54:52,363 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 19:55:17,819 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:55:17,819 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 19:55:17,821 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 19:55:17,821 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 19:55:17,821 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_add_backpack_to_cart_and_verify.py
+2025-11-29 19:55:17,821 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_add_backpack_to_cart_and_verify.py
+2025-11-29 19:55:17,822 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 19:55:17,822 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 19:59:12,977 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:59:12,977 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:59:12,984 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:59:12,984 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:59:16,393 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:59:16,393 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 19:59:16,394 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 19:59:16,394 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:16,639 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:16,639 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:16,640 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:16,640 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:17,836 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:17,836 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:17,836 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:17,836 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:18,471 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:18,471 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:18,472 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:18,472 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:18,899 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:18,899 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:18,899 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:18,899 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:19,138 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:19,138 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:19,139 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:19,139 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:20,060 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:20,060 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:20,060 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:20,060 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:20,369 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:20,369 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:20,370 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:20,370 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:20,705 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:20,705 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:00:20,706 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:20,706 - server - ERROR - Suite not found: Smoke Test A
+2025-11-29 20:00:52,649 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:00:53,692 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:00:53,707 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:00:53,707 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:01:22,395 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:01:22,395 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:01:22,397 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_add_backpack_to_cart_and_verify.py
+2025-11-29 20:01:22,397 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_add_backpack_to_cart_and_verify.py
+2025-11-29 20:01:30,713 - server - INFO - Script execution output: Starting test: Add Backpack to Cart and Verify
+Step: Navigate to login page
+Step: Enter credentials
+Step: Click login button
+Step 1: Navigate to the inventory page (already logged in).
+Step 2: Click 'Add to cart' for the 'Sauce Labs Backpack'.
+Step 3: Click the shopping cart icon.
+Step 4: Verify that 'Sauce Labs Backpack' is present in the cart.
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 20:01:30,713 - server - INFO - Script execution output: Starting test: Add Backpack to Cart and Verify
+Step: Navigate to login page
+Step: Enter credentials
+Step: Click login button
+Step 1: Navigate to the inventory page (already logged in).
+Step 2: Click 'Add to cart' for the 'Sauce Labs Backpack'.
+Step 3: Click the shopping cart icon.
+Step 4: Verify that 'Sauce Labs Backpack' is present in the cart.
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 20:01:30,714 - server - INFO - Test execution result: PASS
+2025-11-29 20:01:30,714 - server - INFO - Test execution result: PASS
+2025-11-29 20:10:34,571 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:10:34,571 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:10:34,574 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_add_backpack_to_cart_and_verify.py
+2025-11-29 20:10:34,574 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_add_backpack_to_cart_and_verify.py
+2025-11-29 20:10:42,134 - server - INFO - Script execution output: Starting test: Add Backpack to Cart and Verify
+Step: Navigate to login page
+Step: Enter credentials
+Step: Click login button
+Step 1: Navigate to the inventory page (already logged in).
+Step 2: Click 'Add to cart' for the 'Sauce Labs Backpack'.
+Step 3: Click the shopping cart icon.
+Step 4: Verify that 'Sauce Labs Backpack' is present in the cart.
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 20:10:42,134 - server - INFO - Script execution output: Starting test: Add Backpack to Cart and Verify
+Step: Navigate to login page
+Step: Enter credentials
+Step: Click login button
+Step 1: Navigate to the inventory page (already logged in).
+Step 2: Click 'Add to cart' for the 'Sauce Labs Backpack'.
+Step 3: Click the shopping cart icon.
+Step 4: Verify that 'Sauce Labs Backpack' is present in the cart.
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 20:10:42,134 - server - INFO - Test execution result: PASS
+2025-11-29 20:10:42,134 - server - INFO - Test execution result: PASS
+2025-11-29 20:12:38,628 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:12:38,628 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:13:06,389 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:13:06,389 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:13:06,391 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:13:06,391 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:13:06,391 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:13:06,391 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:13:06,392 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_to_cart_and_proceed_to_checkout_fl.py
+2025-11-29 20:13:06,392 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_to_cart_and_proceed_to_checkout_fl.py
+2025-11-29 20:13:06,392 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:13:06,392 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:13:08,554 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:13:08,567 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:13:08,567 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:14:03,005 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:14:03,005 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:14:29,057 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:14:29,057 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:14:29,058 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:14:29,058 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:14:29,058 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:14:29,058 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:14:29,059 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_flow_add_item_and_proceed_to_.py
+2025-11-29 20:14:29,059 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_flow_add_item_and_proceed_to_.py
+2025-11-29 20:14:29,059 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:14:29,059 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:14:31,100 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:14:31,114 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:14:31,114 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:14:35,145 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:14:35,145 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:14:35,146 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_add_backpack_to_cart_and_verify.py
+2025-11-29 20:14:35,146 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_add_backpack_to_cart_and_verify.py
+2025-11-29 20:14:41,428 - server - INFO - Script execution output: Starting test: Add Backpack to Cart and Verify
+Step: Navigate to login page
+Step: Enter credentials
+Step: Click login button
+Step 1: Navigate to the inventory page (already logged in).
+Step 2: Click 'Add to cart' for the 'Sauce Labs Backpack'.
+Step 3: Click the shopping cart icon.
+Step 4: Verify that 'Sauce Labs Backpack' is present in the cart.
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 20:14:41,428 - server - INFO - Script execution output: Starting test: Add Backpack to Cart and Verify
+Step: Navigate to login page
+Step: Enter credentials
+Step: Click login button
+Step 1: Navigate to the inventory page (already logged in).
+Step 2: Click 'Add to cart' for the 'Sauce Labs Backpack'.
+Step 3: Click the shopping cart icon.
+Step 4: Verify that 'Sauce Labs Backpack' is present in the cart.
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 20:14:41,428 - server - INFO - Test execution result: PASS
+2025-11-29 20:14:41,428 - server - INFO - Test execution result: PASS
+2025-11-29 20:15:08,103 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:15:08,103 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:15:33,366 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:15:33,366 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:15:33,366 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:15:33,366 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:15:33,367 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:15:33,367 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:15:33,367 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_and_proceed_to_checkout_flow.py
+2025-11-29 20:15:33,367 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_and_proceed_to_checkout_flow.py
+2025-11-29 20:15:33,367 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:15:33,367 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:15:35,416 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:15:35,430 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:15:35,430 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:16:26,654 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:16:26,654 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:17:33,519 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:17:33,519 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:17:33,520 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:17:33,520 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:17:33,520 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:17:33,520 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:17:33,521 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py
+2025-11-29 20:17:33,521 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py
+2025-11-29 20:17:33,521 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:17:33,521 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:17:35,427 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:17:35,440 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:17:35,440 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:19:25,143 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:19:25,143 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:19:25,148 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py
+2025-11-29 20:19:25,148 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py
+2025-11-29 20:20:01,364 - server - INFO - Script execution output: ^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py", line 86, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-11-29 20:20:01,364 - server - INFO - Script execution output: ^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py", line 86, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-11-29 20:20:01,366 - server - INFO - Test execution result: FAIL
+2025-11-29 20:20:01,366 - server - INFO - Test execution result: FAIL
+2025-11-29 20:20:12,048 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:20:12,048 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 20:20:12,051 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py
+2025-11-29 20:20:12,051 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py
+2025-11-29 20:20:47,693 - server - INFO - Script execution output: ^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py", line 86, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-11-29 20:20:47,693 - server - INFO - Script execution output: ^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_from_adding_i.py", line 86, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-11-29 20:20:47,694 - server - INFO - Test execution result: FAIL
+2025-11-29 20:20:47,694 - server - INFO - Test execution result: FAIL
+2025-11-29 20:24:25,364 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:24:25,364 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 20:25:33,941 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:25:33,941 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 20:25:33,943 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:25:33,943 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 20:25:33,943 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:25:33,943 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 20:25:33,944 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_and_order_com.py
+2025-11-29 20:25:33,944 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_and_order_com.py
+2025-11-29 20:25:33,944 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:25:33,944 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 20:25:36,026 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:25:36,039 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 20:25:36,039 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:33:16,121 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:33:17,141 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:33:17,156 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:33:17,156 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:33:41,225 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:33:41,240 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:33:41,240 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:34:00,971 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:34:00,985 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:34:00,985 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:34:50,771 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:34:50,771 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:40:29,409 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:40:29,409 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:41:05,855 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:41:05,855 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:42:00,734 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:42:00,734 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:43:41,147 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:43:41,163 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:43:41,163 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:43:44,030 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:43:44,030 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:49:17,367 - server - ERROR - Agent returned None for generation request.
+2025-11-29 21:49:17,367 - server - ERROR - Agent returned None for generation request.
+2025-11-29 21:49:17,367 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 21:49:17,367 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 21:49:17,368 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 21:49:17,368 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 21:49:17,368 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_failed.py
+2025-11-29 21:49:17,368 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_failed.py
+2025-11-29 21:49:17,368 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 21:49:17,368 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 21:49:19,501 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:49:19,517 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:49:19,517 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:52:37,046 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:52:38,100 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:52:38,115 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:52:38,115 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:55:30,266 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:55:30,266 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:56:49,116 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:56:49,116 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:57:07,742 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 21:57:07,742 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 21:57:07,743 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 21:57:07,743 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 21:57:07,743 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 21:57:07,743 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 21:57:07,744 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_to_cart_and_proceed_to_checkout_fl.py
+2025-11-29 21:57:07,744 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_to_cart_and_proceed_to_checkout_fl.py
+2025-11-29 21:57:07,744 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 21:57:07,744 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 21:57:10,116 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:57:10,130 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:57:10,130 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:57:55,746 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:57:55,746 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 21:59:18,442 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 21:59:18,442 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 21:59:18,444 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 21:59:18,444 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 21:59:18,445 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 21:59:18,445 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 21:59:18,446 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-29 21:59:18,446 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-29 21:59:18,446 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 21:59:18,446 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 21:59:20,556 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:59:20,570 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 21:59:20,570 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:02:24,357 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:02:24,371 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:02:24,371 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:02:51,154 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:02:51,168 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:02:51,168 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:06:04,624 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:06:04,638 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:06:04,638 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:07:42,691 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:07:42,691 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:09:34,352 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:09:34,352 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:09:34,354 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:09:34,354 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:09:34,355 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:09:34,355 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:09:34,356 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_and_checkout_flow.py
+2025-11-29 22:09:34,356 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_and_checkout_flow.py
+2025-11-29 22:09:34,356 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:09:34,356 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:09:36,674 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:09:36,688 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:09:36,688 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:09:56,444 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:09:56,458 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:09:56,458 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:10:34,534 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:10:34,548 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:10:34,548 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:10:45,089 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:10:46,163 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:10:46,178 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:10:46,178 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:13:10,774 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:13:10,787 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:13:10,787 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:13:11,950 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:13:13,096 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:13:13,106 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:13:13,106 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:14:55,612 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:14:55,626 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:14:55,626 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:14:57,065 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:14:58,109 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:14:58,119 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:14:58,119 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:15:28,598 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:15:28,598 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:15:58,062 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:15:58,062 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:15:58,064 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:15:58,064 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:15:58,064 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:15:58,064 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:15:58,064 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_and_proceed_to_checkout_flow.py
+2025-11-29 22:15:58,064 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_item_and_proceed_to_checkout_flow.py
+2025-11-29 22:15:58,065 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:15:58,065 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:16:00,031 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:16:00,047 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:16:00,047 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:17:43,611 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 22:17:43,611 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 22:17:43,615 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-29 22:17:43,615 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-29 22:17:51,848 - server - INFO - Script execution output: er credentials
+Step: Click login button
+Step 1: Click 'Add to Cart' for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-labs-backpack)
+Step 2: Click the shopping cart icon (Selector: #shopping_cart_container a)
+Step 3: Click the 'Checkout' button (ID: checkout)
+Step 4: Fill in First Name (ID: first-name), Last Name (ID: last-name), and Zip/Postal Code (ID: postal-code)
+Step 5: Click the 'Continue' button (ID: continue)
+Step 6: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 22:17:51,848 - server - INFO - Script execution output: er credentials
+Step: Click login button
+Step 1: Click 'Add to Cart' for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-labs-backpack)
+Step 2: Click the shopping cart icon (Selector: #shopping_cart_container a)
+Step 3: Click the 'Checkout' button (ID: checkout)
+Step 4: Fill in First Name (ID: first-name), Last Name (ID: last-name), and Zip/Postal Code (ID: postal-code)
+Step 5: Click the 'Continue' button (ID: continue)
+Step 6: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 22:17:51,848 - server - INFO - Test execution result: PASS
+2025-11-29 22:17:51,848 - server - INFO - Test execution result: PASS
+2025-11-29 22:18:05,792 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 22:18:05,792 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 22:18:05,793 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-29 22:18:05,793 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-29 22:18:13,029 - server - INFO - Script execution output: er credentials
+Step: Click login button
+Step 1: Click 'Add to Cart' for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-labs-backpack)
+Step 2: Click the shopping cart icon (Selector: #shopping_cart_container a)
+Step 3: Click the 'Checkout' button (ID: checkout)
+Step 4: Fill in First Name (ID: first-name), Last Name (ID: last-name), and Zip/Postal Code (ID: postal-code)
+Step 5: Click the 'Continue' button (ID: continue)
+Step 6: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 22:18:13,029 - server - INFO - Script execution output: er credentials
+Step: Click login button
+Step 1: Click 'Add to Cart' for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-labs-backpack)
+Step 2: Click the shopping cart icon (Selector: #shopping_cart_container a)
+Step 3: Click the 'Checkout' button (ID: checkout)
+Step 4: Fill in First Name (ID: first-name), Last Name (ID: last-name), and Zip/Postal Code (ID: postal-code)
+Step 5: Click the 'Continue' button (ID: continue)
+Step 6: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 22:18:13,029 - server - INFO - Test execution result: PASS
+2025-11-29 22:18:13,029 - server - INFO - Test execution result: PASS
+2025-11-29 22:18:40,898 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:18:40,898 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:19:07,288 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:19:07,288 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:19:07,290 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:19:07,290 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:19:07,290 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:19:07,290 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:19:07,291 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_and_checkout.py
+2025-11-29 22:19:07,291 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow_and_checkout.py
+2025-11-29 22:19:07,291 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:19:07,291 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:19:09,290 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:19:09,304 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:19:09,304 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:19:28,979 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 22:19:28,979 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 22:19:28,980 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-29 22:19:28,980 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-29 22:19:37,009 - server - INFO - Script execution output: er credentials
+Step: Click login button
+Step 1: Click 'Add to Cart' for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-labs-backpack)
+Step 2: Click the shopping cart icon (Selector: #shopping_cart_container a)
+Step 3: Click the 'Checkout' button (ID: checkout)
+Step 4: Fill in First Name (ID: first-name), Last Name (ID: last-name), and Zip/Postal Code (ID: postal-code)
+Step 5: Click the 'Continue' button (ID: continue)
+Step 6: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 22:19:37,009 - server - INFO - Script execution output: er credentials
+Step: Click login button
+Step 1: Click 'Add to Cart' for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-labs-backpack)
+Step 2: Click the shopping cart icon (Selector: #shopping_cart_container a)
+Step 3: Click the 'Checkout' button (ID: checkout)
+Step 4: Fill in First Name (ID: first-name), Last Name (ID: last-name), and Zip/Postal Code (ID: postal-code)
+Step 5: Click the 'Continue' button (ID: continue)
+Step 6: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 22:19:37,010 - server - INFO - Test execution result: PASS
+2025-11-29 22:19:37,010 - server - INFO - Test execution result: PASS
+2025-11-29 22:20:33,977 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:20:33,977 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:22:18,741 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:22:18,741 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:22:18,742 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:22:18,742 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:22:18,742 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:22:18,742 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:22:18,743 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_and_checkout_flow.py
+2025-11-29 22:22:18,743 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_and_checkout_flow.py
+2025-11-29 22:22:18,743 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:22:18,743 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:22:20,890 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:22:20,904 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:22:20,904 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:22:35,499 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:22:35,514 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:22:35,514 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:22:44,854 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:22:44,869 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:22:44,869 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:25:21,380 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:25:21,399 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:25:21,399 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:25:22,940 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:25:23,953 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:25:23,963 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:25:23,963 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:48:18,750 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:48:18,750 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:48:51,479 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:48:51,479 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:48:51,482 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:48:51,482 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:48:51,483 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:48:51,483 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:48:51,485 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_to_cart_and_checkout_flow.py
+2025-11-29 22:48:51,485 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_add_to_cart_and_checkout_flow.py
+2025-11-29 22:48:51,485 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:48:51,485 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:48:53,610 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:48:53,625 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:48:53,625 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:48:56,562 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 22:48:56,562 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 22:48:56,563 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_add_to_cart_and_checkout_flow.py
+2025-11-29 22:48:56,563 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_add_to_cart_and_checkout_flow.py
+2025-11-29 22:48:58,116 - server - INFO - Script execution output: ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_add_to_cart_and_checkout_flow.py", line 100, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-11-29 22:48:58,116 - server - INFO - Script execution output: ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_add_to_cart_and_checkout_flow.py", line 100, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-11-29 22:48:58,116 - server - INFO - Test execution result: FAIL
+2025-11-29 22:48:58,116 - server - INFO - Test execution result: FAIL
+2025-11-29 22:50:46,394 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:50:46,408 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:50:46,408 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:47,507 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:47,521 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:47,521 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:48,889 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:49,953 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:49,963 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:49,963 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:58,505 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:58,515 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:51:58,515 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:52:20,400 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:52:20,400 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:53:44,401 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:53:44,401 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 22:53:44,403 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:53:44,403 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:53:44,404 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:53:44,404 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:53:44,405 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow.py
+2025-11-29 22:53:44,405 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow.py
+2025-11-29 22:53:44,405 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:53:44,405 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:53:46,343 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:53:46,365 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:53:46,365 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:55:35,480 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:55:35,494 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:55:35,494 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:55:36,996 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:55:38,035 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:55:38,045 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:55:38,045 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:57:22,860 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:57:22,860 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 22:59:09,733 - server - ERROR - JSON parse error: Expecting ',' delimiter: line 1 column 652 (char 651). Raw JSON: {"test_cases": [{"id": "TC001", "title": "Verify successful shopping cart flow from adding item to order completion", "steps": ["Click 'Add to cart' button for 'Sauce Labs Backpack' (Selector: #add-to-cart-sauce-labs-backpack).", "Click the shopping cart icon (Selector: #shopping_cart_container a).", "Click the 'Checkout' button (Selector: #checkout).", "Input First Name 'John' into field (Selector: #first-name).", "Input Last Name 'Doe' into field (Selector: #last-name).", "Input Zip/Postal Cod...
+2025-11-29 22:59:09,733 - server - ERROR - JSON parse error: Expecting ',' delimiter: line 1 column 652 (char 651). Raw JSON: {"test_cases": [{"id": "TC001", "title": "Verify successful shopping cart flow from adding item to order completion", "steps": ["Click 'Add to cart' button for 'Sauce Labs Backpack' (Selector: #add-to-cart-sauce-labs-backpack).", "Click the shopping cart icon (Selector: #shopping_cart_container a).", "Click the 'Checkout' button (Selector: #checkout).", "Input First Name 'John' into field (Selector: #first-name).", "Input Last Name 'Doe' into field (Selector: #last-name).", "Input Zip/Postal Cod...
+2025-11-29 22:59:09,737 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:59:09,737 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 22:59:09,738 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:59:09,738 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 22:59:09,740 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_json_parse_error.py
+2025-11-29 22:59:09,740 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_json_parse_error.py
+2025-11-29 22:59:09,740 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:59:09,740 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 22:59:11,853 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:59:11,867 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 22:59:11,867 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:02:07,409 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:02:07,433 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:02:07,433 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:02:08,933 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:02:10,009 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:02:10,019 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:02:10,019 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:03:05,803 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:03:05,803 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:04:46,514 - server - INFO - Raw agent output length: 605 characters
+2025-11-29 23:04:46,514 - server - INFO - Raw agent output length: 605 characters
+2025-11-29 23:04:46,516 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:04:46,516 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:04:46,516 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:04:46,516 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:04:46,517 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:04:46,517 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:04:46,518 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:04:46,518 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:04:46,520 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_checkout_flow.py
+2025-11-29 23:04:46,520 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_checkout_flow.py
+2025-11-29 23:04:46,521 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:04:46,521 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:04:48,545 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:04:48,558 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:04:48,558 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:04:50,590 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:04:50,590 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:04:50,591 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow.py
+2025-11-29 23:04:50,591 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow.py
+2025-11-29 23:05:01,712 - server - INFO - Script execution output:  button for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-la)
+Step 3: Click the shopping cart icon (CSS selector: .shopping_cart_link)
+Step 4: Click the 'Checkout' button (ID: checkout)
+Step 5: Input 'John' into First Name field (ID: first-name)
+Step 6: Input 'Doe' into Last Name field (ID: last-name)
+Step 7: Input '12345' into Zip/Postal Code field (ID: postal-code)
+Step 8: Click the 'Continue' button (ID: continue)
+Step 9: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:05:01,712 - server - INFO - Script execution output:  button for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-la)
+Step 3: Click the shopping cart icon (CSS selector: .shopping_cart_link)
+Step 4: Click the 'Checkout' button (ID: checkout)
+Step 5: Input 'John' into First Name field (ID: first-name)
+Step 6: Input 'Doe' into Last Name field (ID: last-name)
+Step 7: Input '12345' into Zip/Postal Code field (ID: postal-code)
+Step 8: Click the 'Continue' button (ID: continue)
+Step 9: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:05:01,713 - server - INFO - Test execution result: PASS
+2025-11-29 23:05:01,713 - server - INFO - Test execution result: PASS
+2025-11-29 23:05:27,612 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:05:27,612 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:05:27,615 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow.py
+2025-11-29 23:05:27,615 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow.py
+2025-11-29 23:05:38,482 - server - INFO - Script execution output:  button for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-la)
+Step 3: Click the shopping cart icon (CSS selector: .shopping_cart_link)
+Step 4: Click the 'Checkout' button (ID: checkout)
+Step 5: Input 'John' into First Name field (ID: first-name)
+Step 6: Input 'Doe' into Last Name field (ID: last-name)
+Step 7: Input '12345' into Zip/Postal Code field (ID: postal-code)
+Step 8: Click the 'Continue' button (ID: continue)
+Step 9: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:05:38,482 - server - INFO - Script execution output:  button for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-la)
+Step 3: Click the shopping cart icon (CSS selector: .shopping_cart_link)
+Step 4: Click the 'Checkout' button (ID: checkout)
+Step 5: Input 'John' into First Name field (ID: first-name)
+Step 6: Input 'Doe' into Last Name field (ID: last-name)
+Step 7: Input '12345' into Zip/Postal Code field (ID: postal-code)
+Step 8: Click the 'Continue' button (ID: continue)
+Step 9: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:05:38,483 - server - INFO - Test execution result: PASS
+2025-11-29 23:05:38,483 - server - INFO - Test execution result: PASS
+2025-11-29 23:07:56,337 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:07:56,351 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:07:56,351 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:22,605 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:22,620 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:22,620 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:24,395 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:24,404 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:24,404 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:25,782 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:26,810 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:26,819 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:08:26,819 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:10:22,267 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:10:22,267 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:10:22,271 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow.py
+2025-11-29 23:10:22,271 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_flow.py
+2025-11-29 23:10:33,409 - server - INFO - Script execution output:  button for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-la)
+Step 3: Click the shopping cart icon (CSS selector: .shopping_cart_link)
+Step 4: Click the 'Checkout' button (ID: checkout)
+Step 5: Input 'John' into First Name field (ID: first-name)
+Step 6: Input 'Doe' into Last Name field (ID: last-name)
+Step 7: Input '12345' into Zip/Postal Code field (ID: postal-code)
+Step 8: Click the 'Continue' button (ID: continue)
+Step 9: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:10:33,409 - server - INFO - Script execution output:  button for 'Sauce Labs Backpack' (ID: add-to-cart-sauce-la)
+Step 3: Click the shopping cart icon (CSS selector: .shopping_cart_link)
+Step 4: Click the 'Checkout' button (ID: checkout)
+Step 5: Input 'John' into First Name field (ID: first-name)
+Step 6: Input 'Doe' into Last Name field (ID: last-name)
+Step 7: Input '12345' into Zip/Postal Code field (ID: postal-code)
+Step 8: Click the 'Continue' button (ID: continue)
+Step 9: Click the 'Finish' button (ID: finish)
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:10:33,410 - server - INFO - Test execution result: PASS
+2025-11-29 23:10:33,410 - server - INFO - Test execution result: PASS
+2025-11-29 23:11:00,462 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:11:00,475 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:11:00,475 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:11:07,869 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:11:07,869 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:11:39,558 - server - INFO - Raw agent output length: 465 characters
+2025-11-29 23:11:39,558 - server - INFO - Raw agent output length: 465 characters
+2025-11-29 23:11:39,558 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:11:39,558 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:11:39,558 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:11:39,558 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:11:39,561 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:11:39,561 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:11:39,565 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:11:39,565 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:11:39,566 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_and_checkout_flow.py
+2025-11-29 23:11:39,566 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_and_checkout_flow.py
+2025-11-29 23:11:39,566 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:11:39,566 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:11:41,524 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:11:41,537 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:11:41,537 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:18,212 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:18,229 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:18,229 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:19,989 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:19,998 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:19,998 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:21,736 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:22,815 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:22,825 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:13:22,825 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:21:57,411 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:21:57,411 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:24:03,504 - server - INFO - Raw agent output length: 645 characters
+2025-11-29 23:24:03,504 - server - INFO - Raw agent output length: 645 characters
+2025-11-29 23:24:03,506 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:24:03,506 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:24:03,507 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:24:03,507 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:24:03,508 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:24:03,508 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:24:03,509 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:24:03,509 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:24:03,510 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_checkout_flow.py
+2025-11-29 23:24:03,510 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_checkout_flow.py
+2025-11-29 23:24:03,510 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:24:03,510 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:24:05,617 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:24:05,631 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:24:05,631 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:24:08,698 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:24:08,708 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:24:08,708 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:42:49,672 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:42:49,672 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:43:22,475 - server - INFO - Raw agent output length: 631 characters
+2025-11-29 23:43:22,475 - server - INFO - Raw agent output length: 631 characters
+2025-11-29 23:43:22,476 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:43:22,476 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:43:22,476 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:43:22,476 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:43:22,477 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:43:22,477 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:43:22,478 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:43:22,478 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:43:22,479 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow_on_swag_labs.py
+2025-11-29 23:43:22,479 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow_on_swag_labs.py
+2025-11-29 23:43:22,480 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:43:22,480 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:43:24,628 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:43:24,642 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:43:24,642 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:43:25,596 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:43:25,596 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:43:25,598 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow_on_swag_labs.py
+2025-11-29 23:43:25,598 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow_on_swag_labs.py
+2025-11-29 23:43:40,239 - server - INFO - Script execution output: ck the shopping cart icon (index 3) to navigate to the cart page
+Step 3: Click the 'Checkout' button (index 4) on the cart page
+Step 4: Input 'John' into the first name field (index 1)
+Step 5: Input 'Doe' into the last name field (index 2)
+Step 6: Input '90210' into the postal code field (index 3)
+Step 7: Click the 'Continue' button (index 4) to proceed to the overview page
+Step 8: Click the 'Finish' button (index 4) on the overview page to complete the purchase
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:43:40,239 - server - INFO - Script execution output: ck the shopping cart icon (index 3) to navigate to the cart page
+Step 3: Click the 'Checkout' button (index 4) on the cart page
+Step 4: Input 'John' into the first name field (index 1)
+Step 5: Input 'Doe' into the last name field (index 2)
+Step 6: Input '90210' into the postal code field (index 3)
+Step 7: Click the 'Continue' button (index 4) to proceed to the overview page
+Step 8: Click the 'Finish' button (index 4) on the overview page to complete the purchase
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:43:40,239 - server - INFO - Test execution result: PASS
+2025-11-29 23:43:40,239 - server - INFO - Test execution result: PASS
+2025-11-29 23:44:02,898 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:44:02,898 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:44:42,569 - server - INFO - Raw agent output length: 702 characters
+2025-11-29 23:44:42,569 - server - INFO - Raw agent output length: 702 characters
+2025-11-29 23:44:42,570 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:44:42,570 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:44:42,571 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:44:42,571 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:44:42,572 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:44:42,572 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:44:42,573 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:44:42,573 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:44:42,574 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_endtoend_shopping_cart_and_check.py
+2025-11-29 23:44:42,574 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_endtoend_shopping_cart_and_check.py
+2025-11-29 23:44:42,575 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:44:42,575 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:44:44,648 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:44:44,664 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:44:44,664 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:46:35,707 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:46:35,721 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:46:35,721 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:46:37,123 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:46:38,158 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:46:38,169 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:46:38,169 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:47:10,888 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:47:10,888 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:48:38,426 - server - INFO - Raw agent output length: 406 characters
+2025-11-29 23:48:38,426 - server - INFO - Raw agent output length: 406 characters
+2025-11-29 23:48:38,428 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:48:38,428 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-29 23:48:38,428 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:48:38,428 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-29 23:48:38,430 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:48:38,430 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:48:38,431 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:48:38,431 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:48:38,432 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_purchase_flow.py
+2025-11-29 23:48:38,432 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_purchase_flow.py
+2025-11-29 23:48:38,432 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:48:38,432 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:48:40,442 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:48:40,456 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:48:40,456 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:48:41,779 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:48:41,779 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:48:41,779 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow_on_swag_labs.py
+2025-11-29 23:48:41,779 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow_on_swag_labs.py
+2025-11-29 23:48:56,537 - server - INFO - Script execution output: ck the shopping cart icon (index 3) to navigate to the cart page
+Step 3: Click the 'Checkout' button (index 4) on the cart page
+Step 4: Input 'John' into the first name field (index 1)
+Step 5: Input 'Doe' into the last name field (index 2)
+Step 6: Input '90210' into the postal code field (index 3)
+Step 7: Click the 'Continue' button (index 4) to proceed to the overview page
+Step 8: Click the 'Finish' button (index 4) on the overview page to complete the purchase
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:48:56,537 - server - INFO - Script execution output: ck the shopping cart icon (index 3) to navigate to the cart page
+Step 3: Click the 'Checkout' button (index 4) on the cart page
+Step 4: Input 'John' into the first name field (index 1)
+Step 5: Input 'Doe' into the last name field (index 2)
+Step 6: Input '90210' into the postal code field (index 3)
+Step 7: Click the 'Continue' button (index 4) to proceed to the overview page
+Step 8: Click the 'Finish' button (index 4) on the overview page to complete the purchase
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:48:56,537 - server - INFO - Test execution result: PASS
+2025-11-29 23:48:56,537 - server - INFO - Test execution result: PASS
+2025-11-29 23:52:35,221 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:52:35,235 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:52:35,235 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:52:36,645 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:52:37,692 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:52:37,703 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:52:37,703 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:53:03,741 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:53:03,741 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-29 23:53:03,741 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow_on_swag_labs.py
+2025-11-29 23:53:03,741 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow_on_swag_labs.py
+2025-11-29 23:53:18,515 - server - INFO - Script execution output: ck the shopping cart icon (index 3) to navigate to the cart page
+Step 3: Click the 'Checkout' button (index 4) on the cart page
+Step 4: Input 'John' into the first name field (index 1)
+Step 5: Input 'Doe' into the last name field (index 2)
+Step 6: Input '90210' into the postal code field (index 3)
+Step 7: Click the 'Continue' button (index 4) to proceed to the overview page
+Step 8: Click the 'Finish' button (index 4) on the overview page to complete the purchase
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:53:18,515 - server - INFO - Script execution output: ck the shopping cart icon (index 3) to navigate to the cart page
+Step 3: Click the 'Checkout' button (index 4) on the cart page
+Step 4: Input 'John' into the first name field (index 1)
+Step 5: Input 'Doe' into the last name field (index 2)
+Step 6: Input '90210' into the postal code field (index 3)
+Step 7: Click the 'Continue' button (index 4) to proceed to the overview page
+Step 8: Click the 'Finish' button (index 4) on the overview page to complete the purchase
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-29 23:53:18,516 - server - INFO - Test execution result: PASS
+2025-11-29 23:53:18,516 - server - INFO - Test execution result: PASS
+2025-11-29 23:53:46,671 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:53:46,684 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:53:46,684 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:53:49,328 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:53:49,328 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:54:54,529 - server - INFO - Raw agent output length: 459 characters
+2025-11-29 23:54:54,529 - server - INFO - Raw agent output length: 459 characters
+2025-11-29 23:54:54,530 - server - ERROR - JSON parse error after regex extraction: Expecting ',' delimiter: line 1 column 457 (char 456)
+2025-11-29 23:54:54,530 - server - ERROR - JSON parse error after regex extraction: Expecting ',' delimiter: line 1 column 457 (char 456)
+2025-11-29 23:54:54,530 - server - ERROR - Extracted JSON string (first 500 chars): {"test_cases": [{"id": "TC001", "title": "Verify successful shopping cart and checkout flow", "steps": ["Add 'Sauce Labs Backpack' to the cart.", "Navigate to the shopping cart page.", "Click the 'Checkout' button.", "Fill in customer information (First Name: Test, Last Name: User, Zip/Postal Code: 12345) and click 'Continue'.", "Click the 'Finish' button on the Checkout Overview page.", "Verify successful completion on the 'Checkout: Complete!' page."}
+2025-11-29 23:54:54,530 - server - ERROR - Extracted JSON string (first 500 chars): {"test_cases": [{"id": "TC001", "title": "Verify successful shopping cart and checkout flow", "steps": ["Add 'Sauce Labs Backpack' to the cart.", "Navigate to the shopping cart page.", "Click the 'Checkout' button.", "Fill in customer information (First Name: Test, Last Name: User, Zip/Postal Code: 12345) and click 'Continue'.", "Click the 'Finish' button on the Checkout Overview page.", "Verify successful completion on the 'Checkout: Complete!' page."}
+2025-11-29 23:54:54,530 - server - ERROR - Failed to parse JSON from agent output. Raw result (first 500 chars): {"test_cases": [{"id": "TC001", "title": "Verify successful shopping cart and checkout flow", "steps": ["Add 'Sauce Labs Backpack' to the cart.", "Navigate to the shopping cart page.", "Click the 'Checkout' button.", "Fill in customer information (First Name: Test, Last Name: User, Zip/Postal Code: 12345) and click 'Continue'.", "Click the 'Finish' button on the Checkout Overview page.", "Verify successful completion on the 'Checkout: Complete!' page."}]}
+2025-11-29 23:54:54,530 - server - ERROR - Failed to parse JSON from agent output. Raw result (first 500 chars): {"test_cases": [{"id": "TC001", "title": "Verify successful shopping cart and checkout flow", "steps": ["Add 'Sauce Labs Backpack' to the cart.", "Navigate to the shopping cart page.", "Click the 'Checkout' button.", "Fill in customer information (First Name: Test, Last Name: User, Zip/Postal Code: 12345) and click 'Continue'.", "Click the 'Finish' button on the Checkout Overview page.", "Verify successful completion on the 'Checkout: Complete!' page."}]}
+2025-11-29 23:54:54,531 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:54:54,531 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:54:54,536 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:54:54,536 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:54:54,537 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_json_parse_error.py
+2025-11-29 23:54:54,537 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_json_parse_error.py
+2025-11-29 23:54:54,537 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:54:54,537 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:54:56,489 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:54:56,503 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:54:56,503 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:38,558 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:38,574 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:38,574 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:40,220 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:40,229 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:40,229 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:41,902 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:42,957 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:42,966 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:56:42,966 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:57:17,657 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:57:17,657 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:57:40,947 - server - ERROR - Agent returned None for generation request.
+2025-11-29 23:57:40,947 - server - ERROR - Agent returned None for generation request.
+2025-11-29 23:57:40,949 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:57:40,949 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:57:40,951 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:57:40,951 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:57:40,952 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_failed.py
+2025-11-29 23:57:40,952 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_failed.py
+2025-11-29 23:57:40,953 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:57:40,953 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:57:42,859 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:57:42,878 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:57:42,878 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:58:35,435 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:58:35,451 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:58:35,451 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:58:36,855 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:58:37,942 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:58:37,952 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:58:37,952 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:59:23,755 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:59:23,755 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-29 23:59:41,106 - server - ERROR - Agent returned None for generation request.
+2025-11-29 23:59:41,106 - server - ERROR - Agent returned None for generation request.
+2025-11-29 23:59:41,107 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:59:41,107 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-29 23:59:41,110 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:59:41,110 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-29 23:59:41,111 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_failed.py
+2025-11-29 23:59:41,111 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_failed.py
+2025-11-29 23:59:41,111 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:59:41,111 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-29 23:59:42,591 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:59:42,605 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-29 23:59:42,605 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:00:27,079 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:00:27,092 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:00:27,092 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:00:28,404 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:00:29,461 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:00:29,470 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:00:29,470 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:01:36,260 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:01:36,260 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:01:53,827 - server - INFO - Raw agent output length: 230 characters
+2025-11-30 00:01:53,827 - server - INFO - Raw agent output length: 230 characters
+2025-11-30 00:01:53,827 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:01:53,827 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:01:53,827 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:01:53,827 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:01:53,829 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:01:53,829 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:01:53,830 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:01:53,830 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:01:53,831 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_execution_failed.py
+2025-11-30 00:01:53,831 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_execution_failed.py
+2025-11-30 00:01:53,831 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:01:53,831 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:01:56,006 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:01:56,021 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:01:56,021 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:02:34,793 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:02:34,793 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:02:52,079 - server - INFO - Raw agent output length: 230 characters
+2025-11-30 00:02:52,079 - server - INFO - Raw agent output length: 230 characters
+2025-11-30 00:02:52,079 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:02:52,079 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:02:52,080 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:02:52,080 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:02:52,080 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:02:52,080 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:02:52,083 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:02:52,083 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:02:52,084 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_execution_failed.py
+2025-11-30 00:02:52,084 - server - INFO - Generated script: generated_tests/Smoke Test A_ERR_agent_execution_failed.py
+2025-11-30 00:02:52,084 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:02:52,084 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:02:53,669 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:02:53,684 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:02:53,684 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:03:28,097 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:03:29,178 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:03:29,195 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:03:29,195 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:04:35,430 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:04:35,430 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:05:57,444 - server - INFO - Raw agent output length: 489 characters
+2025-11-30 00:05:57,444 - server - INFO - Raw agent output length: 489 characters
+2025-11-30 00:05:57,445 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:05:57,445 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:05:57,445 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:05:57,445 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:05:57,446 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:05:57,446 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:05:57,446 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:05:57,446 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:05:57,447 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_purchase_flow.py
+2025-11-30 00:05:57,447 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_purchase_flow.py
+2025-11-30 00:05:57,447 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:05:57,447 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:05:59,863 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:05:59,877 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:05:59,877 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:06:26,879 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:06:26,879 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:06:26,880 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_purchase_flow.py
+2025-11-30 00:06:26,880 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_purchase_flow.py
+2025-11-30 00:07:05,998 - server - INFO - Script execution output: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_purchase_flow.py", line 100, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-11-30 00:07:05,998 - server - INFO - Script execution output: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_purchase_flow.py", line 100, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-11-30 00:07:05,999 - server - INFO - Test execution result: FAIL
+2025-11-30 00:07:05,999 - server - INFO - Test execution result: FAIL
+2025-11-30 00:08:59,000 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:08:59,017 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:08:59,017 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:09:00,425 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:09:01,502 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:09:01,512 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:09:01,512 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:09:41,748 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:09:41,763 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:09:41,763 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:09:43,267 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:09:43,267 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:10:50,401 - server - INFO - Raw agent output length: 410 characters
+2025-11-30 00:10:50,401 - server - INFO - Raw agent output length: 410 characters
+2025-11-30 00:10:50,403 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:10:50,403 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:10:50,403 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:10:50,403 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:10:50,405 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:10:50,405 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:10:50,413 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:10:50,413 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:10:50,415 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:50,415 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:50,415 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:10:50,415 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:10:52,612 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:10:52,625 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:10:52,625 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:10:52,627 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:10:52,627 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:10:52,627 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:52,627 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:52,645 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:10:52,645 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:10:52,645 - server - INFO - Test execution result: FAIL
+2025-11-30 00:10:52,645 - server - INFO - Test execution result: FAIL
+2025-11-30 00:10:55,140 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:10:55,140 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:10:55,141 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:55,141 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:55,166 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:10:55,166 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:10:55,166 - server - INFO - Test execution result: FAIL
+2025-11-30 00:10:55,166 - server - INFO - Test execution result: FAIL
+2025-11-30 00:10:55,821 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:10:55,821 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:10:55,821 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:55,821 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:55,834 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:10:55,834 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:10:55,835 - server - INFO - Test execution result: FAIL
+2025-11-30 00:10:55,835 - server - INFO - Test execution result: FAIL
+2025-11-30 00:10:56,411 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:10:56,411 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:10:56,412 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:56,412 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:10:56,437 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:10:56,437 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:10:56,438 - server - INFO - Test execution result: FAIL
+2025-11-30 00:10:56,438 - server - INFO - Test execution result: FAIL
+2025-11-30 00:14:48,550 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:14:48,550 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:14:48,552 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:14:48,552 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:14:48,576 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:14:48,576 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:14:48,576 - server - INFO - Test execution result: FAIL
+2025-11-30 00:14:48,576 - server - INFO - Test execution result: FAIL
+2025-11-30 00:14:56,552 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:14:56,552 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:14:56,554 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:14:56,554 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:14:56,577 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:14:56,577 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:14:56,577 - server - INFO - Test execution result: FAIL
+2025-11-30 00:14:56,577 - server - INFO - Test execution result: FAIL
+2025-11-30 00:16:02,134 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:16:02,149 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:16:02,149 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:16:03,533 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:16:04,643 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:16:04,653 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:16:04,653 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:16:36,206 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:16:36,206 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:16:36,209 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:16:36,209 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:16:36,238 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:16:36,238 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:16:36,238 - server - INFO - Test execution result: FAIL
+2025-11-30 00:16:36,238 - server - INFO - Test execution result: FAIL
+2025-11-30 00:16:37,199 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:16:37,199 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:16:37,199 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:16:37,199 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:16:37,223 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:16:37,223 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:16:37,223 - server - INFO - Test execution result: FAIL
+2025-11-30 00:16:37,223 - server - INFO - Test execution result: FAIL
+2025-11-30 00:16:38,509 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:16:38,509 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:18:09,406 - server - INFO - Raw agent output length: 680 characters
+2025-11-30 00:18:09,406 - server - INFO - Raw agent output length: 680 characters
+2025-11-30 00:18:09,408 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:18:09,408 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:18:09,408 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:18:09,408 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:18:09,409 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:18:09,409 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:18:09,414 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:18:09,414 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:18:09,414 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_endtoend_shopping_cart_flow.py
+2025-11-30 00:18:09,414 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_endtoend_shopping_cart_flow.py
+2025-11-30 00:18:09,415 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:18:09,415 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:18:11,618 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:18:11,631 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:18:11,631 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:18:11,633 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:11,633 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:11,634 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:11,634 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:11,648 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:11,648 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:11,648 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:11,648 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:13,148 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:13,148 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:13,149 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:13,149 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:13,180 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:13,180 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:13,181 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:13,181 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:13,838 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:13,838 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:13,839 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:13,839 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:13,854 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:13,854 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:13,855 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:13,855 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:14,408 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:14,408 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:14,409 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:14,409 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:14,432 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:14,432 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:14,432 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:14,432 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:14,686 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:14,686 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:14,687 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:14,687 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:14,714 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:14,714 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:14,715 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:14,715 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:14,848 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:14,848 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:14,849 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:14,849 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:14,865 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:14,865 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:14,865 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:14,865 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:15,017 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:15,017 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:15,017 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:15,017 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:15,030 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:15,030 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:15,030 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:15,030 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:15,203 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:15,203 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:15,204 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:15,204 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:15,229 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:15,229 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:15,230 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:15,230 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:16,656 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:16,656 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:16,657 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:16,657 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:16,681 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:16,681 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:16,682 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:16,682 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:25,421 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:25,421 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:18:25,423 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:25,423 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:18:25,447 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:25,447 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:18:25,448 - server - INFO - Test execution result: FAIL
+2025-11-30 00:18:25,448 - server - INFO - Test execution result: FAIL
+2025-11-30 00:19:45,481 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:19:45,495 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:19:45,495 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:19:47,167 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:19:47,176 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:19:47,176 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:19:48,663 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:19:49,750 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:19:49,760 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:19:49,760 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:20:03,478 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:20:03,478 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:21:13,029 - server - INFO - Raw agent output length: 637 characters
+2025-11-30 00:21:13,029 - server - INFO - Raw agent output length: 637 characters
+2025-11-30 00:21:13,032 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:21:13,032 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:21:13,032 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:21:13,032 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:21:13,033 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:21:13,033 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:21:13,034 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:21:13,034 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:21:13,036 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_checkout_flow.py
+2025-11-30 00:21:13,036 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_successful_shopping_cart_checkout_flow.py
+2025-11-30 00:21:13,036 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:21:13,036 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:21:15,086 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:21:15,100 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:21:15,100 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:21:16,168 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:21:16,168 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:21:16,169 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:21:16,169 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:21:16,195 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:21:16,195 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:21:16,195 - server - INFO - Test execution result: FAIL
+2025-11-30 00:21:16,195 - server - INFO - Test execution result: FAIL
+2025-11-30 00:21:23,989 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:21:23,989 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:21:23,990 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:21:23,990 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py
+2025-11-30 00:21:24,015 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:21:24,015 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/Testing_Agent_POC/generated_tests/Smoke Test A_TC001_verify_successful_checkout_flow_for_sauce_labs_bac.py", line 78
+    print("  - Clicking #checkout, button:has-text("Checkout")")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-11-30 00:21:24,015 - server - INFO - Test execution result: FAIL
+2025-11-30 00:21:24,015 - server - INFO - Test execution result: FAIL
+2025-11-30 00:22:46,071 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:22:46,096 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:22:46,096 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:22:47,247 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:22:48,367 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:22:48,376 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:22:48,376 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:22:59,291 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:22:59,305 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:22:59,305 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:23:18,134 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:23:18,134 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:23:51,067 - server - INFO - Raw agent output length: 454 characters
+2025-11-30 00:23:51,067 - server - INFO - Raw agent output length: 454 characters
+2025-11-30 00:23:51,068 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:23:51,068 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:23:51,068 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:23:51,068 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:23:51,071 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:23:51,071 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:23:51,075 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:23:51,075 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:23:51,076 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow.py
+2025-11-30 00:23:51,076 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow.py
+2025-11-30 00:23:51,076 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:23:51,076 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:23:53,054 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:23:53,068 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:23:53,068 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:26:18,208 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:26:18,208 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:26:18,211 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow.py
+2025-11-30 00:26:18,211 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow.py
+2025-11-30 00:26:35,756 - server - INFO - Script execution output:  page
+Step: Enter credentials
+Step: Click login button
+  - Clicking button:has-text("Add to cart")
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+  - Clicking #checkout, button:has-text("Checkout")
+Step 4: Input 'John' into First Name field (index 10)
+Step 5: Input 'Doe' into Last Name field (index 11)
+Step 6: Input '12345' into Zip/Postal Code field (index 12)
+  - Clicking #continue, input[type="submit"]
+  - Clicking #finish, button[name="finish"]
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-30 00:26:35,756 - server - INFO - Script execution output:  page
+Step: Enter credentials
+Step: Click login button
+  - Clicking button:has-text("Add to cart")
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+  - Clicking #checkout, button:has-text("Checkout")
+Step 4: Input 'John' into First Name field (index 10)
+Step 5: Input 'Doe' into Last Name field (index 11)
+Step 6: Input '12345' into Zip/Postal Code field (index 12)
+  - Clicking #continue, input[type="submit"]
+  - Clicking #finish, button[name="finish"]
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-30 00:26:35,756 - server - INFO - Test execution result: PASS
+2025-11-30 00:26:35,756 - server - INFO - Test execution result: PASS
+2025-11-30 00:27:32,956 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:27:32,956 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:27:32,959 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow.py
+2025-11-30 00:27:32,959 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_complete_shopping_cart_flow.py
+2025-11-30 00:27:50,447 - server - INFO - Script execution output:  page
+Step: Enter credentials
+Step: Click login button
+  - Clicking button:has-text("Add to cart")
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+  - Clicking #checkout, button:has-text("Checkout")
+Step 4: Input 'John' into First Name field (index 10)
+Step 5: Input 'Doe' into Last Name field (index 11)
+Step 6: Input '12345' into Zip/Postal Code field (index 12)
+  - Clicking #continue, input[type="submit"]
+  - Clicking #finish, button[name="finish"]
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-30 00:27:50,447 - server - INFO - Script execution output:  page
+Step: Enter credentials
+Step: Click login button
+  - Clicking button:has-text("Add to cart")
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+  - Clicking #checkout, button:has-text("Checkout")
+Step 4: Input 'John' into First Name field (index 10)
+Step 5: Input 'Doe' into Last Name field (index 11)
+Step 6: Input '12345' into Zip/Postal Code field (index 12)
+  - Clicking #continue, input[type="submit"]
+  - Clicking #finish, button[name="finish"]
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-30 00:27:50,448 - server - INFO - Test execution result: PASS
+2025-11-30 00:27:50,448 - server - INFO - Test execution result: PASS
+2025-11-30 00:28:24,674 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:28:24,674 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:29:25,705 - server - INFO - Raw agent output length: 452 characters
+2025-11-30 00:29:25,705 - server - INFO - Raw agent output length: 452 characters
+2025-11-30 00:29:25,708 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:29:25,708 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:29:25,708 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:29:25,708 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:29:25,709 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:29:25,709 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:29:25,711 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:29:25,711 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:29:25,712 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_flow.py
+2025-11-30 00:29:25,712 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_flow.py
+2025-11-30 00:29:25,713 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:29:25,713 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:29:27,887 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:29:27,902 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:29:27,902 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:30:02,314 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:30:02,314 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-11-30 00:30:02,315 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_flow.py
+2025-11-30 00:30:02,315 - server - INFO - Executing generated Playwright script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_flow.py
+2025-11-30 00:30:19,888 - server - INFO - Script execution output: dentials
+Step: Click login button
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+  - Clicking #checkout, button:has-text("Checkout")
+Step 4: Input 'Test' into First Name field (element 1)
+Step 5: Input 'User' into Last Name field (element 2)
+Step 6: Input '12345' into Zip/Postal Code field (element 3)
+  - Clicking #continue, input[type="submit"]
+  - Clicking #finish, button[name="finish"]
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-30 00:30:19,888 - server - INFO - Script execution output: dentials
+Step: Click login button
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+  - Clicking #checkout, button:has-text("Checkout")
+Step 4: Input 'Test' into First Name field (element 1)
+Step 5: Input 'User' into Last Name field (element 2)
+Step 6: Input '12345' into Zip/Postal Code field (element 3)
+  - Clicking #continue, input[type="submit"]
+  - Clicking #finish, button[name="finish"]
+Test PASSED ✓
+Final Result: PASS
+
+2025-11-30 00:30:19,888 - server - INFO - Test execution result: PASS
+2025-11-30 00:30:19,888 - server - INFO - Test execution result: PASS
+2025-11-30 00:31:02,037 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:31:03,085 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:31:04,160 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:31:04,172 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:31:04,172 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:31:46,793 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:31:46,793 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:32:19,736 - server - INFO - Raw agent output length: 642 characters
+2025-11-30 00:32:19,736 - server - INFO - Raw agent output length: 642 characters
+2025-11-30 00:32:19,738 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:32:19,738 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:32:19,738 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:32:19,738 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:32:19,740 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:32:19,740 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:32:19,741 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:32:19,741 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:32:19,743 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_flow.py
+2025-11-30 00:32:19,743 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_flow.py
+2025-11-30 00:32:19,743 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:32:19,743 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:32:21,276 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:32:21,290 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:32:21,290 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:33:57,861 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:33:57,875 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:33:57,875 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:07,573 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:07,583 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:07,583 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:18,931 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:18,943 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:18,943 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:31,634 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:31,643 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:31,643 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:48,414 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:48,429 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:48,429 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:49,636 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:50,714 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:50,724 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:34:50,724 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:35:36,964 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:35:36,964 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:36:13,297 - server - INFO - Raw agent output length: 680 characters
+2025-11-30 00:36:13,297 - server - INFO - Raw agent output length: 680 characters
+2025-11-30 00:36:13,299 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:36:13,299 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:36:13,299 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:36:13,299 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:36:13,299 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:36:13,299 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:36:13,300 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:36:13,300 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:36:13,300 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-30 00:36:13,300 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-30 00:36:13,301 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:36:13,301 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:36:15,577 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:36:15,593 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:36:15,593 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:37:49,068 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:37:49,083 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:37:49,083 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:39:42,715 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:39:42,732 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:39:42,732 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:46:55,145 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:46:55,161 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:46:55,161 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:46:58,177 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:46:58,186 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:46:58,186 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:47:00,173 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:47:00,182 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:47:00,182 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:47:01,884 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:47:02,997 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:47:03,008 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:47:03,008 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:47:44,898 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:47:44,898 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 00:48:25,003 - server - INFO - Raw agent output length: 740 characters
+2025-11-30 00:48:25,003 - server - INFO - Raw agent output length: 740 characters
+2025-11-30 00:48:25,004 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:48:25,004 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:48:25,004 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:48:25,004 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 00:48:25,005 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:48:25,005 - server - INFO - Saved 1 test suites to test_suites.json
+2025-11-30 00:48:25,006 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:48:25,006 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:48:25,007 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-30 00:48:25,007 - server - INFO - Generated script: generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-11-30 00:48:25,007 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:48:25,007 - server - INFO - Saved metadata to: generated_tests/Smoke Test A_metadata.json
+2025-11-30 00:48:26,593 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:48:26,608 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:48:26,608 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:52:14,136 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:52:15,267 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:52:15,284 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:52:15,284 - server - INFO - Loaded 1 test suites from test_suites.json
+2025-11-30 00:53:10,134 - server - INFO - Received generation request for suite 'Smoke Test A - Nov-30-2025' at URL: https://saucedemo.com
+2025-11-30 00:53:10,134 - server - INFO - Received generation request for suite 'Smoke Test A - Nov-30-2025' at URL: https://saucedemo.com
+2025-11-30 00:53:55,199 - server - INFO - Raw agent output length: 144 characters
+2025-11-30 00:53:55,199 - server - INFO - Raw agent output length: 144 characters
+2025-11-30 00:53:55,199 - server - ERROR - Failed to parse JSON from agent output. Raw result (first 500 chars): The shopping cart flow verification test case has been completed successfully. Below are the documented steps with their selectors as requested.
+2025-11-30 00:53:55,199 - server - ERROR - Failed to parse JSON from agent output. Raw result (first 500 chars): The shopping cart flow verification test case has been completed successfully. Below are the documented steps with their selectors as requested.
+2025-11-30 00:53:55,200 - server - INFO - Saved 2 test suites to test_suites.json
+2025-11-30 00:53:55,200 - server - INFO - Saved 2 test suites to test_suites.json
+2025-11-30 00:53:55,201 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:53:55,201 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:53:55,203 - server - INFO - Generated script: generated_tests/Smoke Test A - Nov-30-2025_ERR_json_parse_error.py
+2025-11-30 00:53:55,203 - server - INFO - Generated script: generated_tests/Smoke Test A - Nov-30-2025_ERR_json_parse_error.py
+2025-11-30 00:53:55,203 - server - INFO - Saved metadata to: generated_tests/Smoke Test A - Nov-30-2025_metadata.json
+2025-11-30 00:53:55,203 - server - INFO - Saved metadata to: generated_tests/Smoke Test A - Nov-30-2025_metadata.json
+2025-11-30 00:53:57,305 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:53:57,319 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:53:57,319 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:54:47,915 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:54:47,932 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:54:47,932 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:54:49,132 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:54:50,225 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:54:50,235 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:54:50,235 - server - INFO - Loaded 2 test suites from test_suites.json
+2025-11-30 00:55:45,377 - server - INFO - Received generation request for suite 'Smoke Test A - Nov-29' at URL: https://saucedemo.com
+2025-11-30 00:55:45,377 - server - INFO - Received generation request for suite 'Smoke Test A - Nov-29' at URL: https://saucedemo.com
+2025-11-30 00:57:20,526 - server - INFO - Raw agent output length: 669 characters
+2025-11-30 00:57:20,526 - server - INFO - Raw agent output length: 669 characters
+2025-11-30 00:57:20,528 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:57:20,528 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 00:57:20,529 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A - Nov-29'.
+2025-11-30 00:57:20,529 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A - Nov-29'.
+2025-11-30 00:57:20,530 - server - INFO - Saved 3 test suites to test_suites.json
+2025-11-30 00:57:20,530 - server - INFO - Saved 3 test suites to test_suites.json
+2025-11-30 00:57:20,533 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:57:20,533 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 00:57:20,534 - server - INFO - Generated script: generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-11-30 00:57:20,534 - server - INFO - Generated script: generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-11-30 00:57:20,535 - server - INFO - Saved metadata to: generated_tests/Smoke Test A - Nov-29_metadata.json
+2025-11-30 00:57:20,535 - server - INFO - Saved metadata to: generated_tests/Smoke Test A - Nov-29_metadata.json
+2025-11-30 00:57:22,690 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 00:57:22,706 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 00:57:22,706 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:00:20,812 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:00:20,826 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:00:20,826 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:00:39,833 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:00:39,846 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:00:39,846 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:01:08,760 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:01:08,776 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:01:08,776 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:01:25,180 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:01:25,194 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:01:25,194 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:01:44,387 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:01:44,401 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:01:44,401 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:01,208 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:01,221 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:01,221 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:18,270 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:18,285 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:18,285 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:20,324 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:20,335 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:20,335 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:23,543 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:23,555 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:23,555 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:25,574 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:25,584 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:25,584 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:46,016 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:46,030 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:46,030 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:50,212 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:50,222 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:02:50,222 - server - INFO - Loaded 3 test suites from test_suites.json
+2025-11-30 01:03:28,920 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-11-30 01:03:52,245 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-11-30 01:04:23,856 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-11-30 01:06:31,756 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-11-30 01:06:33,786 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-11-30 01:06:44,033 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-11-30 01:08:29,756 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-11-30 01:10:10,885 - server - INFO - Raw agent output length: 668 characters
+2025-11-30 01:10:10,887 - server - INFO - Method 1: Direct JSON parse successful
+2025-11-30 01:10:10,887 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-11-30 01:10:10,888 - server - INFO - Saved 3 test suites to data/test_suites.json
+2025-11-30 01:10:10,888 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-11-30 01:10:10,889 - server - INFO - Generated script: data/generated_tests/Smoke Test A_TC001_shopping_cart_checkout.py
+2025-11-30 01:10:10,889 - server - INFO - Saved metadata to: data/generated_tests/Smoke Test A_metadata.json
+2025-11-30 01:10:13,246 - server - INFO - Loaded 3 test suites from data/test_suites.json

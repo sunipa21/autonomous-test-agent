@@ -1,0 +1,8 @@
+{
+  "suite_name": "Smoke Test A - Nov-30-2025",
+  "generated_at": "2025-11-30T00:53:55.203149",
+  "test_count": 1,
+  "scripts": [
+    "generated_tests/Smoke Test A - Nov-30-2025_ERR_json_parse_error.py"
+  ]
+}

@@ -28,12 +28,12 @@ An **AI-powered autonomous testing platform** that uses Large Language Models (L
 ### 🕵️ Exploratory Agent in Action
 Watch the AI agent autonomously explore the SauceDemo application and intelligently generate test cases:
 
-https://github.com/user-attachments/assets/YOUR_VIDEO_ID_HERE
+https://github.com/user-attachments/assets/3053d500-c7c7-43fd-830e-5223b7d7af7a
 
 <details>
 <summary>📹 Alternative: Direct Video Embed</summary>
 
-![Exploratory Steps](demo/Exploratory%20Steps.mp4)
+![Exploratory Steps](https://github.com/user-attachments/assets/3be3055c-394c-4a9f-bfbd-35aa85e82e22)
 
 *Note: If video doesn't play above, download it from the `demo/` folder*
 </details>

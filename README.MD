@@ -353,8 +353,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📚 [Architecture Guide](docs/ARCHITECTURE_GUIDE.md)
-- 🐛 [Report Issues](https://github.com/yourusername/AI_Powered_Testing_Agent/issues)
-- 💬 [Discussions](https://github.com/yourusername/AI_Powered_Testing_Agent/discussions)
+- 🐛 [Report Issues](https://github.com/sunipa21/AI_Powered_Testing_Agent/issues)
 
 ---
 

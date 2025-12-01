@@ -3,7 +3,19 @@ from src.llm.llm_factory import get_llm
 import json
 import asyncio
 
-async def explore_and_generate_tests(start_url, user_description, secrets_manager):
+async def explore_and_generate_tests(start_url: str, user_description: str, secrets_manager=None, headless: bool = False):
+    """
+    Launches a browser, explores the website, and generates test cases.
+    
+    Args:
+        start_url: The application URL to explore
+        user_description: User's description of what to test
+        secrets_manager: Optional SecretsManager for login credentials
+        headless: Whether to run browser in headless mode (default: False)
+    
+    Returns:
+        str: JSON string containing test cases
+    """
     print(f"🕵️ Starting Explorer Agent...")
     
     llm = get_llm()
@@ -17,6 +29,7 @@ async def explore_and_generate_tests(start_url, user_description, secrets_manage
     # IMPORTANT: Configuration passed directly to Browser for visibility
     browser = Browser(
         args=[
+            "--start-maximized",
             "--disable-save-password-bubble",
             "--disable-infobars",
             "--no-default-browser-check",
@@ -25,67 +38,91 @@ async def explore_and_generate_tests(start_url, user_description, secrets_manage
             "--disable-features=PasswordBreachDetection,PasswordProtectionWarningTrigger,PasswordManager,OptimizationGuideModelDownloading,OptimizationHintsFetching,SafeBrowsingProtectionLevelToRequests,AutofillServerCommunication",
             "--password-store=basic",
             "--no-service-autorun",
-            "--strict-origin-isolation",
-            "--disable-sync",
-            "--disable-signin-promo",
-            "--disable-domain-reliability",
-            "--disable-client-side-phishing-detection",
-            "--disable-component-update",
-            "--no-first-run",
-            "--disable-password-generation",
-            "--disable-password-manager-reauthentication",
-            "--use-mock-keychain",
-            "--disable-blink-features=AutofillShowTypePredictions",
-            "--start-maximized",  # Maximize window for better visibility
             "--force-device-scale-factor=1",  # Normal zoom level
         ],
-        headless=False,  # CRITICAL: Show the browser window
-        wait_between_actions=3.0,  # 3 SECONDS between EVERY action for visibility
+        headless=headless,  # Use user's preference from UI toggle
+        wait_between_actions=1.0,  # 1 second delay (faster than 3s, still visible)
         highlight_elements=True,  # Yellow highlights on elements
     )
     await browser.start()
-    page = await browser.new_page()
     
     # Make browser window visible and bring to front
-    print("🌐 Browser window opened - should be visible now")
-    print("⏱️  SLOW MOTION MODE: 3-second delay between EVERY action!")
+    if headless:
+        print("🌐 Browser started in HEADLESS mode (background, no window)")
+    else:
+        print("🌐 Browser window opened - should be visible now")
+        print("⏱️  BALANCED MODE: 1-second delay between actions for speed + visibility!")
+
     
     # Add a small delay to ensure window is visible
     await asyncio.sleep(2)
 
-    # Securely inject credentials first
-    if secrets_manager:
-        await secrets_manager.inject_login(page)
-    else:
-        # Fallback if secrets manager is not provided
-        await page.goto(start_url)
+    # ===== ZERO-TRUST SECURITY: LOGIN BEFORE AI =====
+    # We handle authentication HERE, BEFORE the AI Agent runs
+    # The AI NEVER sees credentials or login flow
     
-    # Task for the Agent
+    # Create a temporary page for login injection
+    temp_page = await browser.new_page()
+    
+    if secrets_manager:
+        # Try to load cached session first (optimization)
+        session_loaded = await secrets_manager.try_load_cached_session(temp_page)
+        
+        if not session_loaded:
+            # No cache - perform fresh login
+            print("🔐 SECURE: No cached session. Performing fresh login (AI EXCLUDED)...")
+            await secrets_manager.inject_login(temp_page)
+        else:
+            print("💾 SECURE: Loaded cached session. Skipping login (AI EXCLUDED)...")
+    else:
+        # No secrets manager - just navigate to start URL
+        print("⚠️  No credentials provided. Navigating to URL without login...")
+        await temp_page.goto(start_url)
+        await asyncio.sleep(2)
+    
+    
+    # Note: We don't close temp_page because browser-use Page objects don't have a close() method
+    # The important part is that the browser CONTEXT is now authenticated
+    # The Agent will create its own page but inherit the authenticated context
+    print("✅ SECURE: Authentication complete. Browser context is ready for AI Agent.")
+    
+    # ===== AI AGENT TASK (NO CREDENTIALS) =====
+    # The AI only sees: "You're logged in, now explore"
+    # It does NOT know HOW we logged in or WHAT the credentials were
     exploration_task = f"""
+IMPORTANT: You are starting on an AUTHENTICATED session. The login has ALREADY been completed for you.
+
 GOAL: {user_description}
 
 INSTRUCTIONS:
-1. I have ALREADY logged you in to the inventory page
-2. PERFORM the goal by actually CLICKING buttons and FILLING forms:
-   - Click "Add to cart"
-   - Navigate to cart
-   - Click checkout
-   - Fill customer info form
-   - Complete the checkout
-3. Document each action you performed with its selector
+
+
+1. You are starting at the application's page
+2. PERFORM the goal step-by-step by ACTUALLY interacting with the UI:
+   - Click buttons and links
+   - Fill in forms with realistic test data
+   - Navigate through pages
+   - Complete the entire flow described in the GOAL
+3. Document EVERY action you take with the exact selector you used
 
 CRITICAL - OUTPUT FORMAT:
-You MUST return ONLY this JSON structure with NO other text:
+You MUST return ONLY a JSON structure with NO other text before or after:
 
-{{"test_cases": [{{"id": "TC001", "title": "Shopping cart checkout", "steps": ["Click 'Add to cart' using selector: button[data-test='add-to-cart-sauce-labs-backpack']", "Click cart icon using selector: .shopping_cart_link", "Click 'Checkout' using selector: button[data-test='checkout']"]}}]}}
+{{"test_cases": [{{"id": "TC001", "title": "Your test title", "steps": ["Step 1 description using selector: css-selector-here", "Step 2 description using selector: css-selector-here"]}}]}}
 
 RULES:
-- NO explanations
-- NO markdown
-- NO "Here is the JSON"
+- NO explanations before or after the JSON
+- NO markdown code blocks (no ```json```)
+- NO "Here is the JSON" or similar text
 - ONLY the raw JSON object starting with {{
-- Each step MUST include the selector you used
+- Each step MUST include the exact CSS selector you used
+- Use realistic test data for any forms (e.g., email: test@example.com, name: John Doe)
+- If registration/login is needed, include those steps explicitly
+
+EXAMPLE OUTPUT FORMAT:
+{{"test_cases": [{{"id": "TC001", "title": "Complete registration and checkout", "steps": ["Click 'Register' using selector: a[href='/register']", "Fill email field using selector: #Email", "Click 'Register button' using selector: #register-button"]}}]}}
 """
+
 
     agent = Agent(
         task=exploration_task,

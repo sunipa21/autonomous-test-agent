@@ -9,31 +9,29 @@ async def execute_single_test(test_case_data, secrets_manager):
     print("Opening browser window...")
     
     browser = Browser(
-        browser_profile=BrowserProfile(
-            args=[
-                "--disable-save-password-bubble",
-                "--disable-infobars",
-                "--no-default-browser-check",
-                "--disable-popup-blocking",
-                "--disable-password-manager",
-                "--disable-features=PasswordBreachDetection,PasswordProtectionWarningTrigger,PasswordManager,OptimizationGuideModelDownloading,OptimizationHintsFetching,SafeBrowsingProtectionLevelToRequests,AutofillServerCommunication",
-                "--password-store=basic",
-                "--no-service-autorun",
-                "--strict-origin-isolation",
-                "--disable-sync",
-                "--disable-signin-promo",
-                "--disable-domain-reliability",
-                "--disable-client-side-phishing-detection",
-                "--disable-component-update",
-                "--no-first-run",
-                "--disable-password-generation",
-                "--disable-password-manager-reauthentication",
-                "--use-mock-keychain",
-                "--disable-blink-features=AutofillShowTypePredictions",
-                "--start-maximized",  # Open browser maximized
-                "--force-device-scale-factor=1",
-            ]
-        ),
+        args=[
+            "--disable-save-password-bubble",
+            "--disable-infobars",
+            "--no-default-browser-check",
+            "--disable-popup-blocking",
+            "--disable-password-manager",
+            "--disable-features=PasswordBreachDetection,PasswordProtectionWarningTrigger,PasswordManager,OptimizationGuideModelDownloading,OptimizationHintsFetching,SafeBrowsingProtectionLevelToRequests,AutofillServerCommunication",
+            "--password-store=basic",
+            "--no-service-autorun",
+            "--strict-origin-isolation",
+            "--disable-sync",
+            "--disable-signin-promo",
+            "--disable-domain-reliability",
+            "--disable-client-side-phishing-detection",
+            "--disable-component-update",
+            "--no-first-run",
+            "--disable-password-generation",
+            "--disable-password-manager-reauthentication",
+            "--use-mock-keychain",
+            "--disable-blink-features=AutofillShowTypePredictions",
+            "--start-maximized",  # Open browser maximized
+            "--force-device-scale-factor=1",
+        ],
         headless=False,
         wait_between_actions=1.0,  # 1 second delay
         highlight_elements=True,

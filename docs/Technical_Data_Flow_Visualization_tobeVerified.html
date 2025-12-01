@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Agent Data Flow | Technical Deep Dive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Node Styling */
+        .node {
+            position: absolute;
+            width: 160px;
+            padding: 0.75rem;
+            border-radius: 0.75rem;
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            text-align: center;
+            transition: all 0.4s ease;
+            z-index: 10;
+            opacity: 0.5;
+            filter: grayscale(0.8);
+        }
+
+        .node.active {
+            transform: scale(1.1);
+            border-color: #3b82f6;
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+            background-color: #1e293b;
+            opacity: 1;
+            filter: grayscale(0);
+        }
+
+        .node.secure-active {
+            border-color: #10b981;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .node.opt-active {
+            border-color: #f59e0b;
+            /* Amber for Optimization */
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.3);
+        }
+
+        .node.exec-active {
+            border-color: #8b5cf6;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+        }
+
+        /* SVG Styling */
+        .flow-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .connector {
+            fill: none;
+            stroke: #334155;
+            stroke-width: 1;
+            stroke-dasharray: 5;
+            opacity: 0.2;
+            transition: all 0.4s ease;
+        }
+
+        .connector.active {
+            stroke: #3b82f6;
+            stroke-width: 3;
+            stroke-dasharray: 0;
+            opacity: 1;
+            filter: drop-shadow(0 0 3px #3b82f6);
+        }
+
+        .connector.secure {
+            stroke: #10b981;
+            filter: drop-shadow(0 0 3px #10b981);
+        }
+
+        .connector.opt {
+            stroke: #f59e0b;
+            filter: drop-shadow(0 0 3px #f59e0b);
+        }
+
+        .connector.exec {
+            stroke: #8b5cf6;
+            filter: drop-shadow(0 0 3px #8b5cf6);
+        }
+
+        @keyframes flowPulse {
+            0% {
+                stroke-dashoffset: 20;
+            }
+
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .connector.active {
+            animation: flowPulse 1s linear infinite;
+        }
+
+        /* Terminal Window */
+        .terminal {
+            background-color: #020617;
+            border: 1px solid #1e293b;
+            box-shadow: inset 0 0 20px #000000;
+        }
+
+        /* Syntax Highlighting */
+        .key {
+            color: #f43f5e;
+        }
+
+        .string {
+            color: #a5f3fc;
+        }
+
+        .number {
+            color: #06b6d4;
+        }
+
+        .comment {
+            color: #64748b;
+            font-style: italic;
+        }
+
+        .func {
+            color: #8b5cf6;
+        }
+
+        .keyword {
+            color: #f59e0b;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+
+<body class="h-screen overflow-hidden flex flex-col">
+
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-900 p-4 flex justify-between items-center z-20 shadow-lg">
+        <div class="flex items-center gap-4">
+            <div class="p-2 bg-slate-800 rounded-lg">
+                <i class="fas fa-network-wired text-blue-400"></i>
+            </div>
+            <div>
+                <h1 class="text-lg font-bold text-white tracking-tight">AI Agent Architecture <span
+                        class="text-slate-500">|</span> Data Flow Sim</h1>
+                <div class="flex gap-4 text-[10px] uppercase tracking-widest font-semibold mt-1">
+                    <div class="flex items-center gap-1 text-green-400">
+                        <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(16,185,129,0.6)]"></div>
+                        Secure Zone
+                    </div>
+                    <div class="flex items-center gap-1 text-amber-400">
+                        <div class="w-2 h-2 rounded-full bg-amber-500 shadow-[0_0_8px_rgba(245,158,11,0.6)]"></div>
+                        Optimization
+                    </div>
+                    <div class="flex items-center gap-1 text-blue-400">
+                        <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.6)]"></div> Cloud
+                        Zone
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flow Switcher -->
+        <div class="flex bg-slate-950 p-1 rounded-lg border border-slate-700">
+            <button onclick="switchFlow('generation')" id="btn-gen"
+                class="px-4 py-2 rounded-md text-sm font-medium transition-all bg-blue-600 text-white shadow-lg">
+                <i class="fas fa-magic mr-2"></i>1. Generation Flow
+            </button>
+            <button onclick="switchFlow('execution')" id="btn-exec"
+                class="px-4 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-white transition-all">
+                <i class="fas fa-play mr-2"></i>2. Execution Flow
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="flex-1 flex overflow-hidden">
+
+        <!-- LEFT: Visual Architecture -->
+        <div class="w-8/12 relative bg-slate-950 flex flex-col justify-center items-center overflow-hidden group">
+
+            <!-- Grid Background -->
+            <div class="absolute inset-0"
+                style="background-image: linear-gradient(#1e293b 1px, transparent 1px), linear-gradient(90deg, #1e293b 1px, transparent 1px); background-size: 40px 40px; opacity: 0.15;">
+            </div>
+
+            <!-- DIAGRAM CONTAINER -->
+            <div class="relative w-[900px] h-[600px] scale-90 origin-center transition-transform duration-700">
+
+                <!-- SVG Layer for Connectors -->
+                <svg class="flow-lines" viewBox="0 0 900 600">
+                    <defs>
+                        <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#3b82f6" />
+                        </marker>
+                        <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#10b981" />
+                        </marker>
+                        <marker id="arrow-amber" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#f59e0b" />
+                        </marker>
+                        <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#8b5cf6" />
+                        </marker>
+                    </defs>
+
+                    <!-- Shared Paths -->
+                    <path id="p-user-server" class="connector" d="M450,50 L450,120" />
+
+                    <!-- Generation Paths -->
+                    <path id="p-server-secrets" class="connector" d="M360,150 C300,150 200,180 200,250" />
+
+                    <!-- NEW: Secrets -> FS (Cache Check) -->
+                    <path id="p-secrets-fs" class="connector" d="M200,280 C200,310 370,310 370,290" />
+
+                    <path id="p-secrets-browser" class="connector" d="M200,330 L200,400 C200,450 360,450 360,450" />
+                    <path id="p-server-agent" class="connector" d="M540,150 C600,150 700,180 700,250" />
+                    <path id="p-agent-browser" class="connector" d="M700,330 C700,450 540,450 540,450" />
+                    <path id="p-agent-llm" class="connector" d="M700,330 L700,450" />
+                    <path id="p-agent-server" class="connector" d="M700,250 C600,180 500,150 500,150" />
+                    <!-- Return Data -->
+                    <path id="p-server-fs" class="connector" d="M450,180 L450,250" />
+
+                    <!-- Execution Paths -->
+                    <path id="p-server-subprocess" class="connector" d="M360,150 C300,150 300,250 300,280" />
+                    <path id="p-subprocess-browser" class="connector" d="M300,360 C300,400 380,400 400,430" />
+                    <path id="p-subprocess-server" class="connector" d="M300,330 C320,200 380,180 380,180" />
+                    <!-- Result -->
+                </svg>
+
+                <!-- NODES -->
+                <!-- 1. User UI -->
+                <div id="node-user" class="node" style="top: 0px; left: 370px;">
+                    <i class="fas fa-desktop text-2xl text-blue-400 mb-1"></i>
+                    <div class="font-bold text-white text-sm">User UI</div>
+                    <div class="text-[10px] text-slate-500">Inputs & Results</div>
+                </div>
+
+                <!-- 2. Server -->
+                <div id="node-server" class="node" style="top: 120px; left: 370px;">
+                    <i class="fas fa-server text-2xl text-indigo-400 mb-1"></i>
+                    <div class="font-bold text-white text-sm">Backend API</div>
+                    <div class="text-[10px] text-slate-500">FastAPI / Orchestrator</div>
+                </div>
+
+                <!-- 3. Secrets (Left) -->
+                <div id="node-secrets" class="node border-green-900/50 bg-green-900/10"
+                    style="top: 250px; left: 120px;">
+                    <i class="fas fa-user-shield text-2xl text-green-400 mb-1"></i>
+                    <div class="font-bold text-green-400 text-sm">Secrets Mgr</div>
+                    <div class="text-[10px] text-green-200/50">Zero-Trust Injection</div>
+                </div>
+
+                <!-- 4. FileSystem (Center) -->
+                <div id="node-fs" class="node" style="top: 250px; left: 370px;">
+                    <i class="fas fa-folder-tree text-2xl text-yellow-400 mb-1"></i>
+                    <div class="font-bold text-white text-sm">FileSystem</div>
+                    <div class="text-[10px] text-slate-500">Auth Cache & Scripts</div>
+                </div>
+
+                <!-- 5. Agent (Right) -->
+                <div id="node-agent" class="node border-pink-900/50 bg-pink-900/10" style="top: 250px; left: 620px;">
+                    <i class="fas fa-robot text-2xl text-pink-400 mb-1"></i>
+                    <div class="font-bold text-pink-400 text-sm">Explorer Agent</div>
+                    <div class="text-[10px] text-pink-200/50">Browser-Use Lib</div>
+                </div>
+
+                <!-- 6. Subprocess (Execution Only) -->
+                <div id="node-subprocess" class="node border-purple-900/50 bg-purple-900/10 hidden"
+                    style="top: 280px; left: 220px;">
+                    <i class="fas fa-terminal text-2xl text-purple-400 mb-1"></i>
+                    <div class="font-bold text-purple-400 text-sm">Subprocess</div>
+                    <div class="text-[10px] text-purple-200/50">Isolated Execution</div>
+                </div>
+
+                <!-- 7. Browser (Bottom Center) -->
+                <div id="node-browser" class="node" style="top: 450px; left: 370px;">
+                    <i class="fab fa-chrome text-3xl text-orange-400 mb-1"></i>
+                    <div class="font-bold text-white text-sm">Browser</div>
+                    <div class="text-[10px] text-slate-500">Playwright (CDP)</div>
+                </div>
+
+                <!-- 8. LLM (Bottom Right) -->
+                <div id="node-llm" class="node border-blue-900/50 bg-blue-900/10" style="top: 450px; left: 620px;">
+                    <i class="fas fa-brain text-2xl text-blue-400 mb-1"></i>
+                    <div class="font-bold text-blue-400 text-sm">LLM API</div>
+                    <div class="text-[10px] text-blue-200/50">Cloud Inference</div>
+                </div>
+
+                <!-- Security Badges -->
+                <div id="secure-badge"
+                    class="absolute bottom-10 left-10 bg-green-900/80 border border-green-500 text-green-300 px-3 py-1 rounded text-xs opacity-0 transition-opacity duration-500">
+                    <i class="fas fa-lock mr-2"></i>SECURE CONTEXT
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Data Inspector -->
+        <div class="w-4/12 bg-slate-900 border-l border-slate-700 flex flex-col shadow-2xl z-20">
+            <!-- Step Controller -->
+            <div class="p-6 border-b border-slate-800 bg-slate-800/80 backdrop-blur-md">
+                <div class="flex justify-between items-center mb-2">
+                    <div class="text-xs font-bold text-blue-400 uppercase tracking-wider" id="flow-title">FLOW 1:
+                        GENERATION</div>
+                    <div class="text-xs text-slate-500" id="step-indicator">Step 0 of 9</div>
+                </div>
+                <h2 class="text-lg font-bold text-white mb-4 min-h-[3.5rem]" id="step-headline">Ready to start
+                    simulation.</h2>
+                <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden mb-6">
+                    <div id="progress-bar" class="h-full bg-blue-500 transition-all duration-500 w-0"></div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="reset()"
+                        class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 hover:bg-slate-700 text-slate-300 text-sm transition-all font-medium group">
+                        <i class="fas fa-undo group-hover:-rotate-180 transition-transform duration-500"></i> Reset
+                    </button>
+                    <button onclick="nextStep()" id="next-btn"
+                        class="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold shadow-lg shadow-blue-500/20 transition-all group">
+                        Next Step <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Details Panel -->
+            <div class="flex-1 p-6 overflow-y-auto bg-[#0B1120] custom-scrollbar">
+                <div class="mb-6">
+                    <h3 class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">Operation Details
+                    </h3>
+                    <div class="bg-slate-800/50 rounded-lg p-4 border border-slate-700/50">
+                        <div id="detail-content" class="text-sm text-slate-300 space-y-2">
+                            <p>Select a flow and click start to begin the trace.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Data Payload -->
+                <div>
+                    <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="toggleCode()">
+                        <h3
+                            class="text-xs font-semibold text-slate-500 uppercase tracking-wider flex items-center gap-2">
+                            <i class="fas fa-code"></i> Data Payload
+                        </h3>
+                        <i id="code-chevron"
+                            class="fas fa-chevron-down text-slate-500 text-xs transition-transform"></i>
+                    </div>
+                    <div id="code-container"
+                        class="terminal rounded-lg border border-slate-800 overflow-hidden transition-all duration-300 max-h-[400px]">
+                        <div
+                            class="bg-slate-900/50 px-3 py-1 border-b border-slate-800 flex justify-between items-center">
+                            <span class="text-[10px] text-slate-500 font-mono" id="file-path">system.log</span>
+                            <div class="flex gap-1">
+                                <div class="w-2 h-2 rounded-full bg-slate-700"></div>
+                                <div class="w-2 h-2 rounded-full bg-slate-700"></div>
+                            </div>
+                        </div>
+                        <div class="p-4 font-mono text-xs overflow-x-auto">
+                            <pre id="code-display"
+                                class="leading-relaxed text-slate-400 bg-transparent">// Waiting...</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ================= STATE MANAGEMENT =================
+        let activeFlow = 'generation';
+        let currentStep = 0;
+        let isCodeExpanded = true;
+
+        // ================= DATA MODELS (Based on End_to_End_Flows.html) =================
+
+        const generationSteps = [
+            {
+                // STEP 1
+                nodes: ['node-user', 'node-server'],
+                lines: ['p-user-server'],
+                headline: "User Initiates Generation",
+                desc: "User clicks 'Launch Explorer'. Config and Suite metadata sent to Backend.",
+                details: "Endpoint: <code>POST /api/generate</code><br>Payload: Suite Name, URL, Goal, Creds (managed via env)",
+                path: "http_payload.json",
+                code: `{
+  <span class="key">"suite_name"</span>: <span class="string">"Smoke Test A"</span>,
+  <span class="key">"url"</span>: <span class="string">"https://saucedemo.com"</span>,
+  <span class="key">"goal"</span>: <span class="string">"Verify shopping cart flow"</span>,
+  <span class="key">"credentials"</span>: <span class="comment">// Handled via SecretsManager</span>
+}`,
+                style: "normal"
+            },
+            {
+                // STEP 2
+                nodes: ['node-server', 'node-secrets'],
+                lines: ['p-server-secrets'],
+                headline: "Server Init & Secrets Setup",
+                desc: "Backend initializes the SecretsManager using environment variables. No credentials are persisted to DB.",
+                details: "File: <code>src/core/server.py</code><br>Action: Initialize <code>SecretsManager</code>",
+                path: "server.py",
+                code: `<span class="comment"># Initialize Secrets (Zero-Trust)</span>
+secrets = SecretsManager(
+    username=os.getenv(<span class="string">"APP_USERNAME"</span>),
+    password=os.getenv(<span class="string">"APP_PASSWORD"</span>)
+)
+<span class="comment"># Ready for injection</span>`,
+                style: "secure"
+            },
+            {
+                // STEP 3
+                nodes: ['node-server', 'node-agent', 'node-browser'],
+                lines: ['p-server-agent', 'p-agent-browser'],
+                headline: "Agent & Browser Init",
+                desc: "Explorer Agent initializes the browser instance. Configures headless mode and security flags.",
+                details: "File: <code>src/agents/explorer_agent.py</code><br>Flags: <code>--disable-password-manager</code>",
+                path: "explorer_agent.py",
+                code: `browser = Browser(
+    headless=<span class="keyword">False</span>,
+    highlight_elements=<span class="keyword">True</span>,
+    args=[<span class="string">"--disable-password-manager"</span>]
+)
+<span class="func">await</span> browser.start()`,
+                style: "normal"
+            },
+            {
+                // STEP 3a (NEW OPTIMIZATION)
+                nodes: ['node-secrets', 'node-fs'],
+                lines: ['p-secrets-fs'],
+                headline: "Step 3a: Session Cache Check ⚡",
+                desc: "SecretsManager checks FileSystem for a valid session cookie to skip login.",
+                details: "File: <code>src/core/secrets_manager.py</code><br>Logic: <code>try_load_cached_session()</code>",
+                path: "secrets_manager.py",
+                code: `<span class="func">async def</span> try_load_cached_session(page):
+    cache_file = <span class="string">f"data/auth_cache/{user_hash}.json"</span>
+    <span class="keyword">if</span> os.path.exists(cache_file):
+        cookies = json.load(cache_file)
+        <span class="func">await</span> page.context.add_cookies(cookies)
+        <span class="keyword">return</span> <span class="keyword">True</span> <span class="comment"># ⚡ CACHE HIT</span>
+    <span class="keyword">return</span> <span class="keyword">False</span> <span class="comment"># ❌ CACHE MISS</span>`,
+                style: "opt"
+            },
+            {
+                // STEP 4 (Fallback)
+                nodes: ['node-secrets', 'node-browser'],
+                lines: ['p-secrets-browser'],
+                headline: "Step 4: Secure Credential Injection",
+                desc: "If Cache Miss: SecretsManager drives browser to log in. <strong>Credentials NEVER sent to LLM.</strong>",
+                details: "File: <code>src/core/secrets_manager.py</code><br>Method: Direct DOM Manipulation",
+                path: "secrets_manager.py",
+                code: `<span class="comment"># ZERO-TRUST: Bypassing AI Agent</span>
+<span class="func">await</span> page.fill(<span class="string">"#user-name"</span>, self.username)
+<span class="func">await</span> page.fill(<span class="string">"#password"</span>, self.password)
+<span class="func">await</span> page.click(<span class="string">"#login-button"</span>)
+<span class="func">await</span> page.keyboard.press(<span class="string">"Escape"</span>) <span class="comment"># Dismiss alerts</span>`,
+                style: "secure"
+            },
+            {
+                // STEP 5
+                nodes: ['node-agent', 'node-llm'],
+                lines: ['p-agent-llm'],
+                headline: "Agent Exploration Loop",
+                desc: "Agent captures screenshot/DOM (post-login) and asks LLM for next action.",
+                details: "Loop: Capture -> Reason -> Action<br>Data: <strong>Visuals Only (No Creds)</strong>",
+                path: "api_request.json",
+                code: `{
+  <span class="key">"role"</span>: <span class="string">"user"</span>,
+  <span class="key">"content"</span>: [
+    { <span class="key">"type"</span>: <span class="string">"text"</span>, <span class="key">"text"</span>: <span class="string">"Goal: Verify cart. What next?"</span> },
+    { <span class="key">"type"</span>: <span class="string">"image"</span>, <span class="key">"data"</span>: <span class="string">"base64_screenshot..."</span> }
+  ]
+}`,
+                style: "normal"
+            },
+            {
+                // STEP 6
+                nodes: ['node-llm', 'node-agent', 'node-browser'],
+                lines: ['p-agent-llm', 'p-agent-browser'],
+                headline: "LLM Directs Browser",
+                desc: "LLM analyzes UI and returns Playwright commands. Agent executes them.",
+                details: "Action: Click, Type, Scroll<br>Duration: 25-35s total exploration",
+                path: "api_response.json",
+                code: `{
+  <span class="key">"thought"</span>: <span class="string">"I see the inventory page."</span>,
+  <span class="key">"action"</span>: {
+    <span class="key">"type"</span>: <span class="string">"click"</span>,
+    <span class="key">"selector"</span>: <span class="string">"#add-to-cart-sauce-labs-backpack"</span>
+  }
+}`,
+                style: "normal"
+            },
+            {
+                // STEP 7
+                nodes: ['node-agent', 'node-server'],
+                lines: ['p-agent-server'],
+                headline: "Test Case Generation",
+                desc: "Agent finalizes exploration and returns structured JSON test cases to Server.",
+                details: "Output: Steps, Selectors, Metadata",
+                path: "agent_output.json",
+                code: `{
+  <span class="key">"test_cases"</span>: [{
+    <span class="key">"id"</span>: <span class="string">"TC001"</span>,
+    <span class="key">"title"</span>: <span class="string">"Add to Cart Flow"</span>,
+    <span class="key">"steps"</span>: [
+      <span class="string">"Click 'Add to cart' selector: #add-to-cart"</span>,
+      <span class="string">"Click 'Cart' selector: .shopping_cart_link"</span>
+    ]
+  }]
+}`,
+                style: "normal"
+            },
+            {
+                // STEP 8
+                nodes: ['node-server', 'node-fs'],
+                lines: ['p-server-fs'],
+                headline: "Persist Scripts & Data",
+                desc: "Server generates Python Playwright scripts and saves them to FileSystem.",
+                details: "Dir: <code>data/generated_tests/</code><br>File: <code>Smoke_Test_A_TC001.py</code>",
+                path: "data/generated_tests/TC001.py",
+                code: `<span class="keyword">async def</span> test_tc001():
+    <span class="keyword">async with</span> async_playwright() <span class="keyword">as</span> p:
+        browser = <span class="func">await</span> p.chromium.launch()
+        page = <span class="func">await</span> browser.new_page()
+        <span class="comment"># Injected Login Logic...</span>
+        <span class="func">await</span> page.click(<span class="string">"#add-to-cart"</span>)
+        <span class="func">print</span>(<span class="string">"PASS"</span>)`,
+                style: "normal"
+            }
+        ];
+
+        const executionSteps = [
+            {
+                // STEP 1
+                nodes: ['node-user', 'node-server'],
+                lines: ['p-user-server'],
+                headline: "User Clicks 'Run Test'",
+                desc: "User selects a generated test case (TC001) and triggers execution.",
+                details: "Endpoint: <code>POST /api/execute</code><br>Payload: Test ID",
+                path: "http_request.json",
+                code: `{
+  <span class="key">"suite_name"</span>: <span class="string">"Smoke Test A"</span>,
+  <span class="key">"test_case_id"</span>: <span class="string">"TC001"</span>
+}`,
+                style: "exec"
+            },
+            {
+                // STEP 2
+                nodes: ['node-server', 'node-fs'],
+                lines: ['p-server-fs'],
+                headline: "Locate Script",
+                desc: "Server searches FileSystem for the generated Python script matching the ID.",
+                details: "File: <code>src/core/server.py</code><br>Check: <code>os.path.exists()</code>",
+                path: "server.py",
+                code: `script_path = <span class="string">f"data/generated_tests/{suite}_{id}.py"</span>
+<span class="keyword">if not</span> os.path.exists(script_path):
+    <span class="keyword">return</span> <span class="string">"ERROR: Script missing"</span>`,
+                style: "exec"
+            },
+            {
+                // STEP 3
+                nodes: ['node-server', 'node-subprocess'],
+                lines: ['p-server-subprocess'],
+                headline: "Spawn Subprocess",
+                desc: "Server spawns an isolated Python subprocess to run the Playwright script.",
+                details: "Method: <code>subprocess.run()</code><br>Benefit: Process Isolation",
+                path: "src/agents/test_executor.py",
+                code: `process = subprocess.run(
+    [<span class="string">"python"</span>, script_path],
+    capture_output=<span class="keyword">True</span>,
+    text=<span class="keyword">True</span>,
+    timeout=<span class="number">60</span>
+)`,
+                style: "exec"
+            },
+            {
+                // STEP 4
+                nodes: ['node-subprocess', 'node-browser'],
+                lines: ['p-subprocess-browser'],
+                headline: "Execute Script",
+                desc: "Subprocess drives the browser directly. High speed execution.",
+                details: "Speed: ~10s (vs 30s AI)<br>Logic: Deterministic steps",
+                path: "execution.log",
+                code: `> Launching Chromium...
+> Navigating to Login...
+> Filling Credentials...
+> Clicking '#add-to-cart'...
+> Verifying Cart Badge...
+> RESULT: PASS`,
+                style: "exec"
+            },
+            {
+                // STEP 5
+                nodes: ['node-subprocess', 'node-server'],
+                lines: ['p-subprocess-server'],
+                headline: "Return Result",
+                desc: "Subprocess exits. Server parses stdout for 'PASS' or 'FAIL'.",
+                details: "Exit Code: 0<br>Stdout: 'PASS'",
+                path: "server.py",
+                code: `<span class="keyword">if</span> <span class="string">"PASS"</span> <span class="keyword">in</span> process.stdout:
+    status = <span class="string">"PASS"</span>
+<span class="keyword">else</span>:
+    status = <span class="string">"FAIL"</span>
+<span class="comment"># Update UI state</span>`,
+                style: "exec"
+            },
+            {
+                // STEP 6
+                nodes: ['node-server', 'node-user'],
+                lines: ['p-user-server'],
+                headline: "Update UI",
+                desc: "Server returns result to Frontend. Status badge updates to Green/Red.",
+                details: "Response: JSON<br>Visual: Badge Update",
+                path: "http_response.json",
+                code: `{
+  <span class="key">"test_id"</span>: <span class="string">"TC001"</span>,
+  <span class="key">"status"</span>: <span class="string">"PASS"</span>,
+  <span class="key">"logs"</span>: <span class="string">"..."</span>
+}`,
+                style: "exec"
+            }
+        ];
+
+        // ================= FUNCTIONS =================
+
+        function toggleCode() {
+            const container = document.getElementById('code-container');
+            const chevron = document.getElementById('code-chevron');
+            isCodeExpanded = !isCodeExpanded;
+            if (isCodeExpanded) {
+                container.style.maxHeight = '400px';
+                container.classList.remove('opacity-50');
+                chevron.style.transform = 'rotate(0deg)';
+            } else {
+                container.style.maxHeight = '32px';
+                container.classList.add('opacity-50');
+                chevron.style.transform = 'rotate(-90deg)';
+            }
+        }
+
+        function safeClassList(id, action, className) {
+            const el = document.getElementById(id);
+            if (el) {
+                if (action === 'add') el.classList.add(className);
+                if (action === 'remove') el.classList.remove(className);
+            }
+        }
+
+        function switchFlow(flowType) {
+            activeFlow = flowType;
+            currentStep = 0;
+            const btnGen = document.getElementById('btn-gen');
+            const btnExec = document.getElementById('btn-exec');
+            const title = document.getElementById('flow-title');
+            const subNode = document.getElementById('node-subprocess');
+
+            // Reset Styles
+            btnGen.className = "px-4 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-white transition-all";
+            btnExec.className = "px-4 py-2 rounded-md text-sm font-medium text-slate-400 hover:text-white transition-all";
+
+            if (flowType === 'generation') {
+                btnGen.className = "px-4 py-2 rounded-md text-sm font-medium transition-all bg-blue-600 text-white shadow-lg";
+                title.innerText = "FLOW 1: GENERATION";
+                title.className = "text-xs font-bold text-blue-400 uppercase tracking-wider";
+                if (subNode) subNode.classList.add('hidden');
+            } else {
+                btnExec.className = "px-4 py-2 rounded-md text-sm font-medium transition-all bg-purple-600 text-white shadow-lg";
+                title.innerText = "FLOW 2: EXECUTION";
+                title.className = "text-xs font-bold text-purple-400 uppercase tracking-wider";
+                if (subNode) subNode.classList.remove('hidden');
+            }
+            updateUI();
+        }
+
+        function nextStep() {
+            const stepData = activeFlow === 'generation' ? generationSteps : executionSteps;
+            if (currentStep >= stepData.length) return;
+            currentStep++;
+            updateUI();
+        }
+
+        function reset() {
+            currentStep = 0;
+            updateUI();
+        }
+
+        function updateUI() {
+            const stepData = activeFlow === 'generation' ? generationSteps : executionSteps;
+            const max = stepData.length;
+
+            // 1. Progress Indicators
+            if (document.getElementById('progress-bar')) {
+                document.getElementById('progress-bar').style.width = `${(currentStep / max) * 100}%`;
+            }
+            if (document.getElementById('step-indicator')) {
+                document.getElementById('step-indicator').innerText = `Step ${currentStep} of ${max}`;
+            }
+
+            // 2. Reset Visual Elements
+            document.querySelectorAll('.node').forEach(el => {
+                el.classList.remove('active', 'secure-active', 'opt-active', 'exec-active');
+            });
+            document.querySelectorAll('.connector').forEach(el => {
+                el.classList.remove('active', 'secure', 'opt', 'exec');
+                el.style.markerEnd = "";
+            });
+            safeClassList('secure-badge', 'remove', 'opacity-100');
+            safeClassList('secure-badge', 'add', 'opacity-0');
+
+            // 3. Handle Step 0 (Start state)
+            if (currentStep === 0) {
+                document.getElementById('step-headline').innerText = activeFlow === 'generation'
+                    ? "Ready to launch exploration agent..."
+                    : "Ready to execute generated test...";
+                document.getElementById('detail-content').innerHTML = "<p>Select Next Step to begin trace.</p>";
+                document.getElementById('code-display').innerHTML = '<span class="comment">// Idle</span>';
+                document.getElementById('next-btn').innerHTML = `Start <i class="fas fa-play ml-2"></i>`;
+                return;
+            }
+
+            // 4. Render Active Step
+            const step = stepData[currentStep - 1];
+
+            // Update Text Panels
+            document.getElementById('step-headline').innerText = step.headline;
+            document.getElementById('detail-content').innerHTML = `
+                <p class="font-medium text-white mb-2">${step.desc}</p>
+                <div class="mt-2 pt-2 border-t border-slate-700/50 text-xs text-slate-400 font-mono">
+                    ${step.details}
+                </div>
+            `;
+            document.getElementById('file-path').innerText = step.path || 'data.json';
+            document.getElementById('code-display').innerHTML = step.code;
+
+            // Update Button
+            document.getElementById('next-btn').innerHTML = currentStep === max ?
+                `Finish <i class="fas fa-check ml-2"></i>` :
+                `Next Step <i class="fas fa-arrow-right ml-2"></i>`;
+
+            // Update Graph Nodes
+            if (step.nodes) {
+                step.nodes.forEach(nodeId => {
+                    const el = document.getElementById(nodeId);
+                    if (el) {
+                        el.classList.add('active');
+                        if (step.style === 'secure') el.classList.add('secure-active');
+                        if (step.style === 'opt') el.classList.add('opt-active');
+                        if (step.style === 'exec') el.classList.add('exec-active');
+                    }
+                });
+            }
+
+            // Update Graph Lines
+            if (step.lines) {
+                step.lines.forEach(lineId => {
+                    const el = document.getElementById(lineId);
+                    if (el) {
+                        el.classList.add('active');
+                        if (step.style === 'secure') {
+                            el.classList.add('secure');
+                            el.style.markerEnd = "url(#arrow-green)";
+                        } else if (step.style === 'opt') {
+                            el.classList.add('opt');
+                            el.style.markerEnd = "url(#arrow-amber)";
+                        } else if (step.style === 'exec') {
+                            el.classList.add('exec');
+                            el.style.markerEnd = "url(#arrow-purple)";
+                        } else {
+                            el.style.markerEnd = "url(#arrow-blue)";
+                        }
+                    }
+                });
+            }
+
+            // Show Secure Badge if needed
+            if (step.style === 'secure') {
+                safeClassList('secure-badge', 'add', 'opacity-100');
+                safeClassList('secure-badge', 'remove', 'opacity-0');
+            }
+        }
+
+        // Init
+        switchFlow('generation');
+    </script>
+</body>
+
+</html>

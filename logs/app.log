@@ -1949,3 +1949,880 @@ Final Result: PASS
 2025-11-30 01:10:10,889 - server - INFO - Generated script: data/generated_tests/Smoke Test A_TC001_shopping_cart_checkout.py
 2025-11-30 01:10:10,889 - server - INFO - Saved metadata to: data/generated_tests/Smoke Test A_metadata.json
 2025-11-30 01:10:13,246 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 00:35:05,944 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 00:35:31,228 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-12-01 00:37:00,928 - server - INFO - Raw agent output length: 647 characters
+2025-12-01 00:37:00,928 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 00:37:00,928 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-12-01 00:37:00,930 - server - INFO - Saved 3 test suites to data/test_suites.json
+2025-12-01 00:37:00,930 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 00:37:00,930 - server - INFO - Generated script: data/generated_tests/Smoke Test A_TC001_shopping_cart_checkout.py
+2025-12-01 00:37:00,931 - server - INFO - Saved metadata to: data/generated_tests/Smoke Test A_metadata.json
+2025-12-01 00:37:02,504 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 11:48:36,004 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-12-01 11:48:36,006 - server - WARNING - No Playwright script found for TC001, falling back to AI execution
+2025-12-01 11:48:37,063 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-12-01 11:48:37,063 - server - WARNING - No Playwright script found for TC001, falling back to AI execution
+2025-12-01 11:48:38,935 - server - INFO - Received generation request for suite 'Smoke Test A' at URL: https://saucedemo.com
+2025-12-01 11:50:47,135 - server - INFO - Raw agent output length: 669 characters
+2025-12-01 11:50:47,137 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 11:50:47,137 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A'.
+2025-12-01 11:50:47,139 - server - INFO - Saved 3 test suites to data/test_suites.json
+2025-12-01 11:50:47,139 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 11:50:47,141 - server - INFO - Generated script: data/generated_tests/Smoke Test A_TC001_shopping_cart_checkout.py
+2025-12-01 11:50:47,142 - server - INFO - Saved metadata to: data/generated_tests/Smoke Test A_metadata.json
+2025-12-01 11:50:48,721 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 11:50:51,847 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-12-01 11:50:51,848 - server - WARNING - No Playwright script found for TC001, falling back to AI execution
+2025-12-01 11:50:52,973 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-12-01 11:50:52,973 - server - WARNING - No Playwright script found for TC001, falling back to AI execution
+2025-12-01 11:50:53,596 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-12-01 11:50:53,596 - server - WARNING - No Playwright script found for TC001, falling back to AI execution
+2025-12-01 11:51:07,158 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-12-01 11:51:07,159 - server - WARNING - No Playwright script found for TC001, falling back to AI execution
+2025-12-01 11:54:25,022 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 11:54:56,356 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 11:56:48,730 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 11:59:21,731 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-12-01 11:59:21,734 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-12-01 11:59:21,761 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py", line 87
+    print("Step 4: Fill First Name using selector: input[data-test="firstName"]")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 11:59:21,761 - server - INFO - Test execution result: FAIL
+2025-12-01 11:59:22,582 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A
+2025-12-01 11:59:22,582 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py
+2025-12-01 11:59:22,600 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A_TC001_verify_shopping_cart_and_checkout_flow.py", line 87
+    print("Step 4: Fill First Name using selector: input[data-test="firstName"]")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 11:59:22,601 - server - INFO - Test execution result: FAIL
+2025-12-01 11:59:26,909 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-01 11:59:26,909 - server - INFO - Returning 3 suites to frontend
+2025-12-01 11:59:28,717 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 11:59:28,718 - server - ERROR - Suite not found: 
+2025-12-01 11:59:29,666 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 11:59:29,666 - server - ERROR - Suite not found: 
+2025-12-01 11:59:31,771 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-01 11:59:31,771 - server - INFO - Returning 3 suites to frontend
+2025-12-01 11:59:32,592 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-01 11:59:32,592 - server - INFO - Returning 3 suites to frontend
+2025-12-01 11:59:33,736 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 11:59:33,736 - server - ERROR - Suite not found: 
+2025-12-01 11:59:34,421 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 11:59:34,421 - server - ERROR - Suite not found: 
+2025-12-01 11:59:35,276 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 11:59:35,278 - server - ERROR - Suite not found: 
+2025-12-01 11:59:35,538 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 11:59:35,538 - server - ERROR - Suite not found: 
+2025-12-01 11:59:40,605 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 11:59:40,605 - server - ERROR - Suite not found: 
+2025-12-01 11:59:41,254 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 11:59:41,255 - server - ERROR - Suite not found: 
+2025-12-01 11:59:58,063 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 11:59:58,064 - server - ERROR - Suite not found: 
+2025-12-01 12:00:16,310 - server - INFO - Received execution request for test case: TC001 in suite: 
+2025-12-01 12:00:16,311 - server - ERROR - Suite not found: 
+2025-12-01 12:07:21,000 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-01 12:07:21,001 - server - INFO - Returning 3 suites to frontend
+2025-12-01 12:07:28,808 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:28,810 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:28,835 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:28,836 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:29,883 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:29,884 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:29,910 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:29,910 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:30,502 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:30,502 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:30,517 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:30,518 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:30,986 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:30,987 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:31,013 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:31,013 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:32,579 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:32,580 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:32,604 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:32,605 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:36,155 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:36,158 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:36,207 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:36,207 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:36,699 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:36,700 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:36,726 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:36,726 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:36,914 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:36,915 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:36,939 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:36,940 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:37,140 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:37,142 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:37,166 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:37,166 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:37,491 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:37,491 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:37,506 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:37,506 - server - INFO - Test execution result: FAIL
+2025-12-01 12:07:42,011 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:07:42,012 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:07:42,027 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:07:42,027 - server - INFO - Test execution result: FAIL
+2025-12-01 12:08:48,071 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 12:10:27,536 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-01 12:10:27,538 - server - INFO - Returning 3 suites to frontend
+2025-12-01 12:10:31,467 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:10:31,469 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:10:31,500 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:10:31,500 - server - INFO - Test execution result: FAIL
+2025-12-01 12:10:32,341 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:10:32,342 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:10:32,367 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:10:32,368 - server - INFO - Test execution result: FAIL
+2025-12-01 12:10:33,154 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:10:33,155 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:10:33,180 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:10:33,181 - server - INFO - Test execution result: FAIL
+2025-12-01 12:10:33,652 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:10:33,653 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:10:33,677 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:10:33,678 - server - INFO - Test execution result: FAIL
+2025-12-01 12:10:33,842 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:10:33,842 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:10:33,866 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:10:33,866 - server - INFO - Test execution result: FAIL
+2025-12-01 12:10:40,436 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:10:40,437 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:10:40,461 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py", line 59
+    btn = page.locator('button[data-test='add-to-cart-sauce-labs-backpack']').first
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 12:10:40,461 - server - INFO - Test execution result: FAIL
+2025-12-01 12:11:24,815 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 12:11:28,475 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 12:12:06,411 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 12:13:27,696 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-01 12:13:27,697 - server - INFO - Returning 3 suites to frontend
+2025-12-01 12:13:30,804 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Nov-29
+2025-12-01 12:13:30,806 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 12:13:48,937 - server - INFO - Script execution output: ner a
+  - Clicking button[data-test='checkout']
+Step 4: Input 'Test' into First Name field using selector: input[data-test='firstName']
+Step 5: Input 'User' into Last Name field using selector: input[data-test='lastName']
+Step 6: Input '12345' into Zip/Postal Code field using selector: input[data-test='postalCode']
+Step 7: Click 'Continue' using selector: input[data-test='continue']
+  - Clicking input[data-test='continue']
+  - Clicking button[data-test='finish']
+Test PASSED ✓
+Final Result: PASS
+
+2025-12-01 12:13:48,937 - server - INFO - Test execution result: PASS
+2025-12-01 12:13:58,354 - server - INFO - Received execution request for test case: ERR in suite: Smoke Test A - Nov-30-2025
+2025-12-01 12:13:58,355 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Nov-30-2025_ERR_json_parse_error.py
+2025-12-01 12:14:07,093 - server - INFO - Script execution output: Starting test: JSON Parse Error
+Step: Navigate to login page
+Step: Enter credentials
+Step: Click login button
+Step 1: Failed to extract valid JSON from agent response.
+Step 2: Error details: Could not find valid JSON structure
+Step 3: Raw output snippet: The shopping cart flow verification test case has been completed successfully. Below are the documented steps with their selectors as requested.
+Test PASSED ✓
+Final Result: PASS
+
+2025-12-01 12:14:07,094 - server - INFO - Test execution result: PASS
+2025-12-01 15:29:03,766 - server - INFO - Received generation request for suite 'Smoke Test Dec-01' at URL: https://demowebshop.tricentis.com/
+2025-12-01 15:29:27,987 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-01 15:29:27,987 - server - INFO - Returning 3 suites to frontend
+2025-12-01 15:30:01,036 - server - INFO - Received generation request for suite 'Smoke Test A - Nov-29' at URL: https://demowebshop.tricentis.com/
+2025-12-01 15:30:31,788 - server - INFO - Raw agent output length: 365 characters
+2025-12-01 15:30:31,790 - server - ERROR - Crash occurred in generate_tests: name 're' is not defined. Report saved to logs/crashes/crash_20251201_153031.txt
+2025-12-01 15:30:41,794 - server - INFO - Raw agent output length: 112 characters
+2025-12-01 15:30:41,796 - server - ERROR - Crash occurred in generate_tests: name 're' is not defined. Report saved to logs/crashes/crash_20251201_153041.txt
+2025-12-01 15:32:23,430 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 15:33:23,549 - server - INFO - Received generation request for suite 'Smoke Test A - Nov-29' at URL: https://demowebshop.tricentis.com/
+2025-12-01 15:43:49,815 - server - INFO - Raw agent output length: 1655 characters
+2025-12-01 15:43:49,817 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 15:43:49,817 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A - Nov-29'.
+2025-12-01 15:43:49,819 - server - INFO - Saved 3 test suites to data/test_suites.json
+2025-12-01 15:43:49,819 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 15:43:49,821 - server - INFO - Generated script: data/generated_tests/Smoke Test A - Nov-29_TC001_shopping_cart_checkout.py
+2025-12-01 15:43:49,821 - server - INFO - Saved metadata to: data/generated_tests/Smoke Test A - Nov-29_metadata.json
+2025-12-01 15:43:51,342 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 16:16:09,622 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 16:18:23,914 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 16:18:37,634 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 16:19:38,685 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-01 16:20:44,913 - server - INFO - Received generation request for suite 'Smoke Test A - Dec-01' at URL: https://demowebshop.tricentis.com/
+2025-12-01 16:27:10,657 - server - INFO - Raw agent output length: 2148 characters
+2025-12-01 16:27:10,660 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 16:27:10,660 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test A - Dec-01'.
+2025-12-01 16:27:10,661 - server - INFO - Saved 4 test suites to data/test_suites.json
+2025-12-01 16:27:10,661 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 16:27:10,662 - server - INFO - Generated script: data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py
+2025-12-01 16:27:10,663 - server - INFO - Saved metadata to: data/generated_tests/Smoke Test A - Dec-01_metadata.json
+2025-12-01 16:27:12,657 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-01 16:27:41,622 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Dec-01
+2025-12-01 16:27:41,623 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py
+2025-12-01 16:27:41,655 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py", line 71
+    await page.locator("#first-name, input[name="firstName"]").first.fill("Test")
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 16:27:41,656 - server - INFO - Test execution result: FAIL
+2025-12-01 16:27:50,396 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-01 16:27:50,396 - server - INFO - Returning 4 suites to frontend
+2025-12-01 16:27:55,597 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Dec-01
+2025-12-01 16:27:55,598 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py
+2025-12-01 16:27:55,617 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py", line 71
+    await page.locator("#first-name, input[name="firstName"]").first.fill("Test")
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 16:27:55,617 - server - INFO - Test execution result: FAIL
+2025-12-01 16:28:02,869 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Dec-01
+2025-12-01 16:28:02,869 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py
+2025-12-01 16:28:02,894 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py", line 71
+    await page.locator("#first-name, input[name="firstName"]").first.fill("Test")
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 16:28:02,894 - server - INFO - Test execution result: FAIL
+2025-12-01 16:28:18,001 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Dec-01
+2025-12-01 16:28:18,002 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py
+2025-12-01 16:28:18,029 - server - INFO - Script execution output:   File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py", line 71
+    await page.locator("#first-name, input[name="firstName"]").first.fill("Test")
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+2025-12-01 16:28:18,029 - server - INFO - Test execution result: FAIL
+2025-12-01 16:29:47,194 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-01 16:30:26,606 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-01 16:31:49,716 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Dec-01
+2025-12-01 16:31:49,718 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py
+2025-12-01 16:32:25,203 - server - INFO - Script execution output: Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py", line 286, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-12-01 16:32:25,204 - server - INFO - Test execution result: FAIL
+2025-12-01 16:32:25,312 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-01 16:32:25,313 - server - INFO - Returning 4 suites to frontend
+2025-12-01 16:32:28,683 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test A - Dec-01
+2025-12-01 16:32:28,685 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py
+2025-12-01 16:33:06,331 - server - INFO - Script execution output: Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test A - Dec-01_TC001_complete_user_registration_product_addition_and_ch.py", line 286, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined
+
+2025-12-01 16:33:06,331 - server - INFO - Test execution result: FAIL
+2025-12-01 16:36:30,161 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-01 16:36:44,911 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-01 16:37:00,850 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-01 16:41:23,751 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-01 16:41:23,755 - server - INFO - Returning 4 suites to frontend
+2025-12-01 16:41:28,115 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-01 16:41:28,115 - server - INFO - Returning 4 suites to frontend
+2025-12-01 16:41:40,965 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-01 16:41:40,966 - server - INFO - Returning 4 suites to frontend
+2025-12-01 16:41:44,269 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-01 16:43:51,299 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-01 16:44:20,916 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-01 16:44:20,917 - server - INFO - Returning 4 suites to frontend
+2025-12-01 16:47:03,562 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-01 16:47:03,565 - server - INFO - Returning 4 suites to frontend
+2025-12-01 16:47:58,481 - server - INFO - Received generation request for suite 'Smoke Test B - Dec-01' at URL: https://demowebshop.tricentis.com/
+2025-12-01 17:01:05,996 - server - INFO - Raw agent output length: 3537 characters
+2025-12-01 17:01:05,998 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 17:01:05,998 - server - INFO - Successfully generated 5 test cases for suite 'Smoke Test B - Dec-01'.
+2025-12-01 17:01:06,000 - server - INFO - Saved 5 test suites to data/test_suites.json
+2025-12-01 17:01:06,000 - server - INFO - Generating Playwright scripts for 5 test cases...
+2025-12-01 17:01:06,002 - server - INFO - Generated script: data/generated_tests/Smoke Test B - Dec-01_TC001_successful_user_registration.py
+2025-12-01 17:01:06,002 - server - INFO - Generated script: data/generated_tests/Smoke Test B - Dec-01_TC002_successful_product_search_and_add_to_cart.py
+2025-12-01 17:01:06,002 - server - INFO - Generated script: data/generated_tests/Smoke Test B - Dec-01_TC003_successful_checkout_flow.py
+2025-12-01 17:01:06,003 - server - INFO - Generated script: data/generated_tests/Smoke Test B - Dec-01_TC004_update_user_information.py
+2025-12-01 17:01:06,003 - server - INFO - Generated script: data/generated_tests/Smoke Test B - Dec-01_TC005_successful_password_change.py
+2025-12-01 17:01:06,004 - server - ERROR - Crash occurred in generate_tests: PlaywrightGenerator.save_test_metadata() got an unexpected keyword argument 'credentials'. Report saved to logs/crashes/crash_20251201_170106.txt
+2025-12-01 17:01:08,073 - server - INFO - Loaded 5 test suites from data/test_suites.json
+2025-12-01 17:16:39,425 - server - INFO - Loaded 5 test suites from data/test_suites.json
+2025-12-01 17:17:39,091 - server - INFO - Fetching all test suites. Total suites: 5
+2025-12-01 17:17:39,092 - server - INFO - Returning 5 suites to frontend
+2025-12-01 17:17:46,780 - server - INFO - Fetching all test suites. Total suites: 5
+2025-12-01 17:17:46,780 - server - INFO - Returning 5 suites to frontend
+2025-12-01 17:17:57,170 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test B - Dec-01
+2025-12-01 17:17:57,172 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test B - Dec-01_TC001_successful_user_registration.py
+2025-12-01 17:18:41,106 - server - INFO - Script execution output: /sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test B - Dec-01_TC001_successful_user_registration.py", line 128, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 17:18:41,106 - server - INFO - Test execution result: FAIL
+2025-12-01 17:20:17,587 - server - INFO - Loaded 5 test suites from data/test_suites.json
+2025-12-01 17:36:54,520 - server - INFO - Received generation request for suite 'Demo Sebshop - Dec-01' at URL: https://demowebshop.tricentis.com/
+2025-12-01 17:38:41,933 - server - INFO - Fetching all test suites. Total suites: 5
+2025-12-01 17:38:41,934 - server - INFO - Returning 5 suites to frontend
+2025-12-01 17:38:45,590 - server - INFO - Received execution request for test case: TC002 in suite: Smoke Test B - Dec-01
+2025-12-01 17:38:45,593 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test B - Dec-01_TC002_successful_product_search_and_add_to_cart.py
+2025-12-01 17:39:28,242 - server - INFO - Script execution output: miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test B - Dec-01_TC002_successful_product_search_and_add_to_cart.py", line 122, in test_tc002
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 17:39:28,243 - server - INFO - Test execution result: FAIL
+2025-12-01 17:39:55,039 - server - INFO - Raw agent output length: 569 characters
+2025-12-01 17:39:55,039 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 17:39:55,040 - server - INFO - Successfully generated 1 test cases for suite 'Demo Sebshop - Dec-01'.
+2025-12-01 17:39:55,041 - server - INFO - Saved 6 test suites to data/test_suites.json
+2025-12-01 17:39:55,041 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 17:39:55,042 - server - INFO - Generated script: data/generated_tests/Demo Sebshop - Dec-01_TC001_user_registration_and_attempted_logoutlogin.py
+2025-12-01 17:39:55,043 - server - INFO - Saved test metadata to: data/generated_tests/Demo Sebshop - Dec-01_metadata.json
+2025-12-01 17:39:57,086 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 17:42:50,839 - server - INFO - Received generation request for suite 'Smoke Test B - Dec-01' at URL: https://demowebshop.tricentis.com/
+2025-12-01 17:45:05,576 - server - INFO - Raw agent output length: 230 characters
+2025-12-01 17:45:05,577 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 17:45:05,578 - server - INFO - Successfully generated 1 test cases for suite 'Smoke Test B - Dec-01'.
+2025-12-01 17:45:05,579 - server - INFO - Saved 6 test suites to data/test_suites.json
+2025-12-01 17:45:05,579 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 17:45:05,581 - server - INFO - Generated script: data/generated_tests/Smoke Test B - Dec-01_ERR_agent_execution_failed.py
+2025-12-01 17:45:05,582 - server - INFO - Saved test metadata to: data/generated_tests/Smoke Test B - Dec-01_metadata.json
+2025-12-01 17:45:07,640 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 17:48:25,471 - server - INFO - Received generation request for suite 'Smoke Test B - Dec-01' at URL: https://demowebshop.tricentis.com/
+2025-12-01 17:49:18,858 - server - INFO - Raw agent output length: 505 characters
+2025-12-01 17:49:18,864 - server - ERROR - Crash occurred in generate_tests: name 're' is not defined. Report saved to logs/crashes/crash_20251201_174918.txt
+2025-12-01 17:51:22,318 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 17:51:52,152 - server - INFO - Received generation request for suite 'Smoke Test B - Dec-01' at URL: https://demowebshop.tricentis.com/
+2025-12-01 17:52:48,527 - server - INFO - Raw agent output length: 986 characters
+2025-12-01 17:52:48,529 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 17:52:48,529 - server - INFO - Successfully generated 2 test cases for suite 'Smoke Test B - Dec-01'.
+2025-12-01 17:52:48,530 - server - INFO - Saved 6 test suites to data/test_suites.json
+2025-12-01 17:52:48,530 - server - INFO - Generating Playwright scripts for 2 test cases...
+2025-12-01 17:52:48,532 - server - INFO - Generated script: data/generated_tests/Smoke Test B - Dec-01_TC001_user_registration.py
+2025-12-01 17:52:48,532 - server - INFO - Generated script: data/generated_tests/Smoke Test B - Dec-01_TC002_user_logout_and_login.py
+2025-12-01 17:52:48,533 - server - INFO - Saved test metadata to: data/generated_tests/Smoke Test B - Dec-01_metadata.json
+2025-12-01 17:52:50,602 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 17:53:16,631 - server - INFO - Received execution request for test case: TC002 in suite: Smoke Test B - Dec-01
+2025-12-01 17:53:16,632 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test B - Dec-01_TC002_successful_product_search_and_add_to_cart.py
+2025-12-01 17:54:01,134 - server - INFO - Script execution output: miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test B - Dec-01_TC002_successful_product_search_and_add_to_cart.py", line 122, in test_tc002
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 17:54:01,136 - server - INFO - Test execution result: FAIL
+2025-12-01 18:02:09,963 - server - INFO - Received execution request for test case: TC002 in suite: Smoke Test B - Dec-01
+2025-12-01 18:02:09,964 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test B - Dec-01_TC002_successful_product_search_and_add_to_cart.py
+2025-12-01 18:02:50,310 - server - INFO - Script execution output: miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test B - Dec-01_TC002_successful_product_search_and_add_to_cart.py", line 122, in test_tc002
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 18:02:50,311 - server - INFO - Test execution result: FAIL
+2025-12-01 18:03:41,005 - server - INFO - Received execution request for test case: TC001 in suite: Smoke Test B - Dec-01
+2025-12-01 18:03:41,008 - server - INFO - Executing generated Playwright script: data/generated_tests/Smoke Test B - Dec-01_TC001_successful_user_registration.py
+2025-12-01 18:04:20,655 - server - INFO - Script execution output:    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Smoke Test B - Dec-01_TC001_successful_user_registration.py", line 128, in test_tc001
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 18:04:20,655 - server - INFO - Test execution result: FAIL
+2025-12-01 18:04:22,246 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 18:05:58,886 - server - INFO - Received generation request for suite 'Smoke Test A - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 18:10:39,522 - server - INFO - Raw agent output length: 369 characters
+2025-12-01 18:10:39,523 - server - ERROR - Failed to parse JSON from agent output. Raw result (first 500 chars): I was unable to complete the requested task because the application's login page at https://www.saucedemo.com/ consistently failed to load interactive elements, resulting in an empty DOM tree in the browser state. I could not perform the required steps (Login, Add Item, Verify, Remove Item, Verify, Logout) or capture the necessary CSS selectors for the output format.
+2025-12-01 18:10:39,525 - server - INFO - Saved 6 test suites to data/test_suites.json
+2025-12-01 18:10:39,525 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 18:10:39,525 - server - INFO - Generated script: data/generated_tests/Smoke Test A - Dec-01_ERR_json_parse_error.py
+2025-12-01 18:10:39,526 - server - INFO - Saved test metadata to: data/generated_tests/Smoke Test A - Dec-01_metadata.json
+2025-12-01 18:10:41,793 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 18:11:31,795 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 18:11:59,297 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 18:20:10,146 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 18:20:25,568 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 18:20:46,596 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 18:34:07,187 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-01 18:42:05,089 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:42:05,090 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:42:43,707 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:42:43,708 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:42:44,537 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:42:44,537 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:42:54,129 - server - INFO - Received execution request for test case: TC001 in suite: Demo Sebshop - Dec-01
+2025-12-01 18:42:54,130 - server - WARNING - No Playwright script found for TC001, falling back to AI execution
+2025-12-01 18:44:18,720 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:44:18,721 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:55:41,739 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:55:41,741 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:55:44,916 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:55:44,916 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:01,482 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:01,483 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:02,108 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:02,108 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:02,426 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:02,426 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:02,587 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:02,587 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:02,736 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:02,736 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:02,898 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:02,898 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:03,065 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:03,066 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:03,226 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:03,227 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:03,417 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:03,418 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:03,590 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:03,590 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:25,550 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:25,552 - server - INFO - Returning 6 suites to frontend
+2025-12-01 18:56:28,162 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 18:56:28,162 - server - INFO - Returning 6 suites to frontend
+2025-12-01 19:00:26,231 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 19:00:26,236 - server - INFO - Returning 6 suites to frontend
+2025-12-01 19:00:28,383 - server - INFO - Received execution request for test case: TC001 in suite: Demo Sebshop - Dec-01
+2025-12-01 19:00:28,385 - server - WARNING - No Playwright script found for TC001, falling back to AI execution
+2025-12-01 19:00:41,225 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-01 19:00:41,226 - server - INFO - Returning 6 suites to frontend
+2025-12-01 19:00:57,971 - server - INFO - Received generation request for suite 'Saucelab - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 19:01:44,167 - server - INFO - Raw agent output length: 230 characters
+2025-12-01 19:01:44,169 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 19:01:44,169 - server - INFO - Successfully generated 1 test cases for suite 'Saucelab - Dec-01'.
+2025-12-01 19:01:44,171 - server - INFO - Saved 7 test suites to data/test_suites.json
+2025-12-01 19:01:44,171 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 19:01:44,172 - server - INFO - Generated script: data/generated_tests/Saucelab - Dec-01_ERR_agent_execution_failed.py
+2025-12-01 19:01:44,172 - server - INFO - Saved test metadata to: data/generated_tests/Saucelab - Dec-01_metadata.json
+2025-12-01 19:01:46,445 - server - INFO - Loaded 7 test suites from data/test_suites.json
+2025-12-01 19:12:57,224 - server - INFO - Received generation request for suite 'Saucelab_SP - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 19:14:42,630 - server - INFO - Raw agent output length: 869 characters
+2025-12-01 19:14:42,631 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 19:14:42,632 - server - INFO - Successfully generated 1 test cases for suite 'Saucelab_SP - Dec-01'.
+2025-12-01 19:14:42,634 - server - INFO - Saved 8 test suites to data/test_suites.json
+2025-12-01 19:14:42,634 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 19:14:42,635 - server - INFO - Generated script: data/generated_tests/Saucelab_SP - Dec-01_TC001_login_add_item_verify_remove_item_verify_and_logou.py
+2025-12-01 19:14:42,636 - server - INFO - Saved test metadata to: data/generated_tests/Saucelab_SP - Dec-01_metadata.json
+2025-12-01 19:14:45,011 - server - INFO - Loaded 8 test suites from data/test_suites.json
+2025-12-01 19:18:53,147 - server - INFO - Loaded 8 test suites from data/test_suites.json
+2025-12-01 19:21:22,577 - server - INFO - Fetching all test suites. Total suites: 8
+2025-12-01 19:21:22,578 - server - INFO - Returning 8 suites to frontend
+2025-12-01 19:21:29,104 - server - INFO - Received execution request for test case: TC001 in suite: Saucelab_SP - Dec-01
+2025-12-01 19:21:29,106 - server - INFO - Executing generated Playwright script: data/generated_tests/Saucelab_SP - Dec-01_TC001_login_add_item_verify_remove_item_verify_and_logou.py
+2025-12-01 19:21:38,985 - server - INFO - Script execution output: e3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Saucelab_SP - Dec-01_TC001_login_add_item_verify_remove_item_verify_and_logou.py", line 153, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 19:21:38,986 - server - INFO - Test execution result: FAIL
+2025-12-01 19:23:59,838 - server - INFO - Received generation request for suite 'New - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 19:24:12,690 - server - ERROR - Crash occurred in generate_tests: 'Page' object has no attribute 'close'. Report saved to logs/crashes/crash_20251201_192412.txt
+2025-12-01 19:24:14,165 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-01 19:26:55,951 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-01 19:27:51,174 - server - INFO - Received generation request for suite 'New - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 19:28:14,918 - server - INFO - Raw agent output length: 230 characters
+2025-12-01 19:28:14,919 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 19:28:14,919 - server - INFO - Successfully generated 1 test cases for suite 'New - Dec-01'.
+2025-12-01 19:28:14,921 - server - INFO - Saved 2 test suites to data/test_suites.json
+2025-12-01 19:28:14,921 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 19:28:14,922 - server - INFO - Generated script: data/generated_tests/New - Dec-01_ERR_agent_execution_failed.py
+2025-12-01 19:28:14,922 - server - INFO - Saved test metadata to: data/generated_tests/New - Dec-01_metadata.json
+2025-12-01 19:28:17,220 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-01 19:31:26,470 - server - INFO - Received generation request for suite 'New - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 19:31:50,209 - server - INFO - Raw agent output length: 230 characters
+2025-12-01 19:31:50,209 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 19:31:50,209 - server - INFO - Successfully generated 1 test cases for suite 'New - Dec-01'.
+2025-12-01 19:31:50,211 - server - INFO - Saved 2 test suites to data/test_suites.json
+2025-12-01 19:31:50,211 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 19:31:50,213 - server - INFO - Generated script: data/generated_tests/New - Dec-01_ERR_agent_execution_failed.py
+2025-12-01 19:31:50,213 - server - INFO - Saved test metadata to: data/generated_tests/New - Dec-01_metadata.json
+2025-12-01 19:31:51,700 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-01 19:31:56,820 - server - INFO - Received generation request for suite 'New - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 19:34:34,023 - server - INFO - Raw agent output length: 938 characters
+2025-12-01 19:34:34,025 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 19:34:34,025 - server - INFO - Successfully generated 1 test cases for suite 'New - Dec-01'.
+2025-12-01 19:34:34,026 - server - INFO - Saved 2 test suites to data/test_suites.json
+2025-12-01 19:34:34,026 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 19:34:34,028 - server - INFO - Generated script: data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py
+2025-12-01 19:34:34,028 - server - INFO - Saved test metadata to: data/generated_tests/New - Dec-01_metadata.json
+2025-12-01 19:34:36,357 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-01 19:34:58,431 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 19:34:58,432 - server - INFO - Returning 2 suites to frontend
+2025-12-01 19:35:01,364 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 19:35:01,365 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py
+2025-12-01 19:35:11,310 - server - INFO - Script execution output: miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py", line 153, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 19:35:11,310 - server - INFO - Test execution result: FAIL
+2025-12-01 19:35:23,536 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 19:35:23,538 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py
+2025-12-01 19:35:32,624 - server - INFO - Script execution output: miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py", line 153, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 19:35:32,625 - server - INFO - Test execution result: FAIL
+2025-12-01 19:35:50,169 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 19:35:50,171 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py
+2025-12-01 19:35:58,707 - server - INFO - Script execution output: miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py", line 153, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 19:35:58,708 - server - INFO - Test execution result: FAIL
+2025-12-01 19:40:08,275 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 19:40:08,276 - server - INFO - Returning 2 suites to frontend
+2025-12-01 19:40:10,541 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 19:40:10,543 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py
+2025-12-01 19:40:19,745 - server - INFO - Script execution output: miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py", line 153, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 19:40:19,745 - server - INFO - Test execution result: FAIL
+2025-12-01 19:44:42,313 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-01 19:46:43,763 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-01 19:46:45,435 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-01 20:02:15,989 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:02:15,990 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:02:17,449 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:02:17,452 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py
+2025-12-01 20:02:20,601 - server - INFO - Script execution output: Starting test: Login, Add Item, Verify, Remove Item, Verify Removal, and Logout Flow
+Loaded credentials from: /Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_metadata.json
+Step: Navigate to login page and authenticate
+Test FAILED ✗: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+Final Result: FAIL
+
+2025-12-01 20:02:20,601 - server - INFO - Test execution result: PASS
+2025-12-01 20:04:01,721 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:04:01,723 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py
+2025-12-01 20:04:04,501 - server - INFO - Script execution output: Starting test: Login, Add Item, Verify, Remove Item, Verify Removal, and Logout Flow
+Loaded credentials from: /Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_metadata.json
+Step: Navigate to login page and authenticate
+Test FAILED ✗: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+Final Result: FAIL
+
+2025-12-01 20:04:04,501 - server - INFO - Test execution result: PASS
+2025-12-01 20:04:40,224 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:04:40,225 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py
+2025-12-01 20:04:48,559 - server - INFO - Script execution output: 01_metadata.json
+Step: Navigate to login page and authenticate
+Step: Enter credentials
+Step: Click login button
+Skipping redundant login steps (1-3)...
+Step 4: Click 'Add to cart' button for Sauce Labs Backpack using selector: #add-to-cart-sauce-labs-backpack
+  - Clicking #add-to-cart-sauce-labs-backpack
+  - Clicking #shopping_cart_container a
+Step 6: Verify 'Sauce Labs Backpack' is present in the cart using selector: #item_4_title_link
+Test FAILED ✗: name 're' is not defined
+Final Result: FAIL
+
+2025-12-01 20:04:48,559 - server - INFO - Test execution result: PASS
+2025-12-01 20:05:01,418 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:05:01,420 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_login_add_item_verify_remove_item_verify_removal_a.py
+2025-12-01 20:05:09,137 - server - INFO - Script execution output: 01_metadata.json
+Step: Navigate to login page and authenticate
+Step: Enter credentials
+Step: Click login button
+Skipping redundant login steps (1-3)...
+Step 4: Click 'Add to cart' button for Sauce Labs Backpack using selector: #add-to-cart-sauce-labs-backpack
+  - Clicking #add-to-cart-sauce-labs-backpack
+  - Clicking #shopping_cart_container a
+Step 6: Verify 'Sauce Labs Backpack' is present in the cart using selector: #item_4_title_link
+Test FAILED ✗: name 're' is not defined
+Final Result: FAIL
+
+2025-12-01 20:05:09,137 - server - INFO - Test execution result: PASS
+2025-12-01 20:05:59,943 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-01 20:06:47,261 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:06:47,262 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:06:48,337 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:06:48,337 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:06:48,971 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:06:48,972 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:06:49,385 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:06:49,386 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:06:49,551 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:06:49,551 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:06:49,737 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:06:49,737 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:06:49,921 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:06:49,921 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:06:50,088 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:06:50,089 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:06:50,445 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-01 20:06:50,445 - server - INFO - Returning 2 suites to frontend
+2025-12-01 20:07:53,167 - server - INFO - Loaded 0 test suites from data/test_suites.json
+2025-12-01 20:08:39,278 - server - INFO - Fetching all test suites. Total suites: 0
+2025-12-01 20:08:39,280 - server - INFO - Returning 0 suites to frontend
+2025-12-01 20:08:48,969 - server - INFO - Received generation request for suite 'New - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 20:10:47,763 - server - INFO - Raw agent output length: 439 characters
+2025-12-01 20:10:47,765 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 20:10:47,765 - server - INFO - Successfully generated 1 test cases for suite 'New - Dec-01'.
+2025-12-01 20:10:47,767 - server - INFO - Saved 1 test suites to data/test_suites.json
+2025-12-01 20:10:47,767 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 20:10:47,768 - server - INFO - Generated script: data/generated_tests/New - Dec-01_TC001_add_item_remove_item_and_logout.py
+2025-12-01 20:10:47,768 - server - INFO - Saved test metadata to: data/generated_tests/New - Dec-01_metadata.json
+2025-12-01 20:10:50,051 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-01 20:11:09,440 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:11:09,442 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_add_item_remove_item_and_logout.py
+2025-12-01 20:11:24,325 - server - INFO - Script execution output: /Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_TC001_add_item_remove_item_and_logout.py", line 126, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 20:11:24,326 - server - INFO - Test execution result: FAIL
+2025-12-01 20:11:58,129 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:11:58,131 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_add_item_remove_item_and_logout.py
+2025-12-01 20:12:12,599 - server - INFO - Script execution output: /Users/sunilpandey/miniforge3/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_TC001_add_item_remove_item_and_logout.py", line 126, in test_tc001
+    await page.screenshot(path=f"failure_{test_id}.png")
+                                          ^^^^^^^
+NameError: name 'test_id' is not defined. Did you mean: 'test_url'?
+
+2025-12-01 20:12:12,599 - server - INFO - Test execution result: FAIL
+2025-12-01 20:13:18,555 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-01 20:13:59,579 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-01 20:18:36,288 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:18:36,290 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:18:40,875 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:18:40,877 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_add_item_remove_item_and_logout.py
+2025-12-01 20:18:55,512 - server - INFO - Script execution output: -sidebar-link">Logout</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    4 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 500ms
+
+Final Result: FAIL
+
+2025-12-01 20:18:55,513 - server - INFO - Test execution result: PASS
+2025-12-01 20:19:59,880 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-01 20:20:48,202 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:20:48,204 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:20:54,062 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:20:54,064 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_add_item_remove_item_and_logout.py
+2025-12-01 20:21:09,288 - server - INFO - Script execution output: ects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_metadata.json
+Step: Navigate to login page and authenticate
+Step: Enter credentials
+Step: Click login button
+  - Clicking #add-to-cart-sauce-labs-backpack
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+Step 3: Remove 'Sauce Labs Backpack' from cart using selector: #remove-sauce-labs-backpack
+Step 4: Open side menu using selector: #react-burger-menu-btn
+  - Clicking #logout_sidebar_link
+Test PASSED ✓
+Final Result: PASS
+
+2025-12-01 20:21:09,289 - server - INFO - Test execution result: PASS
+2025-12-01 20:22:52,659 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:22:52,667 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_add_item_remove_item_and_logout.py
+2025-12-01 20:22:55,689 - server - INFO - Script execution output: Starting test: Add item, remove item, and logout
+Loaded credentials from: /Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_metadata.json
+Step: Navigate to login page and authenticate
+Test FAILED ✗: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+Final Result: FAIL
+
+2025-12-01 20:22:55,689 - server - INFO - Test execution result: PASS
+2025-12-01 20:23:37,755 - server - INFO - Received execution request for test case: TC001 in suite: New - Dec-01
+2025-12-01 20:23:37,759 - server - INFO - Executing generated Playwright script: data/generated_tests/New - Dec-01_TC001_add_item_remove_item_and_logout.py
+2025-12-01 20:23:52,754 - server - INFO - Script execution output: ects/AI_Powered_Testing_Agent/data/generated_tests/New - Dec-01_metadata.json
+Step: Navigate to login page and authenticate
+Step: Enter credentials
+Step: Click login button
+  - Clicking #add-to-cart-sauce-labs-backpack
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+Step 3: Remove 'Sauce Labs Backpack' from cart using selector: #remove-sauce-labs-backpack
+Step 4: Open side menu using selector: #react-burger-menu-btn
+  - Clicking #logout_sidebar_link
+Test PASSED ✓
+Final Result: PASS
+
+2025-12-01 20:23:52,755 - server - INFO - Test execution result: PASS
+2025-12-01 20:24:30,115 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:24:30,116 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:24:31,088 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:24:31,088 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:24:32,122 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:24:32,122 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:24:33,016 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:24:33,016 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:24:33,366 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:24:33,366 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:24:58,339 - server - INFO - Loaded 0 test suites from data/test_suites.json
+2025-12-01 20:25:01,263 - server - INFO - Fetching all test suites. Total suites: 0
+2025-12-01 20:25:01,263 - server - INFO - Returning 0 suites to frontend
+2025-12-01 20:25:34,349 - server - INFO - Received generation request for suite 'SmokeTest - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 20:26:41,000 - server - INFO - Fetching all test suites. Total suites: 0
+2025-12-01 20:26:41,002 - server - INFO - Returning 0 suites to frontend
+2025-12-01 20:26:46,823 - server - INFO - Fetching all test suites. Total suites: 0
+2025-12-01 20:26:46,824 - server - INFO - Returning 0 suites to frontend
+2025-12-01 20:27:02,830 - server - INFO - Received generation request for suite 'SmokeTest - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 20:27:53,181 - server - INFO - Raw agent output length: 230 characters
+2025-12-01 20:27:53,183 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 20:27:53,183 - server - INFO - Successfully generated 1 test cases for suite 'SmokeTest - Dec-01'.
+2025-12-01 20:27:53,184 - server - INFO - Saved 1 test suites to data/test_suites.json
+2025-12-01 20:27:53,184 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 20:27:53,186 - server - INFO - Generated script: data/generated_tests/SmokeTest - Dec-01_ERR_agent_execution_failed.py
+2025-12-01 20:27:53,186 - server - INFO - Saved test metadata to: data/generated_tests/SmokeTest - Dec-01_metadata.json
+2025-12-01 20:27:55,488 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-01 20:28:34,357 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:28:34,357 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:28:36,539 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:28:36,539 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:28:38,045 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:28:38,046 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:28:59,573 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:28:59,574 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:29:00,346 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:29:00,357 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:29:00,714 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:29:00,715 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:29:01,153 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:29:01,153 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:29:01,349 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:29:01,350 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:29:01,527 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:29:01,527 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:29:01,682 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:29:01,682 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:29:01,847 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:29:01,847 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:29:02,020 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-01 20:29:02,021 - server - INFO - Returning 1 suites to frontend
+2025-12-01 20:29:27,712 - server - INFO - Loaded 0 test suites from data/test_suites.json
+2025-12-01 20:29:50,110 - server - INFO - Fetching all test suites. Total suites: 0
+2025-12-01 20:29:50,111 - server - INFO - Returning 0 suites to frontend
+2025-12-01 20:30:05,005 - server - INFO - Received generation request for suite 'SmokeTest - Dec-01' at URL: https://www.saucedemo.com
+2025-12-01 20:32:31,373 - server - INFO - Raw agent output length: 535 characters
+2025-12-01 20:32:31,375 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-01 20:32:31,375 - server - INFO - Successfully generated 1 test cases for suite 'SmokeTest - Dec-01'.
+2025-12-01 20:32:31,377 - server - INFO - Saved 1 test suites to data/test_suites.json
+2025-12-01 20:32:31,377 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-01 20:32:31,379 - server - INFO - Generated script: data/generated_tests/SmokeTest - Dec-01_TC001_add_item_verify_remove_verify_and_logout_flow.py
+2025-12-01 20:32:31,379 - server - INFO - Saved test metadata to: data/generated_tests/SmokeTest - Dec-01_metadata.json
+2025-12-01 20:32:33,694 - server - INFO - Loaded 1 test suites from data/test_suites.json

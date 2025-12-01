@@ -1,0 +1,12 @@
+Timestamp: 2025-12-01 19:24:12.687208
+Context: generate_tests for suite 'New - Dec-01' at URL: https://www.saucedemo.com
+Exception: 'Page' object has no attribute 'close'
+--------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 111, in generate_tests
+    raw_result = await explore_and_generate_tests(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/explorer_agent.py", line 85, in explore_and_generate_tests
+    await temp_page.close()
+          ^^^^^^^^^^^^^^^
+AttributeError: 'Page' object has no attribute 'close'

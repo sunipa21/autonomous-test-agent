@@ -1,12 +1,23 @@
 import os
 import asyncio
+import hashlib
+from pathlib import Path
 from browser_use.actor.page import Page
 
 class SecretsManager:
-    def __init__(self, username=None, password=None, login_url=None):
+    def __init__(self, username=None, password=None, login_url=None, cache_dir="data/auth_cache"):
         self.username = username or os.getenv("APP_USERNAME")
         self.password = password or os.getenv("APP_PASSWORD")
         self.login_url = login_url or os.getenv("APP_LOGIN_URL")
+        self.cache_dir = Path(cache_dir)
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Create cache file path using username hash for security
+        if self.username:
+            username_hash = hashlib.md5(self.username.encode()).hexdigest()[:8]
+            self.cache_file = self.cache_dir / f"{username_hash}_session.json"
+        else:
+            self.cache_file = None
 
     async def inject_login(self, page: Page):
         """
@@ -85,3 +96,68 @@ class SecretsManager:
             print(f"  ⚠️  ESC press failed: {e}")
         
         print("🔐 SECURE: Post-login alert handling complete.")
+        
+        # Save session cookies after successful login (OPTIMIZATION)
+        if self.cache_file:
+            try:
+                import json
+                # Get current cookies from page
+                cookies = await page.context.cookies()
+                # Save cookies to cache file
+                with open(self.cache_file, 'w') as f:
+                    json.dump(cookies, f)
+                # Restrict file permissions (owner read/write only)
+                os.chmod(self.cache_file, 0o600)
+                print(f"💾 Saved session cookies to cache")
+                print(f"   Future runs will skip login!")
+            except Exception as e:
+                print(f"⚠️ Failed to save session cache: {e}")
+    
+    async def try_load_cached_session(self, page: Page):
+        """
+        Attempts to load cached session cookies.
+        Returns True if session loaded and valid, False otherwise.
+        """
+        if not self.cache_file or not self.cache_file.exists():
+            return False
+        
+        try:
+            import json
+            print(f"🚀 OPTIMIZATION: Found cached session for {self.username}")
+            
+            # Load cookies from cache
+            with open(self.cache_file, 'r') as f:
+                cookies = json.load(f)
+            
+            # Add cookies to browser context
+            await page.context.add_cookies(cookies)
+            
+            # Navigate to login URL to check if session is still valid
+            await page.goto(self.login_url)
+            await asyncio.sleep(2)
+            
+            # Check if login form is present (session expired) or not (logged in)
+            login_elements = await page.get_elements_by_css_selector("input[name='user-name'], #user-name, input[type='email']")
+            
+            if not login_elements:
+                print("   ✅ Cached session is VALID - skipping login")
+                print(f"   ⚡ Saved ~5-10 seconds!")
+                return True
+            else:
+                print("   ❌ Cached session EXPIRED")
+                # Delete expired cache
+                os.remove(self.cache_file)
+                return False
+                
+        except Exception as e:
+            print(f"   ⚠️ Cache load failed: {e}")
+            # Delete corrupted cache
+            if self.cache_file.exists():
+                os.remove(self.cache_file)
+            return False
+    
+    def clear_cache(self):
+        """Manually clear cached session (for debugging/logout)"""
+        if self.cache_file and self.cache_file.exists():
+            os.remove(self.cache_file)
+            print(f"🗑️ Cleared cached session: {self.cache_file}")

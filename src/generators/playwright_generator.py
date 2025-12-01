@@ -80,25 +80,57 @@ async def test_{test_id.lower().replace("-", "_")}():
         page = await context.new_page()
         
         try:
-            print(f"Starting test: {title}")
+            print(f"Starting test: {test_case.get('title')}")
+            test_id = "{test_case.get('id')}"
             
-            # Login
-            print("Step: Navigate to login page")
-            await page.goto("{credentials.get('url', 'https://www.saucedemo.com')}")
+            # Load credentials from secure config file
+            import json
+            from pathlib import Path
+            config_file = Path(__file__).parent / "{suite_name}_metadata.json"
             
-            print("Step: Enter credentials")
-            username_field = page.locator('input[name="user-name"], #user-name, input[type="text"]').first
-            await username_field.fill("{credentials.get('username', 'standard_user')}")
+            if config_file.exists():
+                with open(config_file, 'r') as f:
+                    config = json.load(f)
+                    test_url = config.get('url', '')
+                    test_username = config.get('username', '')
+                    test_password = config.get('password', '')
+                print(f"Loaded credentials from: {{config_file}}")
+            else:
+                print("WARNING: No config file found, using placeholder values")
+                test_url = "{credentials.get('url')}"
+                test_username = "{credentials.get('username')}"
+                test_password = "{credentials.get('password')}"
             
-            password_field = page.locator('input[name="password"], #password, input[type="password"]').first
-            await password_field.fill("{credentials.get('password', 'secret_sauce')}")
-            
-            print("Step: Click login button")
-            login_button = page.locator('input[type="submit"], #login-button, button:has-text("Login")').first
-            await login_button.click()
-            
-            # Wait for navigation
-            await page.wait_for_load_state('networkidle')
+            # Login (Only if credentials provided AND login form is present)
+            if test_username and test_password:
+                print("Step: Navigate to login page and authenticate")
+                await page.goto(test_url)
+                await page.wait_for_load_state('networkidle')
+                
+                # Check if we need to login (is login button present?)
+                login_button_present = await page.locator('#login-button, input[type="submit"], button:has-text("Login")').first.is_visible(timeout=2000) if await page.locator('#login-button, input[type="submit"], button:has-text("Login")').count() > 0 else False
+                
+                if login_button_present:
+                    print("Step: Enter credentials")
+                    username_field = page.locator('input[name="user-name"], #user-name, input[type="text"]').first
+                    await username_field.fill(test_username)
+                    
+                    password_field = page.locator('input[name="password"], #password, input[type="password"]').first
+                    await password_field.fill(test_password)
+                    
+                    print("Step: Click login button")
+                    login_button = page.locator('input[type="submit"], #login-button, button:has-text("Login")').first
+                    await login_button.click()
+                    
+                    # Wait for navigation
+                    await page.wait_for_load_state('networkidle')
+                else:
+                    print("Step: Already logged in (login form not found, skipping)")
+            else:
+                print("Step: Navigate to application (No login required)")
+                await page.goto(test_url)
+                await page.wait_for_load_state('networkidle')
+
             
             # Parse and execute test-specific steps
 '''
@@ -131,24 +163,25 @@ async def test_{test_id.lower().replace("-", "_")}():
                     # Try to find explicit selector
                     for s in extracted_selectors:
                         if 'first' in s or 'name' in s: sel = s
-                    script += f'''            await page.locator('{sel}').first.fill("{val}")
-            await page.wait_for_timeout(200)
+                    # Escape quotes for safe embedding
+                    sel_escaped = sel.replace('"', '\\"')
+                    script += f'''            await page.locator("{sel_escaped}").first.fill("{val}")
 '''
                 if 'last name' in step_lower:
                     val = "User"
                     sel = '#last-name, input[name="lastName"]'
                     for s in extracted_selectors:
                         if 'last' in s: sel = s
-                    script += f'''            await page.locator('{sel}').first.fill("{val}")
-            await page.wait_for_timeout(200)
+                    sel_escaped = sel.replace('"', '\\"')
+                    script += f'''            await page.locator("{sel_escaped}").first.fill("{val}")
 '''
                 if 'zip' in step_lower or 'postal' in step_lower:
                     val = "12345"
                     sel = '#postal-code, input[name="postalCode"]'
                     for s in extracted_selectors:
                         if 'postal' in s or 'zip' in s or 'code' in s: sel = s
-                    script += f'''            await page.locator('{sel}').first.fill("{val}")
-            await page.wait_for_timeout(200)
+                    sel_escaped = sel.replace('"', '\\"')
+                    script += f'''            await page.locator("{sel_escaped}").first.fill("{val}")
 '''
             
             # Action 2: Click / Add / Navigate (Can happen after fill)
@@ -182,18 +215,18 @@ async def test_{test_id.lower().replace("-", "_")}():
                         elif '"' in step: btn_name = step.split('"')[1]
                         click_selector = f'button:has-text("{btn_name}"), text={btn_name}'
 
-                # Escape quotes for the print statement
-                safe_selector = click_selector.replace('"', '\\"')
+                # Escape quotes for safe embedding in string
+                safe_selector_print = click_selector.replace('"', '\\"')
+                safe_selector_code = click_selector.replace('"', '\\"')
                 script += f'''            # Click action
-            print("  - Clicking {safe_selector}")
-            btn = page.locator('{click_selector}').first
+            print("  - Clicking {safe_selector_print}")
+            btn = page.locator("{safe_selector_code}").first
             if await btn.is_visible():
                 await btn.click()
             else:
                 # Fallback
-                await page.click('{click_selector}', timeout=2000)
+                await page.click("{safe_selector_code}", timeout=2000)
             await page.wait_for_load_state('networkidle')
-            await page.wait_for_timeout(500)
 '''
 
             # Action 3: Verify
@@ -229,13 +262,17 @@ if __name__ == "__main__":
         
         return script
     
-    def save_test_metadata(self, suite_name, test_cases, scripts):
-        """Save metadata about generated scripts"""
+    def save_test_metadata(self, suite_name, test_cases, scripts, credentials=None):
+        """Save metadata about generated scripts including credentials"""
         metadata = {
             "suite_name": suite_name,
             "generated_at": datetime.now().isoformat(),
             "test_count": len(test_cases),
-            "scripts": scripts
+            "scripts": scripts,
+            # Store credentials for runtime use by scripts
+            "url": credentials.get('url') if credentials else '',
+            "username": credentials.get('username') if credentials else '',
+            "password": credentials.get('password') if credentials else ''
         }
         
         metadata_file = os.path.join(self.output_dir, f"{suite_name}_metadata.json")

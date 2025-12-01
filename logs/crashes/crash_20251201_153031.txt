@@ -1,0 +1,9 @@
+Timestamp: 2025-12-01 15:30:31.789099
+Context: generate_tests for suite 'Smoke Test Dec-01' at URL: https://demowebshop.tricentis.com/
+Exception: name 're' is not defined
+--------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 129, in generate_tests
+    json_block_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', raw_result, re.DOTALL)
+                       ^^
+NameError: name 're' is not defined. Did you forget to import 're'

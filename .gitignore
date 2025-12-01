@@ -1,1 +1,4 @@
 .env
+
+# Session Cache (contains auth tokens - DO NOT COMMIT)
+data/auth_cache/v

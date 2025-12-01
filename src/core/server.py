@@ -6,6 +6,7 @@ from pydantic import BaseModel
 import json
 import os
 import asyncio
+import re
 from typing import List, Dict
 
 from src.agents.explorer_agent import explore_and_generate_tests
@@ -55,6 +56,7 @@ class GenerateRequest(BaseModel):
     description: str
     username: str = ""
     password: str = ""
+    headless: bool = False  # Headless mode toggle
 
 class ExecuteRequest(BaseModel):
     suite_name: str
@@ -74,6 +76,21 @@ async def test_response():
     """Test endpoint to verify response format"""
     return {"status": "success", "test_cases": [{"id": "TEST", "title": "Test Case", "steps": ["Step 1", "Step 2"]}]}
 
+@app.get("/api/suites")
+async def get_all_suites():
+    """Get all existing test suites from storage"""
+    logger.info(f"Fetching all test suites. Total suites: {len(TEST_SUITES)}")
+    # Convert dictionary to list format for frontend
+    suites_list = []
+    for suite_name, suite_data in TEST_SUITES.items():
+        suites_list.append({
+            "suite_name": suite_name,
+            "test_cases": suite_data.get('cases', []),
+            "config": suite_data.get('config', {})
+        })
+    logger.info(f"Returning {len(suites_list)} suites to frontend")
+    return {"status": "success", "suites": suites_list}
+
 @app.post("/api/generate")
 async def generate_tests(req: GenerateRequest):
     # ALWAYS initialize test_cases to avoid undefined errors
@@ -82,15 +99,22 @@ async def generate_tests(req: GenerateRequest):
     try:
         logger.info(f"Received generation request for suite '{req.suite_name}' at URL: {req.url}")
         
-        # Initialize Secrets Manager
+        # Initialize Secrets Manager with USER-PROVIDED credentials from request
+        # This allows testing different applications without changing .env
         secrets = SecretsManager(
-            username=os.getenv("APP_USERNAME"),
-            password=os.getenv("APP_PASSWORD"),
-            login_url=os.getenv("APP_LOGIN_URL")
+            username=req.username if req.username else os.getenv("APP_USERNAME"),
+            password=req.password if req.password else os.getenv("APP_PASSWORD"),
+            login_url=req.url  # USE USER-PROVIDED URL, not .env
         )
         
-        # Run AI Agent
-        raw_result = await explore_and_generate_tests(req.url, req.description, secrets)
+        # Run AI Agent with USER-PROVIDED URL and description
+        raw_result = await explore_and_generate_tests(
+            start_url=req.url,  # Pass user URL
+            user_description=req.description,  # Pass user description
+            secrets_manager=secrets,
+            headless=req.headless  # Pass headless mode setting
+        )
+
         
         
         if not raw_result:
@@ -196,18 +220,29 @@ async def generate_tests(req: GenerateRequest):
                 }]
 
         # Save to memory
-        TEST_SUITES[req.suite_name] = {"config": req.dict(), "cases": test_cases}
-        save_suites()  # Persist to file
+        # Save to in-memory storage and persist to file
+        TEST_SUITES[req.suite_name] = {
+            "config": {
+                "suite_name": req.suite_name,
+                "url": req.url,  # Use actual request URL
+                "description": req.description,
+                "username": req.username if req.username else os.getenv("APP_USERNAME"),
+                "password": req.password if req.password else os.getenv("APP_PASSWORD")
+            },
+            "cases": test_cases
+        }
+        save_suites()
         
         # Generate Playwright scripts for each test case
         from src.generators.playwright_generator import PlaywrightGenerator
         generator = PlaywrightGenerator(output_dir="data/generated_tests")
         
         generated_scripts = []
+        # Use actual request credentials, not .env defaults
         credentials = {
-            "url": os.getenv("APP_LOGIN_URL"),
-            "username": os.getenv("APP_USERNAME"),
-            "password": os.getenv("APP_PASSWORD")
+            "url": req.url,
+            "username": req.username if req.username else os.getenv("APP_USERNAME"),
+            "password": req.password if req.password else os.getenv("APP_PASSWORD")
         }
         
         logger.info(f"Generating Playwright scripts for {len(test_cases)} test cases...")
@@ -220,9 +255,16 @@ async def generate_tests(req: GenerateRequest):
                 logger.error(f"Failed to generate script for {test_case.get('id')}: {e}")
         
         # Save metadata
-        if generated_scripts:
-            metadata_file = generator.save_test_metadata(req.suite_name, test_cases, generated_scripts)
-            logger.info(f"Saved metadata to: {metadata_file}")
+        
+        # Save metadata with credentials for runtime loading
+        metadata_file = generator.save_test_metadata(
+            suite_name=req.suite_name,
+            test_cases=test_cases,
+            scripts=generated_scripts,
+            credentials=credentials  # Pass credentials for storage
+        )
+        logger.info(f"Saved test metadata to: {metadata_file}")
+
         
         # ALWAYS return success with test_cases array (never return error status)
         return {"status": "success", "test_cases": test_cases, "scripts_generated": len(generated_scripts)}
@@ -252,8 +294,9 @@ async def execute_test(req: ExecuteRequest):
         return {"status": "error", "message": "Test case not found"}
 
     # Find the generated Playwright script
-    script_pattern = f"generated_tests/{req.suite_name}_{req.test_case_id}_*.py"
+    script_pattern = f"data/generated_tests/{req.suite_name}_{req.test_case_id}_*.py"
     matching_scripts = glob.glob(script_pattern)
+
     
     if not matching_scripts:
         logger.warning(f"No Playwright script found for {req.test_case_id}, falling back to AI execution")

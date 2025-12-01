@@ -112,58 +112,73 @@
             </div>
 
             <div class="flex-1 overflow-y-auto p-6 space-y-6">
-                <form id="genForm" class="space-y-5">
-                    <div class="space-y-1">
-                        <label class="text-xs font-medium text-slate-300 ml-1">Test Suite Name</label>
-                        <input type="text" id="suiteName" value="Smoke Test A"
-                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 outline-none transition-all placeholder-slate-600 text-white">
+                <form id="genForm" class="space-y-4">
+                    <!-- Suite Name -->
+                    <div>
+                        <label for="suiteName" class="block text-sm font-medium text-slate-300 mb-2">Suite
+                            Name</label>
+                        <input type="text" id="suiteName" required
+                            class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition"
+                            placeholder="e.g., Smoke Test A">
                     </div>
 
-                    <div class="space-y-1">
-                        <label class="text-xs font-medium text-slate-300 ml-1">Target Application URL</label>
-                        <div class="relative">
-                            <i class="fas fa-globe absolute left-3.5 top-3 text-slate-500 text-xs"></i>
-                            <input type="url" id="url" value="https://saucedemo.com"
-                                class="w-full bg-slate-800/50 border border-slate-700 rounded-lg pl-9 pr-4 py-2.5 text-sm focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 outline-none transition-all placeholder-slate-600 text-brand-300">
-                        </div>
+                    <!-- URL -->
+                    <div>
+                        <label for="url" class="block text-sm font-medium text-slate-300 mb-2">Application
+                            URL</label>
+                        <input type="url" id="url" required
+                            class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition font-mono text-sm"
+                            placeholder="e.g., https://example.com">
                     </div>
 
-                    <div class="p-4 rounded-xl bg-slate-800/30 border border-slate-700/50 space-y-4">
-                        <div class="flex items-center gap-2 mb-2">
-                            <i class="fas fa-shield-alt text-brand-400"></i>
-                            <span class="text-xs font-semibold text-slate-300">Secure Credentials</span>
+                    <!-- Description -->
+                    <div>
+                        <label for="desc" class="block text-sm font-medium text-slate-300 mb-2">Exploration
+                            Goal</label>
+                        <textarea id="desc" rows="3" required
+                            class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition resize-none"
+                            placeholder="e.g., Test the checkout flow from adding items to cart through payment"></textarea>
+                    </div>
+
+                    <!-- Username -->
+                    <div>
+                        <label for="username" class="block text-sm font-medium text-slate-300 mb-2">Username
+                            <span class="text-xs text-slate-500">(optional)</span></label>
+                        <input type="text" id="username"
+                            class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition"
+                            placeholder="Leave empty if no login required">
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-slate-300 mb-2">Password
+                            <span class="text-xs text-slate-500">(optional)</span></label>
+                        <input type="password" id="password"
+                            class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition"
+                            placeholder="Leave empty if no login required">
+                    </div>
+
+                    <!-- Headless Mode Toggle -->
+                    <div
+                        class="flex items-center justify-between p-3 bg-slate-800/30 border border-slate-700/50 rounded-lg">
+                        <div>
+                            <label for="headlessMode" class="text-sm font-medium text-slate-300">Headless Mode</label>
+                            <p class="text-xs text-slate-500 mt-0.5">Run browser in background (faster, no window)</p>
                         </div>
-                        <div class="grid grid-cols-1 gap-3">
-                            <div class="space-y-1">
-                                <label class="text-[10px] uppercase font-bold text-slate-500 ml-1">Username</label>
-                                <input type="text" id="username" value="standard_user"
-                                    class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:border-brand-500 outline-none text-slate-300">
+                        <label class="relative inline-flex items-center cursor-pointer">
+                            <input type="checkbox" id="headlessMode" class="sr-only peer">
+                            <div
+                                class="w-11 h-6 bg-slate-700 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-brand-500 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-brand-500">
                             </div>
-                            <div class="space-y-1">
-                                <label class="text-[10px] uppercase font-bold text-slate-500 ml-1">Password</label>
-                                <input type="password" id="password" value="secret_sauce"
-                                    class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-3 py-2 text-sm focus:border-brand-500 outline-none text-slate-300">
-                            </div>
-                        </div>
-                        <p class="text-[10px] text-slate-500 italic"><i class="fas fa-info-circle mr-1"></i> Injected
-                            locally. Never sent to AI.</p>
+                        </label>
                     </div>
 
-                    <div class="space-y-1">
-                        <label class="text-xs font-medium text-slate-300 ml-1">Exploration Goal</label>
-                        <textarea id="desc" rows="4"
-                            class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-500/50 focus:border-brand-500 outline-none transition-all placeholder-slate-600 text-slate-300 resize-none"
-                            placeholder="Describe what the agent should test...">Verify the shopping cart flow: Add an item and proceed to checkout.</textarea>
-                    </div>
+                    <!-- Submit Button -->
+                    <button type="submit" id="genBtn"
+                        class="w-full px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-white font-bold rounded-lg shadow-lg shadow-brand-900/30 hover:shadow-brand-900/50 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                        <i class="fas fa-rocket"></i> Launch Explorer Agent
+                    </button>
                 </form>
-            </div>
-
-            <div class="p-6 border-t border-slate-800/50 bg-slate-900/30">
-                <button form="genForm" type="submit" id="genBtn"
-                    class="group w-full bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 text-white py-3.5 rounded-xl font-semibold shadow-lg shadow-brand-500/20 transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
-                    <i class="fas fa-rocket group-hover:animate-bounce"></i>
-                    <span>Launch Explorer Agent</span>
-                </button>
             </div>
         </div>
 
@@ -186,9 +201,20 @@
                             <h2 class="text-2xl font-bold text-white">Test Results</h2>
                             <p class="text-slate-400 text-sm mt-1">Generated test cases and execution status.</p>
                         </div>
-                        <div id="suiteBadge"
-                            class="hidden px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs text-brand-300 font-mono">
-                            <!-- Suite Name populated here -->
+                        <div class="flex items-center gap-3">
+                            <!-- Suite Selector Dropdown -->
+                            <div id="suiteSelector" class="hidden">
+                                <label class="text-xs text-slate-400 mb-1 block">Select Test Suite</label>
+                                <select id="suiteDropdown"
+                                    class="px-3 py-2 rounded-lg bg-slate-800 border border-slate-700 text-sm text-white focus:outline-none focus:ring-2 focus:ring-brand-500 min-w-[250px]">
+                                    <!-- Options populated dynamically -->
+                                </select>
+                            </div>
+
+                            <div id="suiteBadge"
+                                class="hidden px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs text-brand-300 font-mono">
+                                <!-- Suite Name badge -->
+                            </div>
                         </div>
                     </div>
 
@@ -282,9 +308,11 @@
                 url: document.getElementById('url').value,
                 description: document.getElementById('desc').value,
                 username: document.getElementById('username').value,
-                password: document.getElementById('password').value
+                password: document.getElementById('password').value,
+                headless: document.getElementById('headlessMode').checked  // Add headless mode
             };
             currentSuite = payload.suite_name;
+
             suiteBadge.innerText = currentSuite;
             suiteBadge.classList.remove('hidden');
 
@@ -405,6 +433,135 @@
                 badge.innerHTML = `Error`;
             }
         }
+
+        // Load existing test suites on page load
+        let allSuites = []; // Store all loaded suites
+
+        async function loadExistingSuites() {
+            try {
+                console.log('Loading existing test suites...');
+                const response = await fetch('/api/suites');
+                const data = await response.json();
+
+                if (data.status === 'success' && data.suites && data.suites.length > 0) {
+                    console.log(`Loaded ${data.suites.length} existing suite(s)`);
+
+                    // Store all suites
+                    allSuites = data.suites;
+
+                    // Populate dropdown with all suites
+                    const dropdown = document.getElementById('suiteDropdown');
+                    const suiteSelector = document.getElementById('suiteSelector');
+
+                    dropdown.innerHTML = ''; // Clear existing options
+                    allSuites.forEach((suite, index) => {
+                        const option = document.createElement('option');
+                        option.value = index;
+                        option.textContent = `${suite.suite_name} (${suite.test_cases.length} tests)`;
+                        dropdown.appendChild(option);
+                    });
+
+                    // Show dropdown if multiple suites exist
+                    if (allSuites.length > 1) {
+                        suiteSelector.classList.remove('hidden');
+                    }
+
+                    // Display the most recent suite by default
+                    const mostRecentIndex = allSuites.length - 1;
+                    dropdown.value = mostRecentIndex;
+                    displaySuite(mostRecentIndex);
+
+                } else {
+                    console.log('No existing test suites found');
+                    emptyState.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Error loading existing suites:', error);
+                emptyState.classList.remove('hidden');
+            }
+        }
+
+        // Function to display a specific suite
+        function displaySuite(index) {
+            const suite = allSuites[index];
+            if (!suite) return;
+
+            console.log('Displaying suite:', suite.suite_name);
+
+            // CRITICAL: Set currentSuite so "Run Test" knows which suite to use
+            currentSuite = suite.suite_name;
+
+            // Update suite name input
+            document.getElementById('suiteName').value = suite.suite_name;
+
+            // Update badge
+            suiteBadge.innerText = currentSuite;
+            suiteBadge.classList.remove('hidden');
+
+            // Render the test cases
+            if (suite.test_cases && suite.test_cases.length > 0) {
+                renderTable(suite.test_cases);
+                tableContainer.classList.remove('hidden');
+                emptyState.classList.add('hidden');
+                console.log(`Displayed ${suite.test_cases.length} test case(s) from suite: ${currentSuite}`);
+            } else {
+                tbody.innerHTML = '';
+                emptyState.classList.remove('hidden');
+                tableContainer.classList.add('hidden');
+            }
+        }
+
+        // Add event listener for dropdown change
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropdown = document.getElementById('suiteDropdown');
+            dropdown.addEventListener('change', (e) => {
+                const selectedIndex = parseInt(e.target.value);
+                displaySuite(selectedIndex);
+            });
+        });
+
+
+        // Call on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('Page loaded, fetching existing test suites...');
+            loadExistingSuites();
+            loadFormFromLocalStorage(); // Load saved form values
+        });
+
+        // === FORM  PERSISTENCE ===
+        // Save form values to localStorage
+        function saveFormToLocalStorage() {
+            localStorage.setItem('testgen_suiteName', document.getElementById('suiteName').value);
+            localStorage.setItem('testgen_url', document.getElementById('url').value);
+            localStorage.setItem('testgen_desc', document.getElementById('desc').value);
+            localStorage.setItem('testgen_username', document.getElementById('username').value);
+            localStorage.setItem('testgen_password', document.getElementById('password').value);
+            localStorage.setItem('testgen_headless', document.getElementById('headlessMode').checked);
+        }
+
+        // Load form values from localStorage
+        function loadFormFromLocalStorage() {
+            const suiteName = localStorage.getItem('testgen_suiteName');
+            const url = localStorage.getItem('testgen_url');
+            const desc = localStorage.getItem('testgen_desc');
+            const username = localStorage.getItem('testgen_username');
+            const password = localStorage.getItem('testgen_password');
+            const headless = localStorage.getItem('testgen_headless');
+
+            if (suiteName) document.getElementById('suiteName').value = suiteName;
+            if (url) document.getElementById('url').value = url;
+            if (desc) document.getElementById('desc').value = desc;
+            if (username) document.getElementById('username').value = username;
+            if (password) document.getElementById('password').value = password;
+            if (headless !== null) document.getElementById('headlessMode').checked = (headless === 'true');
+        }
+
+        // Save on every input change
+        ['suiteName', 'url', 'desc', 'username', 'password'].forEach(fieldId => {
+            document.getElementById(fieldId).addEventListener('input', saveFormToLocalStorage);
+        });
+        // Also save on toggle change
+        document.getElementById('headlessMode').addEventListener('change', saveFormToLocalStorage);
     </script>
 </body>
 

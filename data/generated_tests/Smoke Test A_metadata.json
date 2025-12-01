@@ -1,8 +1,0 @@
-{
-  "suite_name": "Smoke Test A",
-  "generated_at": "2025-11-30T01:10:10.889595",
-  "test_count": 1,
-  "scripts": [
-    "data/generated_tests/Smoke Test A_TC001_shopping_cart_checkout.py"
-  ]
-}

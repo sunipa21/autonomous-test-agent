@@ -1,70 +1,22 @@
 {
-  "Smoke Test A": {
+  "SmokeTest - Dec-01": {
     "config": {
-      "suite_name": "Smoke Test A",
-      "url": "https://saucedemo.com",
-      "description": "Verify the shopping cart flow: Add an item and proceed to checkout and fill all the fields then finish till the end.",
+      "suite_name": "SmokeTest - Dec-01",
+      "url": "https://www.saucedemo.com",
+      "description": "Login then add item to card, verify then remove the item and verify that it was removed then logout",
       "username": "standard_user",
       "password": "secret_sauce"
     },
     "cases": [
       {
         "id": "TC001",
-        "title": "Shopping cart checkout",
+        "title": "Add item, verify, remove, verify, and logout flow",
         "steps": [
-          "Click 'Add to cart' using selector: button[data-test='add-to-cart-sauce-labs-backpack']",
-          "Click cart icon using selector: .shopping_cart_link",
-          "Click 'Checkout' using selector: button[data-test='checkout']",
-          "Input 'John' into First Name field using selector: input[data-test='firstName']",
-          "Input 'Doe' into Last Name field using selector: input[data-test='lastName']",
-          "Input '12345' into Zip/Postal Code field using selector: input[data-test='postalCode']",
-          "Click 'Continue' using selector: input[data-test='continue']",
-          "Click 'Finish' using selector: button[data-test='finish']"
-        ]
-      }
-    ]
-  },
-  "Smoke Test A - Nov-30-2025": {
-    "config": {
-      "suite_name": "Smoke Test A - Nov-30-2025",
-      "url": "https://saucedemo.com",
-      "description": "Verify the shopping cart flow: Add an item and proceed to checkout and fill all the fields then finish till the end.",
-      "username": "standard_user",
-      "password": "secret_sauce"
-    },
-    "cases": [
-      {
-        "id": "ERR",
-        "title": "JSON Parse Error",
-        "steps": [
-          "Failed to extract valid JSON from agent response.",
-          "Error details: Could not find valid JSON structure",
-          "Raw output snippet: The shopping cart flow verification test case has been completed successfully. Below are the documented steps with their selectors as requested."
-        ]
-      }
-    ]
-  },
-  "Smoke Test A - Nov-29": {
-    "config": {
-      "suite_name": "Smoke Test A - Nov-29",
-      "url": "https://saucedemo.com",
-      "description": "Verify the shopping cart flow: Add an item and proceed to checkout and fill all the fields then finish till the end.",
-      "username": "standard_user",
-      "password": "secret_sauce"
-    },
-    "cases": [
-      {
-        "id": "TC001",
-        "title": "Shopping cart checkout",
-        "steps": [
-          "Click 'Add to cart' using selector: button[data-test='add-to-cart-sauce-labs-backpack']",
-          "Click cart icon using selector: .shopping_cart_link",
-          "Click 'Checkout' using selector: button[data-test='checkout']",
-          "Input 'Test' into First Name field using selector: input[data-test='firstName']",
-          "Input 'User' into Last Name field using selector: input[data-test='lastName']",
-          "Input '12345' into Zip/Postal Code field using selector: input[data-test='postalCode']",
-          "Click 'Continue' using selector: input[data-test='continue']",
-          "Click 'Finish' using selector: button[data-test='finish']"
+          "Add 'Sauce Labs Backpack' to the cart using selector: #add-to-cart-sauce-labs-backpack",
+          "Navigate to the shopping cart page to verify item addition using selector: .shopping_cart_link",
+          "Remove 'Sauce Labs Backpack' from the cart using selector: #remove-sauce-labs-backpack",
+          "Open the side menu to prepare for logout using selector: #react-burger-menu-btn",
+          "Logout from the application using selector: #logout_sidebar_link"
         ]
       }
     ]

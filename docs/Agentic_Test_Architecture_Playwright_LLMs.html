@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Test Architecture: Playwright & LLMs</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --code-bg: #2d2d2d;
+            --code-text: #f8f8f2;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 50px;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 25px;
+        }
+
+        p,
+        li {
+            font-size: 1.1em;
+        }
+
+        .highlight-box {
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            color: #c7254e;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .diagram-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        /* --- ANIMATION STYLES --- */
+        .animation-stage {
+            display: flex;
+            gap: 20px;
+            background: #2c3e50;
+            padding: 20px;
+            border-radius: 8px;
+            color: white;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .browser-mockup {
+            width: 200px;
+            background: white;
+            color: black;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .long-content {
+            width: 100%;
+            height: 800px;
+            /* Long page simulation */
+            background: linear-gradient(to bottom, #ffeaa7 0%, #fab1a0 50%, #ff7675 100%);
+            position: relative;
+            animation: scrollContent 8s infinite linear;
+        }
+
+        .element-marker {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border: 1px solid #333;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .viewport-scanner {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 200px;
+            height: 150px;
+            border: 3px solid #00ff00;
+            box-shadow: 0 0 10px #00ff00;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .viewport-label {
+            position: absolute;
+            top: -25px;
+            left: 0;
+            background: #00ff00;
+            color: black;
+            font-size: 10px;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+
+        .llm-brain {
+            flex: 1;
+            background: #34495e;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brain-log {
+            color: #00ff00;
+        }
+
+        .step-display {
+            margin-top: auto;
+            border-top: 1px solid #555;
+            padding-top: 10px;
+            color: #ecf0f1;
+        }
+
+        /* Keyframes for the scrolling effect */
+        @keyframes scrollContent {
+            0% {
+                top: 0;
+            }
+
+            20% {
+                top: 0;
+            }
+
+            /* Hold top */
+            40% {
+                top: -200px;
+            }
+
+            /* Scroll 1 */
+            60% {
+                top: -200px;
+            }
+
+            /* Hold Middle */
+            80% {
+                top: -400px;
+            }
+
+            /* Scroll 2 */
+            100% {
+                top: -400px;
+            }
+        }
+
+        /* Animation to change text based on timing */
+        .dynamic-text::after {
+            content: "Step 1: Analyzing Header...";
+            animation: changeText 8s infinite linear;
+        }
+
+        @keyframes changeText {
+            0% {
+                content: "Step 1: Analyzing Top Viewport (Header). Target not found.";
+            }
+
+            20% {
+                content: "Action: Scroll Down (Triggered by LLM).";
+            }
+
+            40% {
+                content: "Step 2: Analyzing Middle Viewport (Products). Target not found.";
+            }
+
+            60% {
+                content: "Action: Scroll Down (Triggered by LLM).";
+            }
+
+            80% {
+                content: "Step 3: Analyzing Bottom Viewport (Footer). TARGET FOUND!";
+            }
+
+            100% {
+                content: "Action: Click Footer Link.";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Agentic Test Architecture: Playwright & LLMs</h1>
+        <p>This document details the modern workflow of Agentic AI in software testing, focusing on the
+            Planner-Generator-Healer pattern, the use of Playwright, and libraries like <code>browser-use</code>.</p>
+
+        <!-- SECTION 1 -->
+        <h2>1. The Agentic Triad: Planner, Generator, Healer</h2>
+        <p>In this architecture, the traditional linear scripting model is replaced by an intelligent loop. The system
+            acts as a Multi-Agent System (MAS).</p>
+
+        <h3>A. The Planner (The Explorer)</h3>
+        <p><strong>Role:</strong> Acts as the Product Manager/Architect.</p>
+        <p><strong>Function:</strong> It converts a high-level goal (e.g., "Verify checkout") into a structured plan. It
+            does not blindly crawl; it uses a <strong>ReAct (Reason + Act)</strong> pattern to discover the application
+            state interactively.</p>
+
+        <h3>B. The Generator (The Builder)</h3>
+        <p><strong>Role:</strong> Acts as the SDET.</p>
+        <p><strong>Function:</strong> It takes the plan and creates executable Playwright code. Crucially, it performs
+            <strong>Live Verification</strong>. It generates a selector, immediately checks if it exists in the active
+            browser, and only then writes the code. This prevents "hallucinated" selectors.
+        </p>
+
+        <h3>C. The Healer (The Maintenance Engineer)</h3>
+        <p><strong>Role:</strong> Runtime Self-Correction.</p>
+        <p><strong>Function:</strong> Activates when a test fails (e.g., <code>TargetClosedError</code> or
+            <code>TimeoutError</code>). It uses RAG (Retrieval-Augmented Generation) to compare the <em>intended</em>
+            element with the <em>current</em> DOM structure, finding the closest semantic match to fix "brittle"
+            locators on the fly.
+        </p>
+
+        <div class="highlight-box">
+            <strong>Visual Workflow: The Agentic Loop</strong>
+        </div>
+        <div class="diagram-container">
+            <div class="mermaid">
+                graph TD
+                A[User Goal: 'Verify Checkout'] -->|Input| B(Planner Agent)
+                B -->|Explores UI| C{Plan Generated}
+                C -->|Steps| D(Generator Agent)
+                D -->|Drafts Code| E[Live Browser Verification]
+                E -->|Selector Valid?| D
+                E -->|Valid| F[Execute Code]
+                F -->|Success| G[Pass]
+                F -->|Fail/Timeout| H(Healer Agent)
+                H -->|Fetch DOM + Screenshot| I[LLM Semantic Match]
+                I -->|Find New Selector| F
+            </div>
+        </div>
+
+        <!-- SECTION 2 -->
+        <h2>2. The Exploration Mechanism (The "Vision")</h2>
+        <p>How does the Planner "see" the website? It uses a <strong>Hybrid Approach</strong> combining structure and
+            vision.</p>
+
+        <h3>Does it use the Accessibility Tree or a Screenshot?</h3>
+        <p><strong>Answer: IT USES BOTH.</strong></p>
+
+        <ul>
+            <li><strong>Input A: The Accessibility Tree (The Skeleton).</strong> <br> This is the primary source of
+                truth. It strips away HTML noise (thousands of <code>divs</code>) and keeps only semantic elements
+                (Buttons, Inputs, Links). This helps the LLM generate robust selectors like
+                <code>getByRole('button', { name: 'Submit' })</code>.
+            </li>
+            <li><strong>Input B: The Screenshot (The Skin).</strong> <br> Passed to Vision models (like GPT-4o). This
+                gives the LLM spatial awareness. It helps identify if an element is hidden behind a popup, what color a
+                button is, or the general layout context.</li>
+        </ul>
+
+        <h3>The ReAct Pattern Example</h3>
+        <ol>
+            <li><strong>Observe:</strong> "I see a login form. Tree says: <code>[ID:1 Input 'Email']</code>,
+                <code>[ID:2 Button 'Login']</code>."
+            </li>
+            <li><strong>Reason:</strong> "To reach checkout, I must log in. I need to interact with ID:1 and ID:2."</li>
+            <li><strong>Act:</strong> "Fill ID:1, Click ID:2."</li>
+            <li><strong>Map:</strong> Records this path for the test case.</li>
+        </ol>
+
+        <div class="diagram-container">
+            <div class="mermaid">
+                flowchart LR
+                WebPage[Web Page] -->|CDP Protocol| AccTree[Accessibility Tree JSON]
+                WebPage -->|Screen Capture| Shot[Screenshot Image]
+                AccTree --> LLM[LLM Brain GPT-4o]
+                Shot --> LLM
+                LLM -->|Reasoning| Action[Playwright Action]
+                Action -->|Executes| WebPage
+            </div>
+        </div>
+
+        <!-- SECTION 3 -->
+        <h2>3. Browser-Use vs. Playwright</h2>
+        <p>Understanding when to use the Agent (Browser-Use) versus the Tool (Playwright) is critical for architecture.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Browser-Use (The Agent)</th>
+                    <th>Playwright (The Tool)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Phase</strong></td>
+                    <td><strong>Discovery (Day 0)</strong></td>
+                    <td><strong>Execution (Day 1+)</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Role</strong></td>
+                    <td>Explores, figures out <em>how</em> to test, generates scripts.</td>
+                    <td>Runs established scripts for regression/CI.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cost/Speed</strong></td>
+                    <td>High cost (LLM Tokens), Slower execution.</td>
+                    <td>Free (Open Source), Blazing fast.</td>
+                </tr>
+                <tr>
+                    <td><strong>Logic</strong></td>
+                    <td>Probabilistic (LLM "Thinks").</td>
+                    <td>Deterministic (Code follows strict rules).</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="diagram-container">
+            <div class="mermaid">
+                sequenceDiagram
+                participant Architect as Architect
+                participant Agent as Browser-Use (Agent)
+                participant Script as Raw .spec.py
+                participant CI as CI/CD Pipeline (Playwright)
+
+                Architect->>Agent: "Go to Amazon, add battery to cart"
+                Note over Agent: Uses LLM + Vision to explore
+                Agent->>Script: Generates Playwright Code
+                Architect->>Script: Refines (Adds assertions/cleanup)
+                Script->>CI: Commit to Repo
+                loop Every Night
+                CI->>CI: Runs Playwright Test (Fast/Free)
+                end
+            </div>
+        </div>
+
+        <!-- SECTION 4 -->
+        <h2>4. Inside Browser-Use: Technical Implementation</h2>
+        <p>Specific details on how the <code>browser-use</code> library functions under the hood.</p>
+
+        <h3>Does Browser-Use utilize Playwright?</h3>
+        <p><strong>Yes.</strong> It is a wrapper around Playwright. It manages the browser context via Playwright's API
+            but delegates decision-making to the LLM.</p>
+
+        <h3>The Hybrid Payload Internals</h3>
+        <p>When <code>agent.run()</code> executes, it sends a combined payload to the LLM (e.g., GPT-4o):</p>
+        <ol>
+            <li><strong>Structure:</strong> It calls <code>page.accessibility.snapshot()</code>. It assigns unique
+                <strong>Index Numbers</strong> to elements (e.g., <code>[12] Button 'Save'</code>) so the LLM acts on
+                numbers, not complex strings.
+            </li>
+            <li><strong>Vision:</strong> It takes a screenshot with <strong>Bounding Boxes</strong> overlaid on
+                interactive elements. This helps the LLM correlate the visual location with the Accessibility Tree
+                index.</li>
+            <li><strong>Action:</strong> The LLM responds with a structured command (e.g.,
+                <code>{"action": "click", "index": 12}</code>), which the library translates into a Playwright command.
+            </li>
+        </ol>
+
+        <!-- SECTION 5 (NEW) -->
+        <h2>5. Handling Long Pages: The Sliding Window Strategy</h2>
+        <p>When a web page is longer than the screen (e.g., a 5-page article or infinite scroll), the Agent <strong>does
+                not</strong> capture the full page at once. It uses a "Sliding Window" approach.</p>
+
+        <div class="highlight-box">
+            <strong>Theory:</strong> The Agent sends only the <strong>Visible Viewport</strong> (e.g., top 800px) to the
+            LLM. It does not send a 5000px long screenshot.
+        </div>
+
+        <h3>Why not send the full page?</h3>
+        <ul>
+            <li><strong>Token Limits & Cost:</strong> Sending massive images consumes huge amounts of tokens.</li>
+            <li><strong>Coordinate Hallucinations:</strong> LLMs struggle to map click coordinates accurately on very
+                tall images.</li>
+            <li><strong>Lazy Loading:</strong> Modern sites often don't render content at the bottom until you scroll
+                there. A full-page screenshot might show blank space.</li>
+        </ul>
+
+        <h3>Technical Animation: The Sliding Window</h3>
+        <p>The animation below simulates how the Agent manages context. As the content scrolls up (simulating the user
+            scrolling down), the "Viewport Scanner" (Green Box) captures only what is currently visible.</p>
+
+        <div class="animation-stage">
+            <div class="viewport-scanner">
+                <div class="viewport-label">Agent Viewport (Sent to LLM)</div>
+            </div>
+
+            <div class="browser-mockup">
+                <div class="long-content">
+                    <div class="element-marker" style="top: 20px;">HEADER (Index: 1)</div>
+                    <div class="element-marker" style="top: 80px;">Login Form (Index: 2)</div>
+                    <div class="element-marker" style="top: 250px;">Main Article Content...</div>
+                    <div class="element-marker" style="top: 350px;">Ad Banner (Index: 15)</div>
+                    <div class="element-marker" style="top: 500px;">Related Products (Index: 20)</div>
+                    <div class="element-marker" style="top: 650px;">Comments Section</div>
+                    <div class="element-marker" style="top: 750px;">FOOTER LINK (Target)</div>
+                </div>
+            </div>
+
+            <div class="llm-brain">
+                <div style="border-bottom: 1px solid #7f8c8d; padding-bottom: 10px; margin-bottom: 10px;">
+                    <strong>LLM Context (Memory)</strong>
+                </div>
+                <div class="brain-log">
+                    &gt; Conversation History Active.<br>
+                    &gt; Accessibility Tree: Partial.<br>
+                </div>
+                <div class="step-display">
+                    <strong>Current Status:</strong> <span class="dynamic-text"></span>
+                </div>
+            </div>
+        </div>
+
+        <h3>Context Management (Memory)</h3>
+        <p>If the Agent scrolls past the Header, how does it remember the Login button was there?</p>
+        <ul>
+            <li><strong>Conversation History:</strong> The Agent relies on the chat log. <em>"I checked the header in
+                    Step 1. Target not found."</em></li>
+            <li><strong>The Accessibility Tree (The Cheat Code):</strong> While the Screenshot is only the viewport, the
+                JSON Accessibility Tree often contains structure for the <strong>entire</strong> page. The LLM might
+                "know" a button is at the bottom (Index 99) via the Tree, even if it can't "see" it yet. It will then
+                reason: <em>"Scroll down to reveal Index 99."</em></li>
+        </ul>
+
+    </div>
+
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
+    </script>
+</body>
+
+</html>

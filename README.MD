@@ -29,16 +29,11 @@ An **AI-powered autonomous testing platform** that uses Large Language Models (L
 Watch the AI agent autonomously explore the SauceDemo application and intelligently generate test cases:
 
 https://github.com/user-attachments/assets/3053d500-c7c7-43fd-830e-5223b7d7af7a
-<details>
-</details>
 
 ### ✅ Automated Test Execution
 See the generated Playwright scripts execute with real browser automation:
 
 https://github.com/user-attachments/assets/3be3055c-394c-4a9f-bfbd-35aa85e82e22
-
-<details>
-</details>
 
 ---
 

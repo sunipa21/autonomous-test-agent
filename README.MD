@@ -5,12 +5,12 @@
 ### Exploratory Steps
 Watch the AI agent autonomously exploring the web application and generating test cases:
 
-![Exploratory Steps Demo](Exploratory%20Steps.mp4)
+[![Watch the video](PATH_TO_IMAGE)](https://github.com/sunipa21/AI_Powered_Testing_Agent/blob/main/demo/Exploratory%20Steps.mp4)
 
 ### Execution of Generated Test Steps
 See the AI agent executing the generated test cases:
 
-![Execution of Test Steps Demo](Execution%20of%20Generated%20Test%20Steps.mp4)
+[![Watch the video](PATH_TO_IMAGE)](https://github.com/sunipa21/AI_Powered_Testing_Agent/blob/main/demo/Execution.mp4)
 
 📂 File StructureThe AI should generate the following directory structure:ai-test-agent/
 ├── .env                   # Secrets & Config

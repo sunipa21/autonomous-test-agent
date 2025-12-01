@@ -28,15 +28,28 @@ An **AI-powered autonomous testing platform** that uses Large Language Models (L
 ### 🕵️ Exploratory Agent in Action
 Watch the AI agent autonomously explore the SauceDemo application and intelligently generate test cases:
 
-![Exploratory Steps](https://github.com/user-attachments/assets/3053d500-c7c7-43fd-830e-5223b7d7af7a)
+https://github.com/user-attachments/assets/YOUR_VIDEO_ID_HERE
 
 <details>
+<summary>📹 Alternative: Direct Video Embed</summary>
 
+![Exploratory Steps](https://github.com/user-attachments/assets/3053d500-c7c7-43fd-830e-5223b7d7af7a)
+
+*Note: If video doesn't play above, download it from the `demo/` folder*
+</details>
 
 ### ✅ Automated Test Execution
 See the generated Playwright scripts execute with real browser automation:
 
+https://github.com/user-attachments/assets/YOUR_VIDEO_ID_HERE
+
+<details>
+<summary>📹 Alternative: Direct Video Embed</summary>
+
 ![Automated Test Execution](https://github.com/user-attachments/assets/3be3055c-394c-4a9f-bfbd-35aa85e82e22)
+
+*Note: If video doesn't play above, download it from the `demo/` folder*
+</details>
 
 ---
 
@@ -340,7 +353,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📚 [Architecture Guide](docs/ARCHITECTURE_GUIDE.md)
-- 🐛 [Report Issues](https://github.com/sunipa21/AI_Powered_Testing_Agent/issues)
+- 🐛 [Report Issues](https://github.com/yourusername/AI_Powered_Testing_Agent/issues)
+- 💬 [Discussions](https://github.com/yourusername/AI_Powered_Testing_Agent/discussions)
 
 ---
 

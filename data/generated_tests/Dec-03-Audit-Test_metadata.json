@@ -1,0 +1,11 @@
+{
+  "suite_name": "Dec-03-Audit-Test",
+  "generated_at": "2025-12-03T12:47:15.998114",
+  "test_count": 1,
+  "scripts": [
+    "data/generated_tests/Dec-03-Audit-Test_TC001_add_item_to_cart_and_verify_count.py"
+  ],
+  "url": "https://www.saucedemo.com",
+  "username": "standard_user",
+  "password": "secret_sauce"
+}

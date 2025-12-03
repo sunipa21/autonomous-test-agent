@@ -1,7 +1,19 @@
+import asyncio
+import json
+import os
+import re
+
 from browser_use import Agent, Browser
 from src.llm.llm_factory import get_llm
-import json
-import asyncio
+from src.core.secrets_manager import SecretsManager
+
+# Import AuditLogger for security monitoring (optional)
+try:
+    from src.security.audit_logger import AuditLogger
+    AUDIT_AVAILABLE = True
+except ImportError:
+    AUDIT_AVAILABLE = False
+    print("⚠️  AuditLogger not available - security audit disabled")
 
 async def explore_and_generate_tests(start_url: str, user_description: str, secrets_manager=None, headless: bool = False):
     """
@@ -86,6 +98,29 @@ async def explore_and_generate_tests(start_url: str, user_description: str, secr
     # The Agent will create its own page but inherit the authenticated context
     print("✅ SECURE: Authentication complete. Browser context is ready for AI Agent.")
     
+    # ===== SECURITY AUDIT LOGGING (OPTIONAL) =====
+    # Initialize audit logger if enabled via environment variable
+    audit_logger = None
+    enable_audit = os.getenv('ENABLE_AUDIT_LOG', 'false').lower() == 'true'
+    
+    if enable_audit and AUDIT_AVAILABLE:
+        try:
+            audit_logger = AuditLogger()
+            
+            # Register credentials for leak detection (hashed, never stored plaintext)
+            if secrets_manager:
+                audit_logger.register_credentials(
+                    secrets_manager.username,
+                    secrets_manager.password
+                )
+            
+            print("🔍 Security audit logging ENABLED - monitoring LLM requests")
+        except Exception as e:
+            print(f"⚠️  Failed to initialize audit logger: {e}")
+            audit_logger = None
+    elif enable_audit and not AUDIT_AVAILABLE:
+        print("⚠️  ENABLE_AUDIT_LOG=true but AuditLogger not available")
+    
     # ===== AI AGENT TASK (NO CREDENTIALS) =====
     # The AI only sees: "You're logged in, now explore"
     # It does NOT know HOW we logged in or WHAT the credentials were
@@ -123,7 +158,18 @@ EXAMPLE OUTPUT FORMAT:
 {{"test_cases": [{{"id": "TC001", "title": "Complete registration and checkout", "steps": ["Click 'Register' using selector: a[href='/register']", "Fill email field using selector: #Email", "Click 'Register button' using selector: #register-button"]}}]}}
 """
 
-
+    # ==== AUDIT LOG: LLM REQUEST ====
+    audit_entry = None
+    if audit_logger:
+        audit_entry = audit_logger.log_llm_request(
+            prompt=exploration_task,
+            metadata={
+                "goal": user_description,
+                "url": start_url,
+                "headless": headless
+            }
+        )
+    
     agent = Agent(
         task=exploration_task,
         llm=llm,
@@ -136,6 +182,20 @@ EXAMPLE OUTPUT FORMAT:
     try:
         history = await agent.run()
         
+        # ==== AUDIT LOG: LLM RESPONSE ====
+        if audit_logger and audit_entry:
+            audit_logger.log_llm_response(
+                response=history.final_result(), # Pass the actual result from history
+                request_hash=audit_entry["prompt_hash"]
+            )
+            
+            # Generate compliance report at end of session
+            try:
+                report_path = audit_logger.generate_compliance_report()
+                print(f"📊 Security audit report generated: {report_path}")
+            except Exception as e:
+                print(f"⚠️  Failed to generate audit report: {e}")
+            
         # Keep browser open for 10 seconds so you can see the final state
         print("⏸️  Keeping browser open for 10 seconds to see final state...")
         await asyncio.sleep(10)

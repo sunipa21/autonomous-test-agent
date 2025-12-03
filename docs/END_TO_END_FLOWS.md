@@ -167,13 +167,21 @@ browser = Browser(
 
 #### Step 3: Start Browser and Navigate (Lines 49-59)
 ```python
-await browser.start()
-page = await browser.new_page()
+await browser.start()  # Creates Tab 1: "Starting agent..." (idle)
+page = await browser.new_page()  # Creates Tab 2: "Swag Labs" (active)
 
-# Securely inject credentials
+# Securely inject credentials in Tab 2
 if secrets_manager:
     await secrets_manager.inject_login(page)
 ```
+
+**Visual Behavior:**
+When you run the explorer, you'll observe:
+- **Tab 1**: "Starting agent f6fa..." (browser control page, sits idle)
+- **Tab 2**: "Swag Labs" (where BOTH login and exploration happen)
+  - Playwright performs login in Tab 2
+  - AI continues exploring in the same Tab 2
+  - Seamless handover via browser context (cookies shared)
 
 ---
 

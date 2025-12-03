@@ -2826,3 +2826,140 @@ Final Result: PASS
 2025-12-01 20:32:31,379 - server - INFO - Generated script: data/generated_tests/SmokeTest - Dec-01_TC001_add_item_verify_remove_verify_and_logout_flow.py
 2025-12-01 20:32:31,379 - server - INFO - Saved test metadata to: data/generated_tests/SmokeTest - Dec-01_metadata.json
 2025-12-01 20:32:33,694 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 12:28:56,450 - server - INFO - Received generation request for suite 'SmokeTest - Dec-01' at URL: https://www.saucedemo.com
+2025-12-02 12:33:10,729 - server - INFO - Raw agent output length: 857 characters
+2025-12-02 12:33:10,731 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-02 12:33:10,731 - server - INFO - Successfully generated 1 test cases for suite 'SmokeTest - Dec-01'.
+2025-12-02 12:33:10,733 - server - INFO - Saved 1 test suites to data/test_suites.json
+2025-12-02 12:33:10,733 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-02 12:33:10,734 - server - INFO - Generated script: data/generated_tests/SmokeTest - Dec-01_TC001_login_add_item_remove_item_and_logout_flow.py
+2025-12-02 12:33:10,735 - server - INFO - Saved test metadata to: data/generated_tests/SmokeTest - Dec-01_metadata.json
+2025-12-02 12:33:13,297 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 14:26:48,576 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 14:26:49,939 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 14:26:51,074 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 14:26:52,197 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 14:28:39,717 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 14:28:40,845 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 14:49:28,627 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 14:50:05,126 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-02 14:50:05,127 - server - INFO - Returning 1 suites to frontend
+2025-12-02 14:50:18,544 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-02 14:50:18,545 - server - INFO - Returning 1 suites to frontend
+2025-12-02 14:50:23,178 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-02 14:50:23,178 - server - INFO - Returning 1 suites to frontend
+2025-12-02 14:54:00,282 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-02 14:54:00,283 - server - INFO - Returning 1 suites to frontend
+2025-12-02 14:54:18,943 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-02 14:54:18,944 - server - INFO - Returning 1 suites to frontend
+2025-12-02 14:54:40,388 - server - INFO - Audit logging ENABLED via web interface
+2025-12-02 14:54:47,041 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-02 14:54:47,041 - server - INFO - Returning 1 suites to frontend
+2025-12-02 14:54:51,327 - server - INFO - Received generation request for suite 'SmokeTest - Dec-01' at URL: https://www.saucedemo.com
+2025-12-02 14:55:53,380 - server - INFO - Raw agent output length: 358 characters
+2025-12-02 14:55:53,381 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-02 14:55:53,381 - server - INFO - Successfully generated 1 test cases for suite 'SmokeTest - Dec-01'.
+2025-12-02 14:55:53,382 - server - INFO - Saved 1 test suites to data/test_suites.json
+2025-12-02 14:55:53,382 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-02 14:55:53,383 - server - INFO - Generated script: data/generated_tests/SmokeTest - Dec-01_TC001_add_sauce_labs_backpack_to_cart_and_verify_item_co.py
+2025-12-02 14:55:53,383 - server - INFO - Saved test metadata to: data/generated_tests/SmokeTest - Dec-01_metadata.json
+2025-12-02 14:55:55,809 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-02 14:59:19,728 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-02 14:59:19,729 - server - INFO - Returning 1 suites to frontend
+2025-12-03 09:32:58,823 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-03 10:05:17,675 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-03 10:06:41,909 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-03 10:06:41,910 - server - INFO - Returning 1 suites to frontend
+2025-12-03 10:10:18,555 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-03 10:10:19,759 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-03 10:10:39,390 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-03 10:11:14,999 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-03 10:16:34,440 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-03 10:17:31,508 - server - INFO - Loaded 1 test suites from data/test_suites.json
+2025-12-03 11:29:04,828 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-03 11:29:04,830 - server - INFO - Returning 1 suites to frontend
+2025-12-03 11:29:12,787 - server - INFO - Fetching all test suites. Total suites: 1
+2025-12-03 11:29:12,787 - server - INFO - Returning 1 suites to frontend
+2025-12-03 11:29:42,805 - server - INFO - Received generation request for suite 'Dec-03-First-Test' at URL: https://www.saucedemo.com
+2025-12-03 11:30:58,228 - server - INFO - Raw agent output length: 396 characters
+2025-12-03 11:30:58,230 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-03 11:30:58,230 - server - INFO - Successfully generated 1 test cases for suite 'Dec-03-First-Test'.
+2025-12-03 11:30:58,232 - server - INFO - Saved 2 test suites to data/test_suites.json
+2025-12-03 11:30:58,232 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-03 11:30:58,234 - server - INFO - Generated script: data/generated_tests/Dec-03-First-Test_TC001_add_an_item_to_the_cart_and_verify_cart_contents.py
+2025-12-03 11:30:58,234 - server - INFO - Saved test metadata to: data/generated_tests/Dec-03-First-Test_metadata.json
+2025-12-03 11:31:00,703 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-03 11:35:53,880 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-03 11:35:53,881 - server - INFO - Returning 2 suites to frontend
+2025-12-03 11:35:56,847 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-03 11:35:56,849 - server - INFO - Returning 2 suites to frontend
+2025-12-03 11:36:10,032 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-03 11:36:10,033 - server - INFO - Returning 2 suites to frontend
+2025-12-03 11:36:12,645 - server - INFO - Received execution request for test case: TC001 in suite: Dec-03-First-Test
+2025-12-03 11:36:12,648 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-03-First-Test_TC001_add_an_item_to_the_cart_and_verify_cart_contents.py
+2025-12-03 11:36:22,775 - server - INFO - Script execution output: ls from: /Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Dec-03-First-Test_metadata.json
+Step: Navigate to login page and authenticate
+Step: Enter credentials
+Step: Click login button
+  - Clicking #add-to-cart-sauce-labs-backpack
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+Step 3: Verify the 'Sauce Labs Backpack' is displayed in the cart with quantity 1 using selector: #item_4_title_link
+Test FAILED ✗: name 're' is not defined
+Final Result: FAIL
+
+2025-12-03 11:36:22,776 - server - INFO - Test execution result: PASS
+2025-12-03 11:36:36,395 - server - INFO - Received execution request for test case: TC001 in suite: Dec-03-First-Test
+2025-12-03 11:36:36,396 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-03-First-Test_TC001_add_an_item_to_the_cart_and_verify_cart_contents.py
+2025-12-03 11:36:45,310 - server - INFO - Script execution output: ls from: /Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Dec-03-First-Test_metadata.json
+Step: Navigate to login page and authenticate
+Step: Enter credentials
+Step: Click login button
+  - Clicking #add-to-cart-sauce-labs-backpack
+  - Clicking .shopping_cart_link, #shopping_cart_container a
+Step 3: Verify the 'Sauce Labs Backpack' is displayed in the cart with quantity 1 using selector: #item_4_title_link
+Test FAILED ✗: name 're' is not defined
+Final Result: FAIL
+
+2025-12-03 11:36:45,310 - server - INFO - Test execution result: PASS
+2025-12-03 11:41:02,531 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-03 11:41:32,158 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-03 11:52:57,761 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-03 11:52:57,762 - server - INFO - Returning 2 suites to frontend
+2025-12-03 12:06:11,720 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-03 12:06:11,721 - server - INFO - Returning 2 suites to frontend
+2025-12-03 12:37:15,192 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-03 12:37:15,194 - server - INFO - Returning 2 suites to frontend
+2025-12-03 12:45:05,589 - server - INFO - Loaded 2 test suites from data/test_suites.json
+2025-12-03 12:45:29,605 - server - INFO - Fetching all test suites. Total suites: 2
+2025-12-03 12:45:29,605 - server - INFO - Returning 2 suites to frontend
+2025-12-03 12:46:02,822 - server - INFO - Received generation request for suite 'Dec-03-Audit-Test' at URL: https://www.saucedemo.com
+2025-12-03 12:47:15,993 - server - INFO - Raw agent output length: 369 characters
+2025-12-03 12:47:15,994 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-03 12:47:15,995 - server - INFO - Successfully generated 1 test cases for suite 'Dec-03-Audit-Test'.
+2025-12-03 12:47:15,996 - server - INFO - Saved 3 test suites to data/test_suites.json
+2025-12-03 12:47:15,996 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-03 12:47:15,998 - server - INFO - Generated script: data/generated_tests/Dec-03-Audit-Test_TC001_add_item_to_cart_and_verify_count.py
+2025-12-03 12:47:15,998 - server - INFO - Saved test metadata to: data/generated_tests/Dec-03-Audit-Test_metadata.json
+2025-12-03 12:47:18,481 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-03 12:47:27,006 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-03 12:47:27,006 - server - INFO - Returning 3 suites to frontend
+2025-12-03 12:48:23,442 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-03 12:48:23,443 - server - INFO - Returning 3 suites to frontend
+2025-12-03 12:48:29,258 - server - INFO - Received execution request for test case: TC001 in suite: Dec-03-Audit-Test
+2025-12-03 12:48:29,260 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-03-Audit-Test_TC001_add_item_to_cart_and_verify_count.py
+2025-12-03 12:48:38,932 - server - INFO - Script execution output: tem to cart and verify count
+Loaded credentials from: /Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/data/generated_tests/Dec-03-Audit-Test_metadata.json
+Step: Navigate to login page and authenticate
+Step: Enter credentials
+Step: Click login button
+  - Clicking #add-to-cart-sauce-labs-backpack
+  - Clicking #shopping_cart_container a
+Step 3: Verify Sauce Labs Backpack is present in the cart using selector: #item_4_title_link
+Test FAILED ✗: name 're' is not defined
+Final Result: FAIL
+
+2025-12-03 12:48:38,933 - server - INFO - Test execution result: PASS
+2025-12-03 12:48:49,208 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-03 12:48:49,208 - server - INFO - Returning 3 suites to frontend
+2025-12-03 12:48:53,737 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-03 12:48:53,737 - server - INFO - Returning 3 suites to frontend

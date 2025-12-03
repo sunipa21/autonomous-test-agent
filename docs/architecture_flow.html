@@ -229,12 +229,16 @@ await browser.start()  # Launches Chromium via Playwright
 page = await browser.new_page()</pre>
                         </div>
 
-                        <div class="data-flow p-3 rounded-lg">
+                        <div class="data-flow rounded-lg p-4 mt-4">
                             <p class="text-sm font-semibold text-purple-400 mb-1">🌐 Browser Process Started:</p>
                             <p class="text-xs text-gray-300">• Chromium browser launched (headless=False)</p>
-                            <p class="text-xs text-gray-300">• CDP (Chrome DevTools Protocol) connection established</p>
+                            <p class="text-xs text-gray-300">• Tab 1: "Starting agent..." (browser control page, stays
+                                <span class="text-yellow-400">IDLE</span>)</p>
+                            <p class="text-xs text-gray-300">• Tab 2: "Swag Labs" created via <code
+                                    class="code-font text-xs bg-slate-700 px-1 py-0.5 rounded">new_page()</code></p>
                             <p class="text-xs text-gray-300">• New browser context created with security flags</p>
-                            <p class="text-xs text-gray-300">• Empty page ready for navigation</p>
+                            <p class="text-xs text-gray-300 mt-2 text-purple-300">🔄 <strong>Handover will occur in Tab
+                                    2:</strong> Playwright logs in → AI continues exploring (same tab)</p>
                         </div>
                     </div>
                 </div>

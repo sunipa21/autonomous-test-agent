@@ -3,20 +3,58 @@
     "config": {
       "suite_name": "SmokeTest - Dec-01",
       "url": "https://www.saucedemo.com",
-      "description": "Login then add item to card, verify then remove the item and verify that it was removed then logout",
+      "description": "Login then add item to card, verify that one item is there add to the cart",
       "username": "standard_user",
       "password": "secret_sauce"
     },
     "cases": [
       {
         "id": "TC001",
-        "title": "Add item, verify, remove, verify, and logout flow",
+        "title": "Add Sauce Labs Backpack to cart and verify item count",
         "steps": [
-          "Add 'Sauce Labs Backpack' to the cart using selector: #add-to-cart-sauce-labs-backpack",
-          "Navigate to the shopping cart page to verify item addition using selector: .shopping_cart_link",
-          "Remove 'Sauce Labs Backpack' from the cart using selector: #remove-sauce-labs-backpack",
-          "Open the side menu to prepare for logout using selector: #react-burger-menu-btn",
-          "Logout from the application using selector: #logout_sidebar_link"
+          "Click 'Add to cart' for Sauce Labs Backpack using selector: #add-to-cart-sauce-labs-backpack",
+          "Click shopping cart icon using selector: .shopping_cart_link",
+          "Verify Sauce Labs Backpack is present in the cart using selector: #item_4_title_link"
+        ]
+      }
+    ]
+  },
+  "Dec-03-First-Test": {
+    "config": {
+      "suite_name": "Dec-03-First-Test",
+      "url": "https://www.saucedemo.com",
+      "description": "Login then add item to card, verify that one item is there add to the cart",
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "cases": [
+      {
+        "id": "TC001",
+        "title": "Add an item to the cart and verify cart contents",
+        "steps": [
+          "Click the 'Add to cart' button for the Sauce Labs Backpack using selector: #add-to-cart-sauce-labs-backpack",
+          "Click the shopping cart icon using selector: .shopping_cart_link",
+          "Verify the 'Sauce Labs Backpack' is displayed in the cart with quantity 1 using selector: #item_4_title_link"
+        ]
+      }
+    ]
+  },
+  "Dec-03-Audit-Test": {
+    "config": {
+      "suite_name": "Dec-03-Audit-Test",
+      "url": "https://www.saucedemo.com",
+      "description": "Login then add item to card, verify that one item is there add to the cart",
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "cases": [
+      {
+        "id": "TC001",
+        "title": "Add item to cart and verify count",
+        "steps": [
+          "Add Sauce Labs Backpack to cart using selector: #add-to-cart-sauce-labs-backpack",
+          "Navigate to the cart page by clicking the shopping cart icon using selector: #shopping_cart_container a",
+          "Verify Sauce Labs Backpack is present in the cart using selector: #item_4_title_link"
         ]
       }
     ]

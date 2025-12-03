@@ -283,11 +283,18 @@ When building an AI-powered testing agent that needs to test authenticated web a
 
 **What It Does**:
 1. **Loads credentials** from environment variables (`.env` file)
-2. **Navigates to login page** using Playwright
+2. **Navigates to login page** using Playwright in a new browser tab
 3. **Directly manipulates DOM** to fill username/password fields
 4. **Submits login form** programmatically
 5. **Handles post-login alerts** (browser password managers)
-6. **Hands over authenticated browser session** to AI agent
+6. **Hands over authenticated browser page** to AI agent (same tab, sequential handover)
+
+**Visual Behavior**:
+- Browser creates Tab 1: "Starting agent..." (browser control page, stays idle)
+- Browser creates Tab 2: "Swag Labs" (where login and exploration both happen)
+  - **Phase 1**: Playwright logs in Tab 2
+  - **Phase 2**: AI continues exploring in same Tab 2
+- The handover is seamless - AI picks up where Playwright left off in the same tab
 
 **What The AI Sees**:
 ```
@@ -1860,6 +1867,184 @@ sequenceDiagram
 ---
 
 ## Security Architecture
+
+### Core Security Model: Zero-Trust
+
+The system implements a **zero-trust architecture** where credentials **never** reach the AI/LLM provider:
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     SECURITY BOUNDARY                           │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌───────────────┐         ┌──────────────┐                    │
+│  │   .env File   │────────▶│SecretsManager│                    │
+│  │  (Local Only) │         │  (Local PC)  │                    │
+│  └───────────────┘         └──────┬───────┘                    │
+│                                   │                             │
+│                                   ▼                             │
+│                          ┌─────────────────┐                    │
+│                          │   Playwright    │                    │
+│                          │  (Login Local)  │                    │
+│                          └────────┬────────┘                    │
+│                                   │                             │
+│                    Cookies Set ───┘                             │
+│                                   │                             │
+│                                   ▼                             │
+│                          ┌─────────────────┐                    │
+│                          │ Browser Context │                    │
+│                          │  (Authenticated)│                    │
+│                          └────────┬────────┘                    │
+│                                   │                             │
+│  ════════════════════════════════════════════════════════════  │
+│                    TRUST BOUNDARY (CLOUDS)|                     │
+│  ════════════════════════════════════════════════════════════  │
+│                                   │                             │
+│                                   ▼                             │
+│                          ┌─────────────────┐                    │
+│                          │   AI Agent      │───────────────┐    │
+│                          │ (AI sees only   │               │    │
+│                          │  post-login UI) │               │    │
+│                          └─────────────────┘               │    │
+│                                                            │    │
+│                                                            ▼    │
+│                                                  ┌──────────────┴────┐
+│                                                  │  LLM API (Cloud)  │
+│                                                  │  Gemini/OpenAI    │
+│                                                  │                   │
+│                                                  │  ✅ Receives:     │
+│                                                  │  - Screenshots    │
+│                                                  │  - DOM trees      │
+│                                                  │  - Test goals     │
+│                                                  │                   │
+│                                                  │  ❌ NEVER gets:   │
+│                                                  │  - Credentials    │
+│                                                  │  - Login forms    │
+│                                                  │  - Passwords      │
+│                                                  └───────────────────┘
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Security Components
+
+#### 1. Secrets Manager (`src/core/secrets_manager.py`)
+
+**Responsibility**: Secure local credential injection
+
+**Methods**:
+- `inject_login()`: Fills forms via direct DOM manipulation
+- `try_load_cached_session()`: Loads cookies from disk (optimization)
+- `save_session_cookies()`: Caches session for subsequent runs
+- `handle_post_login_alerts()`: Dismisses browser password prompts
+
+#### 2. Audit Logger (`src/security/audit_logger.py`) - NEW
+
+**Responsibility**: Monitor and prove credentials never reach LLM
+
+**Features**:
+- **Real-time leak detection**: Scans every LLM request for credential patterns
+- **JSONL audit trail**: Machine-readable logs for compliance
+- **Compliance reports**: Auto-generated SOC2/ISO27001 documentation
+- **Cryptographic hashing**: Stores credential hashes (never plaintext) for leak detection
+
+**Usage**:
+```python
+from src.security.audit_logger import AuditLogger
+
+audit = AuditLogger()
+audit.register_credentials(username, password)  # Hashed
+audit_entry = audit.log_llm_request(prompt="...", metadata={...})
+audit.log_llm_response(response, audit_entry["prompt_hash"])
+report_path = audit.generate_compliance_report()
+```
+
+**Outputs**:
+- `data/security_audit/llm_audit_YYYYMMDD_HHMMSS.jsonl` - Log entries
+- `data/security_audit/compliance_report_YYYYMMDD_HHMMSS.md` - Report
+
+#### 3. Web-Based Audit Dashboard (`templates/audit_dashboard.html`) - NEW
+
+**URL**: `http://localhost:8000/audit`
+
+**Purpose**: Provide visual proof that credentials never reach LLM
+
+**Features**:
+- **Toggle Control**: Enable/disable audit logging via web UI
+- **Real-Time Logs**: See LLM requests/responses as they happen
+- **Statistics Dashboard**: Track total logs, leaks detected (should be 0)
+- **Compliance Report Viewer**: View generated reports inline
+- **Color-Coded Alerts**: Green (safe), Red (leak detected)
+
+**API Endpoints** (`src/core/server.py`):
+```python
+GET  /audit                    # Dashboard page
+GET  /api/audit/status         # Current audit status + stats
+POST /api/audit/toggle         # Enable/disable logging
+GET  /api/audit/logs?limit=50  # Fetch log entries
+GET  /api/audit/report         # Get compliance report
+DELETE /api/audit/clear        # Clear all logs
+```
+
+**Persistent Configuration**:
+- Settings saved to `data/audit_config.json`
+- Auto-updates `ENABLE_AUDIT_LOG` environment variable
+- Survives server restarts
+
+**Visual Workflow**:
+```
+User navigates to /audit
+   │
+   ├──▶ Sees toggle switch (ON/OFF)
+   │
+   ├──▶ Enables audit logging (switch to ON)
+   │     └──▶ Config saved to data/audit_config.json
+   │     └──▶ ENABLE_AUDIT_LOG=true set
+   │
+   ├──▶ Returns to main app (/), runs test generation
+   │     └──▶ AuditLogger initializes
+   │     └──▶ Credentials registered (hashed)
+   │     └──▶ Every LLM request logged + scanned
+   │
+   └──▶ Returns to /audit dashboard
+         ├──▶ Statistics update (e.g., "Total Logs: 12")
+         ├──▶ Logs displayed with timestamps
+         ├──▶ "Credential Leaks: 0" ✅ (proof of security)
+         └──▶ Compliance report viewable
+```
+
+### Security Verification Methods
+
+#### Method 1: Web Dashboard (Recommended for POCs)
+1. Navigate to `http://localhost:8000/audit`
+2. Toggle audit logging ON
+3. Run test generation
+4. Return to dashboard
+5. Verify "Credential Leaks: 0"
+6. Show to stakeholders as visual proof
+
+#### Method 2: Static Code Analysis (CI/CD)
+```bash
+python scripts/verify_credential_isolation.py
+# Output: ✅ NO CREDENTIAL LEAKS DETECTED
+```
+
+#### Method 3: Manual Log Inspection
+```bash
+cat data/security_audit/llm_audit_*.jsonl | jq '.leak_detected'
+# Should output: false, false, false...
+
+grep -i "password" data/security_audit/*.jsonl
+# Should return: NO MATCHES
+```
+
+#### Method 4: Compliance Report
+```bash
+cat data/security_audit/compliance_report_*.md
+# Human-readable SOC2 compliance report
+```
+
+### Security Guarantees
 
 ### Zero-Trust Model
 

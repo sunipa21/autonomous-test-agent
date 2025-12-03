@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Audit Dashboard - AI Testing Agent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f172a;
+            background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
+            min-height: 100vh;
+            padding: 20px;
+            color: #f1f5f9;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Glass morphism effect */
+        .glass {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .header {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 25px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            color: #f1f5f9;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .back-btn {
+            padding: 10px 20px;
+            background: rgba(71, 85, 105, 0.6);
+            backdrop-filter: blur(8px);
+            color: white;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(71, 85, 105, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .toggle-container {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .toggle-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .toggle-info {
+            flex: 1;
+        }
+
+        .toggle-info h2 {
+            color: #f1f5f9;
+            margin-bottom: 10px;
+        }
+
+        .toggle-info p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 80px;
+            height: 40px;
+        }
+
+        .toggle-switch input {
+            display: none;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(71, 85, 105, 0.6);
+            transition: .4s;
+            border-radius: 34px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 32px;
+            width: 32px;
+            left: 4px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(40px);
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .status-badge.enabled {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .status-badge.disabled {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
+        }
+
+        .stat-card h3 {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .stat-card .value {
+            color: #f1f5f9;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-card .label {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .logs-container {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .logs-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logs-header h2 {
+            color: #f1f5f9;
+        }
+
+        .logs-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+            color: white;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-danger {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-danger:hover {
+            background: rgba(239, 68, 68, 0.3);
+            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+        }
+
+        .btn-success {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-success:hover {
+            background: rgba(34, 197, 94, 0.3);
+            box-shadow: 0 5px 15px rgba(34, 197, 94, 0.3);
+        }
+
+        .log-entry {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 15px;
+            border-left: 4px solid;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .log-entry.request {
+            border-left-color: #8b5cf6;
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        .log-entry.response {
+            border-left-color: #22c55e;
+            background: rgba(34, 197, 94, 0.1);
+        }
+
+        .log-entry.leak-detected {
+            border-left-color: #ef4444;
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .log-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #cbd5e1;
+        }
+
+        .log-content {
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .leak-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .leak-badge.safe {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .leak-badge.danger {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+        }
+
+        .empty-state i {
+            font-size: 64px;
+            margin-bottom: 20px;
+            color: #475569;
+        }
+
+        .compliance-report {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .report-content {
+            max-height: 600px;
+            overflow-y: auto;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 92, 246, 0.5);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 92, 246, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .toggle-section {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>
+                <i class="fas fa-shield-alt"></i>
+                Security Audit Dashboard
+            </h1>
+            <div class="header-actions">
+                <a href="/" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Main
+                </a>
+            </div>
+        </div>
+
+        <!-- Toggle Control -->
+        <div class="toggle-container">
+            <div class="toggle-section">
+                <div class="toggle-info">
+                    <h2>Audit Logging Control</h2>
+                    <p>
+                        Enable audit logging to monitor all LLM interactions and detect credential leaks in real-time.
+                        When enabled, every request/response is logged and scanned for sensitive data.
+                    </p>
+                    <div style="margin-top: 15px;">
+                        <span class="status-badge" id="statusBadge">
+                            <i class="fas fa-circle"></i>
+                            Loading...
+                        </span>
+                    </div>
+                </div>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="auditToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Log Entries</h3>
+                <div class="value" id="totalLogs">0</div>
+                <div class="label">Audit entries recorded</div>
+            </div>
+            <div class="stat-card">
+                <h3>Compliance Reports</h3>
+                <div class="value" id="totalReports">0</div>
+                <div class="label">Reports generated</div>
+            </div>
+            <div class="stat-card">
+                <h3>Credential Leaks</h3>
+                <div class="value" id="totalLeaks" style="color: #28a745;">0</div>
+                <div class="label">Detected (should be 0)</div>
+            </div>
+        </div>
+
+        <!-- Audit Logs -->
+        <div class="logs-container">
+            <div class="logs-header">
+                <h2><i class="fas fa-clipboard-list"></i> Recent Audit Logs</h2>
+                <div class="logs-actions">
+                    <button class="btn btn-primary" onclick="refreshLogs()">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh
+                    </button>
+                    <button class="btn btn-success" onclick="viewReport()">
+                        <i class="fas fa-file-alt"></i>
+                        View Report
+                    </button>
+                    <button class="btn btn-danger" onclick="clearLogs()">
+                        <i class="fas fa-trash"></i>
+                        Clear Logs
+                    </button>
+                </div>
+            </div>
+            <div id="logsContent">
+                <div class="empty-state">
+                    <i class="fas fa-inbox"></i>
+                    <p>Loading audit logs...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compliance Report (Hidden by default) -->
+        <div class="compliance-report" id="reportSection" style="display: none;">
+            <h2 style="margin-bottom: 20px;"><i class="fas fa-certificate"></i> Compliance Report</h2>
+            <div class="report-content" id="reportContent">
+                Loading report...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Load status on page load
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadStatus();
+            await refreshLogs();
+
+            // Auto-refresh every 10 seconds
+            setInterval(refreshLogs, 10000);
+        });
+
+        // Load audit status
+        async function loadStatus() {
+            try {
+                const res = await fetch('/api/audit/status');
+                const data = await res.json();
+
+                const toggle = document.getElementById('auditToggle');
+                const badge = document.getElementById('statusBadge');
+
+                toggle.checked = data.enabled;
+
+                if (data.enabled) {
+                    badge.className = 'status-badge enabled';
+                    badge.innerHTML = '<i class="fas fa-check-circle"></i> Audit Logging Enabled';
+                } else {
+                    badge.className = 'status-badge disabled';
+                    badge.innerHTML = '<i class="fas fa-times-circle"></i> Audit Logging Disabled';
+                }
+
+                // Update stats
+                document.getElementById('totalReports').textContent = data.report_count || 0;
+            } catch (err) {
+                console.error('Failed to load status:', err);
+            }
+        }
+
+        // Toggle audit logging
+        document.getElementById('auditToggle').addEventListener('change', async (e) => {
+            const enabled = e.target.checked;
+
+            try {
+                const res = await fetch('/api/audit/toggle', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ enabled })
+                });
+
+                const data = await res.json();
+
+                if (data.status === 'success') {
+                    await loadStatus();
+                    alert(data.message.charAt(0).toUpperCase() + data.message.slice(1) + '!');
+
+                    if (enabled) {
+                        alert('⚠️ Important: You need to run a new test for audit logs to be generated.');
+                    }
+                }
+            } catch (err) {
+                console.error('Toggle failed:', err);
+                e.target.checked = !enabled;
+                alert('Failed to toggle audit logging');
+            }
+        });
+
+        // Refresh logs
+        async function refreshLogs() {
+            try {
+                const res = await fetch('/api/audit/logs?limit=50');
+                const data = await res.json();
+
+                const container = document.getElementById('logsContent');
+
+                if (data.logs && data.logs.length > 0) {
+                    document.getElementById('totalLogs').textContent = data.total || data.logs.length;
+
+                    // Count leaks
+                    const leaks = data.logs.filter(log => log.leak_detected).length;
+                    document.getElementById('totalLeaks').textContent = leaks;
+                    document.getElementById('totalLeaks').style.color = leaks > 0 ? '#dc3545' : '#28a745';
+
+                    // Render logs
+                    container.innerHTML = data.logs.map(log => renderLog(log)).join('');
+                } else {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <i class="fas fa-inbox"></i>
+                            <p>${data.message || 'No audit logs found. Enable audit logging and run tests to generate logs.'}</p>
+                        </div>
+                    `;
+                }
+            } catch (err) {
+                console.error('Failed to load logs:', err);
+            }
+        }
+
+        // Render single log entry
+        function renderLog(log) {
+            const isRequest = log.type === 'LLM_REQUEST';
+            const hasLeak = log.leak_detected;
+
+            const className = hasLeak ? 'log-entry leak-detected' :
+                isRequest ? 'log-entry request' : 'log-entry response';
+
+            const icon = isRequest ? 'fa-paper-plane' : 'fa-reply';
+            const typeLabel = isRequest ? 'LLM Request' : 'LLM Response';
+
+            const leakBadge = isRequest ? `
+                <span class="leak-badge ${hasLeak ? 'danger' : 'safe'}">
+                    <i class="fas ${hasLeak ? 'fa-exclamation-triangle' : 'fa-shield-alt'}"></i>
+                    ${hasLeak ? 'LEAK DETECTED' : 'Safe'}
+                </span>
+            ` : '';
+
+            return `
+                <div class="${className}">
+                    <div class="log-meta">
+                        <span><i class="fas ${icon}"></i> ${typeLabel}</span>
+                        <span>${new Date(log.timestamp).toLocaleString()}</span>
+                    </div>
+                    <div class="log-content">
+                        ${isRequest ? `
+                            <strong>Prompt:</strong> ${log.prompt_preview}<br>
+                            <strong>Length:</strong> ${log.prompt_length} characters<br>
+                            <strong>Hash:</strong> ${log.prompt_hash.substring(0, 16)}...<br>
+                            ${leakBadge}
+                            ${hasLeak ? `<br><strong style="color: #dc3545;">Leak Details:</strong> ${log.leak_details.join(', ')}` : ''}
+                        ` : `
+                            <strong>Response:</strong> ${log.response_preview}<br>
+                            <strong>Length:</strong> ${log.response_length} characters
+                        `}
+                    </div>
+                </div>
+            `;
+        }
+
+        // View compliance report
+        async function viewReport() {
+            try {
+                const res = await fetch('/api/audit/report');
+                const data = await res.json();
+
+                const reportSection = document.getElementById('reportSection');
+                const reportContent = document.getElementById('reportContent');
+
+                if (data.status === 'success') {
+                    reportContent.textContent = data.report;
+                    reportSection.style.display = 'block';
+                    reportSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert(data.message || 'No compliance report available');
+                }
+            } catch (err) {
+                console.error('Failed to load report:', err);
+                alert('Failed to load compliance report');
+            }
+        }
+
+        // Clear logs
+        async function clearLogs() {
+            if (!confirm('Are you sure you want to clear all audit logs? This action cannot be undone.')) {
+                return;
+            }
+
+            try {
+                const res = await fetch('/api/audit/clear', { method: 'DELETE' });
+                const data = await res.json();
+
+                alert(data.message);
+                await refreshLogs();
+                await loadStatus();
+            } catch (err) {
+                console.error('Failed to clear logs:', err);
+                alert('Failed to clear logs');
+            }
+        }
+    </script>
+</body>
+
+</html>

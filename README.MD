@@ -16,10 +16,12 @@ An **AI-powered autonomous testing platform** that uses Large Language Models (L
 
 - **🔍 AI-Driven Exploration**: Browser-Use Agent autonomously navigates your web app
 - **🔐 Zero-Trust Security**: Credentials injected locally via Playwright, never sent to LLM
+- **🖥️ Audit Dashboard**: Web-based interface to prove credentials never leak to AI (NEW!)
 - **⚡ Auto-Generated Scripts**: Creates executable Playwright test scripts with selectors
 - **🎭 Headless/Headed Modes**: Watch the agent work or run tests in background
 - **📊 Session Caching**: Smart session management to skip redundant logins
 - **🔁 Multi-LLM Support**: Works with Gemini 2.0, GPT-4, Claude 3.5, or local models
+- **📈 Real-Time Monitoring**: Track LLM interactions and detect leaks live
 
 ---
 
@@ -65,19 +67,17 @@ https://github.com/user-attachments/assets/YOUR_VIDEO_ID_HERE
 │  │   .env File      │         │         │  LLM API    │    │
 │  │  ┌────────────┐  │         │         │  (Gemini/   │    │
 │  │  │ USERNAME   │  │         │         │   Claude)   │    │
-│  │  │ PASSWORD   │  │         │         └─────────────┘    │
-│  │  └────────────┘  │         │               ▲            │
-│  └────────┬─────────┘         │               │            │
-│           │                   │         ONLY SEES:         │
-│           ▼                   │      ┌──────────────┐      │
-│  ┌──────────────────┐         │      │ Post-login   │      │
-│  │ SecretsManager   │         │      │ Page State   │      │
-│  │  inject_login()  │─────────┼─────▶│              │      │
-│  └────────┬─────────┘         │      │ "Welcome!"   │      │
+│  │  └────────────┘  │         │         └─────────────┘    │
+│  └────────┬─────────┘         │               ▲            │
+│           │                   │               │            │
+│  ┌──────────────────┐         │         ONLY SEES:         │
+│  │ SecretsManager   │         │      ┌──────────────┐      │
+│  │  inject_login()  │─────────┼─────▶│ Post-login   │      │
+│  └────────┬─────────┘         │      │ Page State   │      │
+│           │                   │      │              │      │
+│  Page is now logged in        │      │ "Welcome!"   │      │
 │           │                   │      │ [Items...]   │      │
-│  Page is now logged in        │      └──────────────┘      │
-│           │                   │                            │
-│           ▼                   │                            │
+│           ▼                   │      └──────────────┘      │
 │     ┌─────────────┐           │                            │
 │     │  AI Agent   │───────────┼────────────────────────────│
 │     └─────────────┘           │                            │
@@ -89,8 +89,11 @@ https://github.com/user-attachments/assets/YOUR_VIDEO_ID_HERE
 - ✅ **No Credentials in Prompts**: LLM never sees username/password
 - ✅ **Local Injection**: Playwright fills login forms before AI involvement
 - ✅ **Session Caching**: Cookies saved locally (never shared with AI)
-- ✅ **Audit Trail**: Console logs prove AI exclusion from authentication
-- ✅ **Compliance Ready**: GDPR, SOC2, HIPAA compatible
+- ✅ **Web Audit Dashboard**: Visual proof at `http://localhost:8000/audit`
+- ✅ **Real-Time Leak Detection**: Scans every LLM request for credentials
+- ✅ **Compliance Reports**: Auto-generated SOC2/ISO27001 documentation
+- ✅ **Static Analysis**: Automated code verification in CI/CD
+- ✅ **GDPR/SOC2/HIPAA Ready**: Enterprise-grade security architecture
 
 ---
 
@@ -156,9 +159,12 @@ Open your browser: **http://localhost:8000**
 AI_Powered_Testing_Agent/
 ├── src/
 │   ├── core/
-│   │   ├── server.py              # FastAPI backend
+│   │   ├── server.py              # FastAPI backend + audit endpoints
 │   │   ├── secrets_manager.py     # 🔐 Zero-trust credential injection
 │   │   └── config.py              # Configuration loader
+│   ├── security/                  # 🔐 NEW: Security auditing
+│   │   ├── audit_logger.py        # LLM request monitoring
+│   │   └── __init__.py
 │   ├── agents/
 │   │   └── explorer_agent.py      # 🤖 AI exploration logic
 │   ├── generators/
@@ -166,18 +172,103 @@ AI_Powered_Testing_Agent/
 │   └── llm/
 │       └── llm_factory.py         # 🧠 Multi-LLM support
 ├── templates/
-│   └── index.html                 # 🎨 Web UI
+│   ├── index.html                 # 🎨 Main web UI
+│   └── audit_dashboard.html       # 🛡️ NEW: Security audit UI
+├── scripts/
+│   └── verify_credential_isolation.py # 🔬 Static code analysis
 ├── data/
 │   ├── test_suites.json           # Generated test cases
 │   ├── generated_tests/           # Playwright scripts
-│   └── auth_cache/                # Session cookies
+│   ├── auth_cache/                # Session cookies
+│   ├── security_audit/            # 🔐 NEW: Audit logs & reports
+│   └── audit_config.json          # 🔐 NEW: Audit settings
 ├── docs/
 │   ├── ARCHITECTURE_GUIDE.md      # 📚 Deep dive documentation
-│   └── Technical_Data_Flow_Visualization.html
+│   ├── SECURITY_EXPLANATION.md    # 🛡️ Security model explained
+│   ├── SECURITY_AUDIT_GUIDE.md    # 🔬 Audit verification guide
+│   └── AUDIT_LOGGING_GUIDE.md     # 📖 Audit feature docs
 ├── demo/                          # 🎥 Demo videos
 ├── .env                           # 🔑 Secrets (git-ignored)
 └── requirements.txt
 ```
+
+**Key Directories**:
+- `src/security/` - 🔐 **NEW**: Audit logging and leak detection
+- `templates/audit_dashboard.html` - 🖥️ **NEW**: Security verification UI
+- `scripts/` - 🔬 Static code analysis tools
+
+---
+
+## 🛡️ Security Audit Dashboard
+
+### Visual Proof of Credential Safety
+
+Access the audit dashboard at: **http://localhost:8000/audit**
+
+<img src="https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge" alt="Status"/>
+
+### ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🎚️ **Toggle Control** | Enable/disable audit logging with one click |
+| 📊 **Real-Time Stats** | Total logs, compliance reports, leak count (should be 0!) |
+| 🔍 **Live Log Viewer** | See every LLM request/response with timestamps |
+| 📋 **Compliance Reports** | Auto-generated SOC2/ISO27001 documentation |
+| 🎨 **Color-Coded Alerts** | Purple (request), Green (safe), Red (leak detected) |
+| ⚡ **Auto-Refresh** | Updates every 10 seconds |
+
+### 🚀 Quick Demo (30 seconds)
+
+**Perfect for stakeholder presentations!**
+
+1. **Enable Audit Logging**:
+   ```
+   Navigate to: http://localhost:8000/audit
+   Toggle switch to ON (turns purple/green)
+   ```
+
+2. **Run a Test**:
+   ```
+   Return to: http://localhost:8000/
+   Fill credentials and generate tests
+   ```
+
+3. **Show Visual Proof**:
+   ```
+   Return to: http://localhost:8000/audit
+   Point to "Credential Leaks: 0" ✅ (in green)
+   Click "View Report" for compliance docs
+   ```
+
+### 📈 What Gets Logged
+
+Each audit entry contains:
+- ⏰ **Timestamp**: When request was made
+- 📝 **Prompt Preview**: First 300 chars of LLM prompt
+- 🔐 **Leak Detection**: Automatic pattern matching
+- #️⃣ **SHA-256 Hash**: Cryptographic verification
+- ✅ **Safe/Danger Badge**: Visual indicator
+
+**Example Log Entry:**
+```json
+{
+  "timestamp": "2025-12-02T14:30:00Z",
+  "type": "LLM_REQUEST",
+  "prompt_length": 1247,
+  "prompt_hash": "a3f2b8...",
+  "leak_detected": false,  ← Should ALWAYS be false!
+  "prompt_preview": "You are starting on an AUTHENTICATED session..."
+}
+```
+
+### 🏢 Enterprise Benefits
+
+- ✅ **POC Demonstrations**: Live visual proof for security teams
+- ✅ **Compliance Audits**: Exportable logs + reports
+- ✅ **Continuous Monitoring**: Track all LLM interactions
+- ✅ **Zero Configuration**: Works out-of-the-box
+- ✅ **Persistent Settings**: Survives server restarts
 
 ---
 

@@ -8,12 +8,14 @@ import os
 import asyncio
 import re
 from typing import List, Dict
+from pathlib import Path
 
 from src.agents.explorer_agent import explore_and_generate_tests
 from src.agents.test_executor import execute_single_test
 from src.generators.playwright_generator import PlaywrightGenerator
 from src.core.secrets_manager import SecretsManager
 from src.core.logger import setup_logger, log_crash
+from src.core.lifecycle_logger import LifecycleLogger, EventPhase, EventComponent
 
 # Setup Logger
 logger = setup_logger("server")
@@ -99,12 +101,33 @@ async def generate_tests(req: GenerateRequest):
     try:
         logger.info(f"Received generation request for suite '{req.suite_name}' at URL: {req.url}")
         
+        # LOG: Start new session and log user action
+        session_id = LifecycleLogger.start_session()
+        LifecycleLogger.log_event(
+            event_type="user_action",
+            phase=EventPhase.EXPLORATION,
+            component=EventComponent.FRONTEND,
+            action="launch_explorer",
+            description=f"User initiated test generation for '{req.suite_name}'",
+            metadata={"suite_name": req.suite_name, "url": req.url, "headless": req.headless}
+        )
+        
         # Initialize Secrets Manager with USER-PROVIDED credentials from request
         # This allows testing different applications without changing .env
         secrets = SecretsManager(
             username=req.username if req.username else os.getenv("APP_USERNAME"),
             password=req.password if req.password else os.getenv("APP_PASSWORD"),
             login_url=req.url  # USE USER-PROVIDED URL, not .env
+        )
+        
+        # LOG: Secrets manager initialized
+        LifecycleLogger.log_event(
+            event_type="system_bootstrap",
+            phase=EventPhase.EXPLORATION,
+            component=EventComponent.SECRETS,
+            action="secrets_manager_init",
+            description="Secrets manager initialized from environment",
+            metadata={"has_username": bool(req.username or os.getenv("APP_USERNAME"))}
         )
         
         # Run AI Agent with USER-PROVIDED URL and description
@@ -267,6 +290,17 @@ async def generate_tests(req: GenerateRequest):
 
         
         # ALWAYS return success with test_cases array (never return error status)
+        
+        # LOG: Generation complete
+        LifecycleLogger.log_event(
+            event_type="test_generation",
+            phase=EventPhase.GENERATION,
+            component=EventComponent.SERVER,
+            action="generation_complete",
+            description=f"Generated {len(test_cases)} test cases successfully",
+            metadata={"test_count": len(test_cases), "scripts_count": len(generated_scripts), "suite_name": req.suite_name}
+        )
+        
         return {"status": "success", "test_cases": test_cases, "scripts_generated": len(generated_scripts)}
 
     except Exception as e:
@@ -335,8 +369,267 @@ async def execute_test(req: ExecuteRequest):
         logger.error(f"Test execution timed out for {script_path}")
         return {"status": "success", "result": "TIMEOUT"}
     except Exception as e:
-        logger.error(f"Error executing script {script_path}: {e}")
-        return {"status": "success", "result": "ERROR"}
+        logger.error(f"Failed to execute test: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=str(e))
+
+# ========================================
+# AUDIT DASHBOARD ENDPOINTS
+# ========================================
+
+AUDIT_CONFIG_FILE = "data/audit_config.json"
+
+def load_audit_config():
+    """Load audit configuration from file"""
+    if os.path.exists(AUDIT_CONFIG_FILE):
+        try:
+            with open(AUDIT_CONFIG_FILE, 'r') as f:
+                return json.load(f)
+        except:
+            pass
+    return {"enabled": False}
+
+def save_audit_config(config):
+    """Save audit configuration to file"""
+    os.makedirs("data", exist_ok=True)
+    with open(AUDIT_CONFIG_FILE, 'w') as f:
+        json.dump(config, f, indent=2)
+    
+    # Also update environment variable for current session
+    os.environ['ENABLE_AUDIT_LOG'] = 'true' if config.get('enabled') else 'false'
+
+# === AUDIT DASHBOARD ROUTES ===
+
+@app.get("/audit")
+async def audit_dashboard(request: Request):
+    """
+    Standard audit dashboard with log viewing and compliance reports
+    """
+    response = templates.TemplateResponse("audit_dashboard.html", {"request": request})
+    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate, max-age=0"
+    return response
+
+@app.get("/audit/lifecycle")
+async def audit_lifecycle_dashboard(request: Request):
+    """
+    Enhanced lifecycle audit dashboard with end-to-end trace visualization
+    Shows complete lifecycle from user action through AI exploration to test execution
+    """
+    return templates.TemplateResponse("audit_dashboard_enhanced.html", {"request": request})
+
+# ==================== LIFECYCLE EVENT API ENDPOINTS ====================
+
+@app.get("/api/audit/lifecycle/events")
+async def get_lifecycle_events(session_id: str = None, limit: int = None):
+    """
+    Get lifecycle events for debugging and audit trail
+    
+    Args:
+        session_id: Optional session ID to filter events
+        limit: Optional limit on number of events to return
+    
+    Returns:
+        JSON with events array and metadata
+    """
+    try:
+        events = LifecycleLogger.get_events(session_id=session_id, limit=limit)
+        return {
+            "success": True,
+            "events": [event.dict() for event in events],
+            "total": len(events),
+            "session_id": session_id or LifecycleLogger.get_current_session()
+        }
+    except Exception as e:
+        logger.error(f"Failed to get lifecycle events: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.delete("/api/audit/lifecycle/clear")
+async def clear_lifecycle_events(session_id: str = None):
+    """
+    Clear lifecycle events
+    
+    Args:
+        session_id: Optional session ID to clear specific session events
+    
+    Returns:
+        Success status
+    """
+    try:
+        LifecycleLogger.clear_events(session_id=session_id)
+        return {
+            "success": True,
+            "message": f"Cleared events for session: {session_id}" if session_id else "Cleared all events"
+        }
+    except Exception as e:
+        logger.error(f"Failed to clear lifecycle events: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/audit/lifecycle/sessions")
+async def get_lifecycle_sessions():
+    """
+    Get all lifecycle session IDs
+    
+    Returns:
+        List of session IDs with event counts
+    """
+    try:
+        sessions = LifecycleLogger.get_sessions()
+        session_data = []
+        for session_id in sessions:
+            count = LifecycleLogger.get_event_count(session_id)
+            session_data.append({
+                "session_id": session_id,
+                "event_count": count
+            })
+        
+        return {
+            "success": True,
+            "sessions": session_data,
+            "current_session": LifecycleLogger.get_current_session()
+        }
+    except Exception as e:
+        logger.error(f"Failed to get lifecycle sessions: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/audit/status")
+async def get_audit_status():
+    """Get current audit logging status"""
+    config = load_audit_config()
+    
+    # Check if any audit logs exist
+    audit_dir = Path("data/security_audit")
+    log_files = list(audit_dir.glob("llm_audit_*.jsonl")) if audit_dir.exists() else []
+    report_files = list(audit_dir.glob("compliance_report_*.md")) if audit_dir.exists() else []
+    
+    return {
+        "enabled": config.get("enabled", False),
+        "env_var": os.getenv('ENABLE_AUDIT_LOG',  'false'),
+        "log_count": len(log_files),
+        "report_count": len(report_files),
+        "latest_log": str(log_files[-1]) if log_files else None,
+        "latest_report": str(report_files[-1]) if report_files else None
+    }
+
+@app.post("/api/audit/toggle")
+async def toggle_audit_logging(enabled: dict):
+    """Toggle audit logging on/off"""
+    is_enabled = enabled.get("enabled", False)
+    
+    config = {"enabled": is_enabled}
+    save_audit_config(config)
+    
+    logger.info(f"Audit logging {'ENABLED' if is_enabled else 'DISABLED'} via web interface")
+    
+    return {
+        "status": "success",
+        "enabled": is_enabled,
+        "message": f"Audit logging {'enabled' if is_enabled else 'disabled'}"
+    }
+
+@app.get("/api/audit/logs")
+async def get_audit_logs(limit: int = 50):
+    """Fetch recent audit log entries"""
+    audit_dir = Path("data/security_audit")
+    
+    if not audit_dir.exists():
+        return {
+            "status": "success",
+            "logs": [],
+            "message": "No audit logs found. Enable audit logging and run tests to generate logs."
+        }
+    
+    # Find most recent audit log file
+    log_files = sorted(audit_dir.glob("llm_audit_*.jsonl"), key=lambda x: x.stat().st_mtime, reverse=True)
+    
+    if not log_files:
+        return {
+            "status": "success",
+            "logs": [],
+            "message": "No audit log files found yet."
+        }
+    
+    # Read the most recent log file
+    logs = []
+    try:
+        with open(log_files[0], 'r') as f:
+            for line in f:
+                if line.strip():
+                    logs.append(json.loads(line))
+        
+        # Return most recent entries (limited)
+        return {
+            "status": "success",
+            "logs": logs[-limit:] if len(logs) > limit else logs,
+            "total": len(logs),
+            "file": str(log_files[0])
+        }
+    except Exception as e:
+        logger.error(f"Failed to read audit logs: {e}")
+        return {
+            "status": "error",
+            "logs": [],
+            "error": str(e)
+        }
+
+@app.get("/api/audit/report")
+async def get_compliance_report():
+    """Get the latest compliance report"""
+    audit_dir = Path("data/security_audit")
+    
+    if not audit_dir.exists():
+        return {
+            "status": "error",
+            "message": "No audit reports found."
+        }
+    
+    # Find most recent report
+    report_files = sorted(audit_dir.glob("compliance_report_*.md"), key=lambda x: x.stat().st_mtime, reverse=True)
+    
+    if not report_files:
+        return {
+            "status": "error",
+            "message": "No compliance reports generated yet."
+        }
+    
+    # Read the report
+    try:
+        with open(report_files[0], 'r') as f:
+            report_content = f.read()
+        
+        return {
+            "status": "success",
+            "report": report_content,
+            "file": str(report_files[0])
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e)
+        }
+
+@app.delete("/api/audit/clear")
+async def clear_audit_logs():
+    """Clear all audit logs (for testing)"""
+    audit_dir = Path("data/security_audit")
+    
+    if not audit_dir.exists():
+        return {"status": "success", "message": "No logs to clear"}
+    
+    deleted_count = 0
+    try:
+        for file in audit_dir.glob("*"):
+            file.unlink()
+            deleted_count += 1
+        
+        return {
+            "status": "success",
+            "deleted": deleted_count,
+            "message": f"Cleared {deleted_count} audit files"
+        }
+    except Exception as e:
+        return {
+            "status": "error",
+            "message": str(e)
+        }
 
 if __name__ == "__main__":
     uvicorn.run("server:app", host="127.0.0.1", port=8000, reload=True)

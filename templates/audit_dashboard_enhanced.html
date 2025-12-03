@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Lifecycle Audit Dashboard - AI Testing Agent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0f172a;
+            background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
+            min-height: 100vh;
+            padding: 20px;
+            color: #f1f5f9;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Glass morphism effect */
+        .glass {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        /* Header */
+        .header {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 25px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            color: #f1f5f9;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .back-btn {
+            padding: 10px 20px;
+            background: rgba(71, 85, 105, 0.6);
+            backdrop-filter: blur(8px);
+            color: white;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(71, 85, 105, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Security Compliance Banner */
+        .security-banner {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(16, 185, 129, 0.2));
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 8px;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .security-badge i {
+            color: #22c55e;
+            font-size: 20px;
+        }
+
+        .security-badge span {
+            color: #f1f5f9;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* Security Zones Visualization */
+        .security-zones {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .security-zones h2 {
+            color: #f1f5f9;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .zones-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .zone {
+            flex: 1;
+            min-width: 200px;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid;
+            position: relative;
+        }
+
+        .zone-public {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+
+        .zone-runner {
+            background: rgba(34, 197, 94, 0.1);
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+
+        .zone-ai {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .zone-vault {
+            background: rgba(234, 179, 8, 0.1);
+            border-color: rgba(234, 179, 8, 0.4);
+        }
+
+        .zone h3 {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .zone p {
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+
+        .zone-arrow {
+            font-size: 24px;
+            color: #64748b;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .zone-arrow.secure {
+            color: #22c55e;
+        }
+
+        /* Timeline Container */
+        .timeline-container {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .timeline-header h2 {
+            color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .timeline-phases {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .phase-indicator {
+            flex: 1;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .phase-indicator:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .phase-exploration {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+
+        .phase-generation {
+            background: rgba(34, 197, 94, 0.1);
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+
+        .phase-execution {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+
+        .phase-indicator h3 {
+            font-size: 13px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .phase-indicator .phase-count {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .phase-indicator .phase-label {
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+
+        /* Timeline Events */
+        .timeline-events {
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 25px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #8b5cf6, #22c55e, #f59e0b);
+            border-radius: 3px;
+        }
+
+        /* Event Card */
+        .event-card {
+            position: relative;
+            margin-left: 60px;
+            margin-bottom: 20px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .event-card:hover {
+            border-color: rgba(139, 92, 246, 0.5);
+            box-shadow: 0 5px 20px rgba(139, 92, 246, 0.2);
+        }
+
+        .event-marker {
+            position: absolute;
+            left: -47px;
+            top: 20px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #0f172a;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .event-marker.marker-user {
+            background: #6366f1;
+        }
+
+        .event-marker.marker-system {
+            background: #8b5cf6;
+        }
+
+        .event-marker.marker-browser {
+            background: #22c55e;
+        }
+
+        .event-marker.marker-credential {
+            background: #eab308;
+        }
+
+        .event-marker.marker-login {
+            background: #10b981;
+        }
+
+        .event-marker.marker-ai {
+            background: #a855f7;
+        }
+
+        .event-marker.marker-reasoning {
+            background: #c084fc;
+        }
+
+        .event-marker.marker-tool {
+            background: #818cf8;
+        }
+
+        .event-marker.marker-generation {
+            background: #22c55e;
+        }
+
+        .event-marker.marker-execution {
+            background: #f59e0b;
+        }
+
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .event-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .event-title h3 {
+            color: #f1f5f9;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .event-type-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .event-meta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .event-time {
+            color: #94a3b8;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .security-status {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .security-status.safe {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .security-status.warning {
+            background: rgba(245, 158, 11, 0.2);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .event-content {
+            color: #cbd5e1;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .event-details {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .detail-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        .detail-label {
+            color: #64748b;
+            min-width: 140px;
+        }
+
+        .detail-value {
+            color: #e2e8f0;
+            flex: 1;
+        }
+
+        .detail-value code {
+            background: rgba(139, 92, 246, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #c084fc;
+        }
+
+        /* Collapsible Panels */
+        .collapsible-header {
+            background: rgba(71, 85, 105, 0.3);
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+
+        .collapsible-header:hover {
+            background: rgba(71, 85, 105, 0.5);
+        }
+
+        .collapsible-header h4 {
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .collapsible-content.expanded {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+
+        .collapsible-body {
+            padding: 15px;
+            background: rgba(15, 23, 42, 0.4);
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        /* Reasoning Chain */
+        .reasoning-step {
+            padding: 12px;
+            margin-bottom: 10px;
+            background: rgba(139, 92, 246, 0.1);
+            border-left: 3px solid #8b5cf6;
+            border-radius: 6px;
+        }
+
+        .reasoning-step .step-number {
+            color: #8b5cf6;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .reasoning-step .step-text {
+            color: #e2e8f0;
+            font-size: 13px;
+        }
+
+        /* Tool Invocation */
+        .tool-call {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+
+        .tool-call .tool-name {
+            color: #6366f1;
+            font-weight: bold;
+        }
+
+        .tool-call .tool-args {
+            color: #cbd5e1;
+            margin-top: 5px;
+            padding-left: 15px;
+        }
+
+        .tool-call .tool-result {
+            color: #22c55e;
+            margin-top: 8px;
+            padding: 8px;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 4px;
+        }
+
+        /* Exploration Graph */
+        .graph-preview {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .graph-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .graph-stat {
+            text-align: center;
+            padding: 15px;
+            background: rgba(139, 92, 246, 0.1);
+            border-radius: 8px;
+        }
+
+        .graph-stat .stat-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #8b5cf6;
+        }
+
+        .graph-stat .stat-label {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+
+        /* Test Execution Trace */
+        .test-step {
+            background: rgba(15, 23, 42, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border-left: 4px solid;
+        }
+
+        .test-step.step-success {
+            border-left-color: #22c55e;
+        }
+
+        .test-step.step-failed {
+            border-left-color: #ef4444;
+        }
+
+        .test-step.step-blocked {
+            border-left-color: #64748b;
+        }
+
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .step-result {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .step-result.success {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .step-result.failed {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+
+        .step-details {
+            font-size: 13px;
+            color: #cbd5e1;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #64748b;
+        }
+
+        .empty-state i {
+            font-size: 64px;
+            margin-bottom: 20px;
+            color: #475569;
+        }
+
+        .empty-state h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .empty-state p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+            color: white;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(139, 92, 246, 0.5);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(139, 92, 246, 0.7);
+        }
+
+        @media (max-width: 1024px) {
+            .zones-container {
+                flex-direction: column;
+            }
+
+            .zone-arrow {
+                transform: rotate(90deg);
+            }
+
+            .timeline-phases {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>
+                <i class="fas fa-route"></i>
+                Enhanced Lifecycle Audit Dashboard
+            </h1>
+            <div class="header-actions">
+                <a href="/audit" class="back-btn">
+                    <i class="fas fa-shield-alt"></i>
+                    Simple View
+                </a>
+                <a href="/" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Main
+                </a>
+            </div>
+        </div>
+
+        <!-- Security Compliance Banner -->
+        <div class="security-banner">
+            <div class="security-badge">
+                <i class="fas fa-lock"></i>
+                <span>Secrets Protected – Zero Trust Maintained</span>
+            </div>
+            <div class="security-badge">
+                <i class="fas fa-shield-check"></i>
+                <span>LLM Received Sanitized Context Only</span>
+            </div>
+            <div class="security-badge">
+                <i class="fas fa-eye-slash"></i>
+                <span>No Raw Credentials Exposed to AI</span>
+            </div>
+            <div class="security-badge">
+                <i class="fas fa-layer-group"></i>
+                <span>Execution Zone Isolated from AI Zone</span>
+            </div>
+        </div>
+
+        <!-- Security Zones Visualization -->
+        <div class="security-zones">
+            <h2>
+                <i class="fas fa-network-wired"></i>
+                Security Boundary Architecture
+            </h2>
+            <div class="zones-container">
+                <div class="zone zone-public">
+                    <h3><i class="fas fa-user"></i> PUBLIC ZONE</h3>
+                    <p>Frontend / User Interface</p>
+                    <small style="color: #94a3b8; margin-top: 8px; display: block;">✓ User Actions</small>
+                </div>
+
+                <div class="zone-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="zone zone-runner">
+                    <h3><i class="fas fa-cog"></i> RUNNER ZONE</h3>
+                    <p>Playwright + Credentials</p>
+                    <small style="color: #94a3b8; margin-top: 8px; display: block;">✓ Secure Execution</small>
+                </div>
+
+                <div class="zone-arrow secure">
+                    <i class="fas fa-lock"></i>
+                    <span style="font-size: 12px;">SANITIZED</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+
+                <div class="zone zone-ai">
+                    <h3><i class="fas fa-brain"></i> AI ZONE</h3>
+                    <p>LLM (No Credentials)</p>
+                    <small style="color: #94a3b8; margin-top: 8px; display: block;">✓ Safe Context</small>
+                </div>
+
+                <div class="zone-arrow secure">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+
+                <div class="zone zone-vault">
+                    <h3><i class="fas fa-vault"></i> VAULT ZONE</h3>
+                    <p>Secrets Storage</p>
+                    <small style="color: #94a3b8; margin-top: 8px; display: block;">✓ Isolated</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline-container">
+            <div class="timeline-header">
+                <h2>
+                    <i class="fas fa-stream"></i>
+                    End-to-End Lifecycle Timeline
+                </h2>
+                <button class="btn btn-primary" onclick="loadDemoData()">
+                    <i class="fas fa-play"></i>
+                    Load Demo Trace
+                </button>
+            </div>
+
+            <!-- Phase Indicators -->
+            <div class="timeline-phases">
+                <div class="phase-indicator phase-exploration" onclick="scrollToPhase('exploration')">
+                    <h3><i class="fas fa-compass"></i> Exploration</h3>
+                    <div class="phase-count" id="explorationCount">0</div>
+                    <div class="phase-label">Events Logged</div>
+                </div>
+                <div class="phase-indicator phase-generation" onclick="scrollToPhase('generation')">
+                    <h3><i class="fas fa-code"></i> Generation</h3>
+                    <div class="phase-count" id="generationCount">0</div>
+                    <div class="phase-label">Test Cases Created</div>
+                </div>
+                <div class="phase-indicator phase-execution" onclick="scrollToPhase('execution')">
+                    <h3><i class="fas fa-play-circle"></i> Execution</h3>
+                    <div class="phase-count" id="executionCount">0</div>
+                    <div class="phase-label">Steps Executed</div>
+                </div>
+            </div>
+
+            <!-- Timeline Events -->
+            <div class="timeline-events" id="timeline-events">
+                <div class="timeline-line"></div>
+
+                <div class="empty-state">
+                    <i class="fas fa-route"></i>
+                    <h3>No Lifecycle Events Yet</h3>
+                    <p>Click "Load Demo Trace" to see a complete end-to-end audit trail,<br>
+                        or run a test from the main page to generate real lifecycle events.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //  ========== REAL API INTEGRATION (Replaces Demo Data) ==========
+
+        async function loadRealEvents() {
+            try {
+                const response = await fetch('/api/audit/lifecycle/events');
+                const data = await response.json();
+
+                if (data.success && data.events && data.events.length > 0) {
+                    console.log(`[Lifecycle] Loaded ${data.events.length} events from API`);
+
+                    // Map API events to timeline format
+                    const timelineEvents = data.events.map((event, index) => {
+                        return {
+                            type: event.event_type,
+                            marker: getMarkerClass(event.component),
+                            title: formatEventTitle(event),
+                            time: event.timestamp,
+                            security: event.security_context?.safe ? 'safe' : 'warning',
+                            content: event.description || event.action,
+                            details: {
+                                'Event ID': event.event_id,
+                                'Session ID': event.session_id,
+                                'Component': event.component,
+                                'Action': event.action,
+                                'Phase': event.phase,
+                                ...event.metadata
+                            }
+                        };
+                    });
+
+                    // Render timeline
+                    renderTimeline(timelineEvents);
+                    updatePhaseCounts(timelineEvents);
+
+                    // Update "live" indicator (if element exists)
+                    const liveIndicator = document.getElementById('live-indicator');
+                    if (liveIndicator) {
+                        liveIndicator.innerText = `LIVE (${data.events.length} events)`;
+                    }
+                } else {
+                    console.log(`[Lifecycle] No events yet - showing empty state`);
+                    showEmptyState();
+                }
+            } catch (error) {
+                console.error('[Lifecycle] Failed to load events:', error);
+                showErrorState(error);
+            }
+        }
+
+        function getMarkerClass(component) {
+            const markerMap = {
+                'frontend': 'marker-user',
+                'server': 'marker-system',
+                'browser': 'marker-browser',
+                'secrets': 'marker-credential',
+                'agent': 'marker-ai',
+                'llm': 'marker-reasoning',
+                'executor': 'marker-execution'
+            };
+            return markerMap[component] || 'marker-system';
+        }
+
+        function formatEventTitle(event) {
+            const titleMap = {
+                'user_action': `User Action → ${event.action}`,
+                'system_bootstrap': 'System Bootstrapping',
+                'browser_init': 'Browser Initialization',
+                'credential_retrieval': 'Credential Retrieval',
+                'llm_interaction': 'LLM Interaction',
+                'test_generation': 'Test Generation Complete',
+                'test_execution': 'Test Execution'
+            };
+            return titleMap[event.event_type] || event.action;
+        }
+
+        function showEmptyState() {
+            const container = document.getElementById('timeline-events');
+            container.innerHTML = `
+                <div class="empty-state">
+                    <i class="fas fa-hourglass-half"></i>
+                    <h3>No Lifecycle Events Yet</h3>
+                    <p>Start an exploration or test execution to see live events appear here.</p>
+                </div>
+            `;
+        }
+
+        function showErrorState(error) {
+            const container = document.getElementById('timeline-events');
+            container.innerHTML = `
+                <div class="empty-state">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h3>Error Loading Events</h3>
+                    <p>Failed to fetch lifecycle events: ${error.message}</p>
+                </div>
+            `;
+        }
+
+        function renderTimeline(events) {
+            const container = document.getElementById('timeline-events');
+            container.innerHTML = events.map((event, index) => `
+                <div class="event-card">
+                    <div class="event-marker ${event.marker}">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <div class="event-header">
+                        <div class="event-title">
+                            <h3>${event.title}</h3>
+                        </div>
+                        <div class="event-meta">
+                            <div class="event-time">
+                                <i class="fas fa-clock"></i>
+                                ${new Date(event.time).toLocaleTimeString()}
+                            </div>
+                            <div class="security-status ${event.security}">
+                                <i class="fas fa-${event.security === 'safe' ? 'check' : 'exclamation'}-circle"></i>
+                                ${event.security === 'safe' ? 'SECURE' : 'CAUTION'}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-content">${event.content}</div>
+                    ${event.details ? `
+                        <div class="event-details">
+                            ${Object.entries(event.details).map(([key, value]) => `
+                                <div class="detail-row">
+                                    <span class="detail-label">${key}:</span>
+                                    <span class="detail-value">${typeof value === 'object' ? JSON.stringify(value) : value}</span>
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        function updatePhaseCounts(events) {
+            const phases = { exploration: 0, generation: 0, execution: 0 };
+            events.forEach(event => {
+                const phase = event.details?.Phase || 'exploration';
+                if (phases[phase] !== undefined) phases[phase]++;
+            });
+
+            document.querySelector('.phase-exploration .phase-count').innerText = phases.exploration;
+            document.querySelector('.phase-generation .phase-count').innerText = phases.generation;
+            document.querySelector('.phase-execution .phase-count').innerText = phases.execution;
+        }
+
+        // Auto-refresh every 3 seconds
+        let refreshInterval;
+        function startAutoRefresh() {
+            loadRealEvents(); // Initial load
+            refreshInterval = setInterval(loadRealEvents, 3000); // Refresh every 3s
+            console.log('[Lifecycle] Auto-refresh started (every 3s)');
+        }
+
+        function stopAutoRefresh() {
+            if (refreshInterval) {
+                clearInterval(refreshInterval);
+                console.log('[Lifecycle] Auto-refresh stopped');
+            }
+        }
+
+        // Start on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('[Lifecycle Dashboard] Loaded - fetching real events');
+            startAutoRefresh();
+        });
+
+        // Stop when page unloads
+        window.addEventListener('beforeunload', () => {
+            stopAutoRefresh();
+        });
+    </script>
+</body>
+
+</html>

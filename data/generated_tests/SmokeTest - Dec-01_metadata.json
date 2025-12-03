@@ -1,9 +1,9 @@
 {
   "suite_name": "SmokeTest - Dec-01",
-  "generated_at": "2025-12-01T20:32:31.379624",
+  "generated_at": "2025-12-02T14:55:53.383123",
   "test_count": 1,
   "scripts": [
-    "data/generated_tests/SmokeTest - Dec-01_TC001_add_item_verify_remove_verify_and_logout_flow.py"
+    "data/generated_tests/SmokeTest - Dec-01_TC001_add_sauce_labs_backpack_to_cart_and_verify_item_co.py"
   ],
   "url": "https://www.saucedemo.com",
   "username": "standard_user",

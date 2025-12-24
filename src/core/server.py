@@ -3,11 +3,15 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
-import json
 import os
+import json
+import sys
+import glob
+import logging
 import asyncio
+from datetime import datetime
+from typing import List, Optional, Dict
 import re
-from typing import List, Dict
 from pathlib import Path
 
 from src.agents.explorer_agent import explore_and_generate_tests
@@ -371,6 +375,208 @@ async def execute_test(req: ExecuteRequest):
     except Exception as e:
         logger.error(f"Failed to execute test: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
+
+# ========================================
+# RECORDER API ENDPOINTS
+# ========================================
+
+from src.agents.recorder_agent import recorder
+
+class RecorderStartRequest(BaseModel):
+    suite_name: str
+    test_title: str
+    url: str
+    username: str = ""
+    password: str = ""
+    headless: bool = False
+
+class RecorderStopRequest(BaseModel):
+    session_id: str
+
+@app.post("/api/recorder/start")
+async def start_recorder(req: RecorderStartRequest):
+    """
+    Start a Playwright codegen recording session
+    
+    Body:
+        {
+            "suite_name": "Test Suite Name",
+            "test_title": "Test Case Title",
+            "url": "https://example.com",
+            "username": "user" (optional),
+            "password": "pass" (optional),
+            "headless": false
+        }
+    
+    Returns:
+        {"session_id": str, "status": "recording", "pid": int}
+    """
+    try:
+        logger.info(f"Starting recorder for suite '{req.suite_name}' - Test: '{req.test_title}'")
+        
+        config = {
+            "suite_name": req.suite_name,
+            "test_title": req.test_title,
+            "url": req.url,
+            "username": req.username,
+            "password": req.password,
+            "headless": req.headless
+        }
+        
+        result = await recorder.start_recording(config)
+        logger.info(f"Recorder started successfully: {result['session_id']}")
+        
+        return {
+            "status": "success",
+            **result
+        }
+        
+    except Exception as e:
+        logger.error(f"Failed to start recorder: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/recorder/status/{session_id}")
+async def get_recorder_status(session_id: str):
+    """
+    Get the status of a recording session
+    
+    Returns:
+        {"status": "recording|stopped", "duration": int, "pid": int}
+    """
+    try:
+        status = recorder.get_recording_status(session_id)
+        return {
+            "status": "success",
+            **status
+        }
+    except Exception as e:
+        logger.error(f"Failed to get recorder status: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/recorder/stop")
+async def stop_recorder(req: RecorderStopRequest):
+    """
+    Stop a recording session and get the generated test case
+    
+    Body:
+        {"session_id": "uuid"}
+    
+    Returns:
+        {
+            "playwright_code": str,
+            "english_steps": [str],
+            "test_case": {...}
+        }
+    """
+    try:
+        logger.info(f"Stopping recorder session: {req.session_id}")
+        
+        # Check if this session was already stopped and saved
+        session = recorder.sessions.get(req.session_id)
+        if session and session.get("saved", False):
+            logger.warning(f"Session {req.session_id} was already saved, returning cached result")
+            return {
+                "status": "success",
+                "message": "Test case already saved",
+                "test_case": session.get("test_case", {}),
+                "playwright_code": session.get("playwright_code", ""),
+                "english_steps": session.get("english_steps", [])
+            }
+        
+        result = await recorder.stop_recording(req.session_id)
+        
+        # Save the test case to the suite
+        session = recorder.sessions.get(req.session_id)
+        if session:
+            suite_name = session["config"]["suite_name"]
+            test_case = result["test_case"]
+            
+            # Generate unique test ID based on existing tests in suite
+            if suite_name in TEST_SUITES:
+                existing_test_count = len(TEST_SUITES[suite_name]["cases"])
+                test_case["id"] = f"TC{str(existing_test_count + 1).zfill(3)}"
+                TEST_SUITES[suite_name]["cases"].append(test_case)
+            else:
+                test_case["id"] = "TC001"
+                TEST_SUITES[suite_name] = {
+                    "config": session["config"],
+                    "cases": [test_case]
+                }
+            
+            save_suites()
+            logger.info(f"💾 Saved test case {test_case['id']} '{test_case['title']}' to suite '{suite_name}'")
+            
+            # Also save as executable .py file in generated_tests directory
+            try:
+                # Create filename from suite name, test ID, and title
+                test_id = test_case["id"]
+                title = test_case.get("title", "recorded_test")
+                safe_name = "".join(c if c.isalnum() or c in (' ', '_') else '' for c in title)
+                safe_name = safe_name.replace(' ', '_').lower()[:50]
+                filename = f"{suite_name}_{test_id}_{safe_name}.py"
+                
+                # Create generated_tests directory if it doesn't exist
+                output_dir = "data/generated_tests"
+                os.makedirs(output_dir, exist_ok=True)
+                filepath = os.path.join(output_dir, filename)
+                
+                # Get the Playwright code
+                playwright_code = result["playwright_code"]
+                
+                # Add slow_mo to the browser launch for better visibility
+                # Replace the browser launch line to add slow_mo parameter
+                playwright_code = playwright_code.replace(
+                    'browser = await playwright.chromium.launch(headless=False)',
+                    'browser = await playwright.chromium.launch(headless=False, slow_mo=500)  # 500ms delay between actions for visibility'
+                )
+                
+                # Add header comment with metadata
+                file_content = f'''"""
+Test Case: {test_id}
+Title: {test_case['title']}
+Suite: {suite_name}
+Recorded: {test_case.get('recorded_at', datetime.now().isoformat())}
+Recording Session: {test_case.get('recording_session_id', 'N/A')}
+
+English Steps:
+'''
+                for i, step in enumerate(test_case.get('steps', []), 1):
+                    file_content += f'  {i}. {step}\n'
+                
+                file_content += '''
+"""
+
+'''
+                file_content += playwright_code
+                
+                # Write to file
+                with open(filepath, 'w') as f:
+                    f.write(file_content)
+                
+                logger.info(f"📄 Saved executable script to: {filepath}")
+                test_case["script_file"] = filepath
+                
+            except Exception as file_error:
+                logger.error(f"Failed to save script file: {file_error}")
+                # Don't fail the whole operation if file save fails
+            
+            # Mark session as saved to prevent duplicates
+            session["saved"] = True
+            session["test_case"] = test_case
+            session["playwright_code"] = result["playwright_code"]
+            session["english_steps"] = result["english_steps"]
+        
+        return {
+            "status": "success",
+            **result
+        }
+        
+    except Exception as e:
+        import traceback
+        error_trace = traceback.format_exc()
+        logger.error(f"Failed to stop recorder: {e}")
+        logger.error(f"Full traceback:\n{error_trace}")
+        raise HTTPException(status_code=500, detail=f"Failed to stop recording: {str(e)}")
 
 # ========================================
 # AUDIT DASHBOARD ENDPOINTS

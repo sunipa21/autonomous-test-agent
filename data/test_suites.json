@@ -58,5 +58,180 @@
         ]
       }
     ]
+  },
+  "Dec-06-Audit-Test": {
+    "config": {
+      "suite_name": "Dec-06-Audit-Test",
+      "url": "https://www.saucedemo.com",
+      "description": "understand the application and find any issues.",
+      "username": "standard_user",
+      "password": "secret_sauce"
+    },
+    "cases": [
+      {
+        "id": "TC001",
+        "title": "Purchase 'Sauce Labs Backpack' and complete checkout flow",
+        "steps": [
+          "Add 'Sauce Labs Backpack' to cart using selector: #add-to-cart-sauce-labs-backpack",
+          "Click shopping cart icon using selector: #shopping_cart_container a",
+          "Click 'Checkout' button using selector: #checkout",
+          "Fill First Name field with 'John' using selector: #first-name",
+          "Fill Last Name field with 'Doe' using selector: #last-name",
+          "Fill Zip/Postal Code field with '12345' using selector: #postal-code",
+          "Click 'Continue' button using selector: #continue",
+          "Click 'Finish' button using selector: #finish",
+          "Verify successful order completion using selector: #back-to-products"
+        ]
+      },
+      {
+        "id": "TC004",
+        "title": "Login",
+        "steps": [
+          "Manual test steps - code recorded successfully"
+        ],
+        "playwright_code": "",
+        "recorded_at": "2025-12-24T00:24:30.354943",
+        "recording_session_id": "cee4274e-8896-4438-8a46-9c79136dc690"
+      },
+      {
+        "id": "TC002",
+        "title": "Logout",
+        "steps": [
+          "Navigate to \"about:blank\""
+        ],
+        "playwright_code": "import asyncio\nimport re\nfrom playwright.async_api import Playwright, async_playwright, expect\n\n\nasync def run(playwright: Playwright) -> None:\n    browser = await playwright.chromium.launch(headless=False)\n    context = await browser.new_context(viewport={\"width\":1280,\"height\":720})\n    page = await context.new_page()\n    await page.goto(\"about:blank\")\n\n    # ---------------------\n    await context.close()\n    await browser.close()\n\n\nasync def main() -> None:\n    async with async_playwright() as playwright:\n        await run(playwright)\n\n\nasyncio.run(main())\n",
+        "recorded_at": "2025-12-24T08:51:29.762613",
+        "recording_session_id": "d59e490e-56e9-41df-953b-1e22f9a76ca1"
+      },
+      {
+        "id": "TC002",
+        "title": "Logout",
+        "steps": [
+          "Navigate to \"about:blank\""
+        ],
+        "playwright_code": "import asyncio\nimport re\nfrom playwright.async_api import Playwright, async_playwright, expect\n\n\nasync def run(playwright: Playwright) -> None:\n    browser = await playwright.chromium.launch(headless=False)\n    context = await browser.new_context(viewport={\"width\":1280,\"height\":720})\n    page = await context.new_page()\n    await page.goto(\"about:blank\")\n\n    # ---------------------\n    await context.close()\n    await browser.close()\n\n\nasync def main() -> None:\n    async with async_playwright() as playwright:\n        await run(playwright)\n\n\nasyncio.run(main())\n",
+        "recorded_at": "2025-12-24T08:51:29.762613",
+        "recording_session_id": "d59e490e-56e9-41df-953b-1e22f9a76ca1"
+      }
+    ]
+  },
+  "Dec-24-Test-Suite-1": {
+    "config": {
+      "suite_name": "Dec-24-Test-Suite-1",
+      "test_title": "Checkout - end to end flow",
+      "url": "https://www.saucedemo.com",
+      "username": "",
+      "password": "",
+      "headless": false
+    },
+    "cases": [
+      {
+        "id": "TC001",
+        "title": "Checkout - end to end flow",
+        "steps": [
+          "Navigate to \"https://www.saucedemo.com/\"",
+          "Click username",
+          "Enter \"standard_user\" in username field",
+          "Click password",
+          "Enter \"secret_sauce\" in password field",
+          "Click login-button",
+          "Click add-to-cart-sauce-labs-backpack",
+          "Click shopping-cart-link",
+          "Click checkout",
+          "Click firstName",
+          "Enter \"Test\" in firstName field",
+          "Click lastName",
+          "Enter \"User\" in lastName field",
+          "Click postalCode",
+          "Enter \"12345\" in postalCode field",
+          "Click continue",
+          "Click finish",
+          "Verify element",
+          "Verify element",
+          "Click logout-sidebar-link",
+          "Verify element",
+          "Click username",
+          "Enter \"standard_user\" in username field",
+          "Click password",
+          "Enter \"secret_sauce\" in password field",
+          "Click login-button",
+          "Click logout-sidebar-link",
+          "Close page"
+        ],
+        "playwright_code": "import asyncio\nimport re\nfrom playwright.async_api import Playwright, async_playwright, expect\n\n\nasync def run(playwright: Playwright) -> None:\n    browser = await playwright.chromium.launch(headless=False)\n    context = await browser.new_context(viewport={\"width\":1280,\"height\":720})\n    page = await context.new_page()\n    await page.goto(\"https://www.saucedemo.com/\")\n    await page.locator(\"[data-test=\\\"username\\\"]\").click()\n    await page.locator(\"[data-test=\\\"username\\\"]\").fill(\"standard_user\")\n    await page.locator(\"[data-test=\\\"password\\\"]\").click()\n    await page.locator(\"[data-test=\\\"password\\\"]\").fill(\"secret_sauce\")\n    await page.locator(\"[data-test=\\\"login-button\\\"]\").click()\n    await page.locator(\"[data-test=\\\"add-to-cart-sauce-labs-backpack\\\"]\").click()\n    await page.locator(\"[data-test=\\\"shopping-cart-link\\\"]\").click()\n    await page.locator(\"[data-test=\\\"checkout\\\"]\").click()\n    await page.locator(\"[data-test=\\\"firstName\\\"]\").click()\n    await page.locator(\"[data-test=\\\"firstName\\\"]\").fill(\"Test\")\n    await page.locator(\"[data-test=\\\"lastName\\\"]\").click()\n    await page.locator(\"[data-test=\\\"lastName\\\"]\").fill(\"User\")\n    await page.locator(\"[data-test=\\\"postalCode\\\"]\").click()\n    await page.locator(\"[data-test=\\\"postalCode\\\"]\").fill(\"12345\")\n    await page.locator(\"[data-test=\\\"continue\\\"]\").click()\n    await page.locator(\"[data-test=\\\"finish\\\"]\").click()\n    await expect(page.locator(\"[data-test=\\\"pony-express\\\"]\")).to_be_visible()\n    await expect(page.locator(\"[data-test=\\\"complete-header\\\"]\")).to_be_visible()\n    await page.get_by_role(\"button\", name=\"Open Menu\").click()\n    await page.locator(\"[data-test=\\\"logout-sidebar-link\\\"]\").click()\n    await expect(page.locator(\"[data-test=\\\"login-button\\\"]\")).to_be_visible()\n    await page.locator(\"[data-test=\\\"username\\\"]\").click()\n    await page.locator(\"[data-test=\\\"username\\\"]\").fill(\"standard_user\")\n    await page.locator(\"[data-test=\\\"password\\\"]\").click()\n    await page.locator(\"[data-test=\\\"password\\\"]\").fill(\"secret_sauce\")\n    await page.locator(\"[data-test=\\\"login-button\\\"]\").click()\n    await page.get_by_role(\"button\", name=\"Open Menu\").click()\n    await page.locator(\"[data-test=\\\"logout-sidebar-link\\\"]\").click()\n    await page.close()\n\n    # ---------------------\n    await context.close()\n    await browser.close()\n\n\nasync def main() -> None:\n    async with async_playwright() as playwright:\n        await run(playwright)\n\n\nasyncio.run(main())\n",
+        "recorded_at": "2025-12-24T14:34:16.523748",
+        "recording_session_id": "247ceaa4-22ab-4985-972c-861374e03cf2"
+      }
+    ]
+  },
+  "Dec-24-Test-Suite-2": {
+    "config": {
+      "suite_name": "Dec-24-Test-Suite-2",
+      "test_title": "Checkout-1",
+      "url": "https://www.saucedemo.com",
+      "username": "",
+      "password": "",
+      "headless": false
+    },
+    "cases": [
+      {
+        "id": "TC001",
+        "title": "Checkout-1",
+        "steps": [
+          "Navigate to \"https://www.saucedemo.com/\"",
+          "Click username",
+          "Enter \"standard_user\" in username field",
+          "Click password",
+          "Enter \"secret_sauce\" in password field",
+          "Click login-button",
+          "Click add-to-cart-sauce-labs-backpack",
+          "Click shopping-cart-link",
+          "Click checkout",
+          "Click firstName",
+          "Enter \"Test\" in firstName field",
+          "Click lastName",
+          "Enter \"User\" in lastName field",
+          "Click postalCode",
+          "Enter \"12345\" in postalCode field",
+          "Click continue",
+          "Click finish",
+          "Verify element",
+          "Verify element",
+          "Click logout-sidebar-link"
+        ],
+        "playwright_code": "import asyncio\nimport re\nfrom playwright.async_api import Playwright, async_playwright, expect\n\n\nasync def run(playwright: Playwright) -> None:\n    browser = await playwright.chromium.launch(headless=False)\n    context = await browser.new_context(viewport={\"width\":1280,\"height\":720})\n    page = await context.new_page()\n    await page.goto(\"https://www.saucedemo.com/\")\n    await page.locator(\"[data-test=\\\"username\\\"]\").click()\n    await page.locator(\"[data-test=\\\"username\\\"]\").fill(\"standard_user\")\n    await page.locator(\"[data-test=\\\"password\\\"]\").click()\n    await page.locator(\"[data-test=\\\"password\\\"]\").fill(\"secret_sauce\")\n    await page.locator(\"[data-test=\\\"login-button\\\"]\").click()\n    await page.locator(\"[data-test=\\\"add-to-cart-sauce-labs-backpack\\\"]\").click()\n    await page.locator(\"[data-test=\\\"shopping-cart-link\\\"]\").click()\n    await page.locator(\"[data-test=\\\"checkout\\\"]\").click()\n    await page.locator(\"[data-test=\\\"firstName\\\"]\").click()\n    await page.locator(\"[data-test=\\\"firstName\\\"]\").fill(\"Test\")\n    await page.locator(\"[data-test=\\\"lastName\\\"]\").click()\n    await page.locator(\"[data-test=\\\"lastName\\\"]\").fill(\"User\")\n    await page.locator(\"[data-test=\\\"postalCode\\\"]\").click()\n    await page.locator(\"[data-test=\\\"postalCode\\\"]\").fill(\"12345\")\n    await page.locator(\"[data-test=\\\"continue\\\"]\").click()\n    await page.locator(\"[data-test=\\\"finish\\\"]\").click()\n    await expect(page.locator(\"[data-test=\\\"pony-express\\\"]\")).to_be_visible()\n    await expect(page.locator(\"[data-test=\\\"complete-header\\\"]\")).to_be_visible()\n    await page.get_by_role(\"button\", name=\"Open Menu\").click()\n    await page.locator(\"[data-test=\\\"logout-sidebar-link\\\"]\").click()\n\n    # ---------------------\n    await context.close()\n    await browser.close()\n\n\nasync def main() -> None:\n    async with async_playwright() as playwright:\n        await run(playwright)\n\n\nasyncio.run(main())\n",
+        "recorded_at": "2025-12-24T14:51:23.969222",
+        "recording_session_id": "944a3dd7-4cac-4b30-a148-96060d3f2235"
+      }
+    ]
+  },
+  "Dec-24-Login-Logout": {
+    "config": {
+      "suite_name": "Dec-24-Login-Logout",
+      "test_title": "Login-Logout",
+      "url": "https://www.saucedemo.com/",
+      "username": "",
+      "password": "",
+      "headless": false
+    },
+    "cases": [
+      {
+        "id": "TC001",
+        "title": "Login-Logout",
+        "steps": [
+          "Navigate to \"https://www.saucedemo.com/\"",
+          "Click username",
+          "Enter \"standard_user\" in username field",
+          "Click password",
+          "Enter \"secret_sauce\" in password field",
+          "Click login-button",
+          "Click logout-sidebar-link",
+          "Verify element"
+        ],
+        "playwright_code": "import asyncio\nimport re\nfrom playwright.async_api import Playwright, async_playwright, expect\n\n\nasync def run(playwright: Playwright) -> None:\n    browser = await playwright.chromium.launch(headless=False)\n    context = await browser.new_context(viewport={\"width\":1280,\"height\":720})\n    page = await context.new_page()\n    await page.goto(\"https://www.saucedemo.com/\")\n    await page.locator(\"[data-test=\\\"username\\\"]\").click()\n    await page.locator(\"[data-test=\\\"username\\\"]\").fill(\"standard_user\")\n    await page.locator(\"[data-test=\\\"password\\\"]\").click()\n    await page.locator(\"[data-test=\\\"password\\\"]\").fill(\"secret_sauce\")\n    await page.locator(\"[data-test=\\\"login-button\\\"]\").click()\n    await page.get_by_role(\"button\", name=\"Open Menu\").click()\n    await page.locator(\"[data-test=\\\"logout-sidebar-link\\\"]\").click()\n    await expect(page.locator(\"[data-test=\\\"login-button\\\"]\")).to_be_visible()\n\n    # ---------------------\n    await context.close()\n    await browser.close()\n\n\nasync def main() -> None:\n    async with async_playwright() as playwright:\n        await run(playwright)\n\n\nasyncio.run(main())\n",
+        "recorded_at": "2025-12-24T20:08:16.533648",
+        "recording_session_id": "07cd42d4-286a-4e49-b915-df8e1b42d1a8"
+      }
+    ]
   }
 }

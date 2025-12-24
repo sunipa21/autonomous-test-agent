@@ -68,7 +68,18 @@
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #475569;
+            background: rgba(148, 163, 184, 0.5);
+        }
+
+        /* Spinner animation for loading states */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         body {
@@ -185,10 +196,16 @@
                         </label>
                     </div>
 
-                    <!-- Submit Button -->
+                    <!-- Submit Buttons -->
                     <button type="submit" id="genBtn"
                         class="w-full px-6 py-3 bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-600 hover:to-brand-700 text-white font-bold rounded-lg shadow-lg shadow-brand-900/30 hover:shadow-brand-900/50 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
                         <i class="fas fa-rocket"></i> Launch Explorer Agent
+                    </button>
+
+                    <!-- Record New Test Button -->
+                    <button type="button" id="recordBtn" onclick="openRecorderModal()"
+                        class="w-full px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold rounded-lg shadow-lg shadow-red-900/30 hover:shadow-red-900/50 transition-all flex items-center justify-center gap-2">
+                        <i class="fas fa-circle text-red-300"></i> Record New Test
                     </button>
                 </form>
             </div>
@@ -295,6 +312,79 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Recorder Modal -->
+    <div id="recorderModal"
+        class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="glass-panel max-w-md w-full p-6 rounded-xl shadow-2xl">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold text-white">📹 Record New Test</h3>
+                <button onclick="closeRecorderModal()" class="text-slate-400 hover:text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Recording Status -->
+            <div id="recordingStatus" class="hidden mb-4 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+                <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                    <div class="flex-1">
+                        <p class="text-sm font-medium text-red-300">Recording in Progress</p>
+                        <p class="text-xs text-slate-400 mt-1">Interact with the browser, then click "Stop Recording"
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-3 flex items-center gap-2 text-xs text-slate-500">
+                    <i class="fas fa-clock"></i>
+                    <span id="recordingDuration">00:00</span>
+                </div>
+            </div>
+
+            <!-- Start Recording Form -->
+            <form id="recorderForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Test Case Title</label>
+                    <input type="text" id="recordTestTitle" required
+                        class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
+                        placeholder="e.g., Complete checkout flow">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Application URL</label>
+                    <input type="url" id="recordUrl" required
+                        class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 font-mono text-sm"
+                        placeholder="https://example.com">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Username <span
+                            class="text-xs text-slate-500">(optional)</span></label>
+                    <input type="text" id="recordUsername"
+                        class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
+                        placeholder="Leave empty if no login required">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">Password <span
+                            class="text-xs text-slate-500">(optional)</span></label>
+                    <input type="password" id="recordPassword"
+                        class="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500"
+                        placeholder="Leave empty if no login required">
+                </div>
+
+                <button type="submit" id="startRecordBtn"
+                    class="w-full px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2">
+                    <i class="fas fa-circle"></i> Start Recording
+                </button>
+            </form>
+
+            <!-- Stop Recording Button (hidden initially) -->
+            <button id="stopRecordBtn" onclick="stopRecording()"
+                class="hidden w-full px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white font-bold rounded-lg shadow-lg flex items-center justify-center gap-2">
+                <i class="fas fa-stop"></i> Stop Recording
+            </button>
         </div>
     </div>
 
@@ -574,7 +664,234 @@
         });
         // Also save on toggle change
         document.getElementById('headlessMode').addEventListener('change', saveFormToLocalStorage);
+
+        // ========================================
+        // RECORDER FUNCTIONALITY
+        // ========================================
+
+        let currentRecordingSession = null;
+        let recordingTimer = null;
+        let recordingStartTime = null;
+
+        function openRecorderModal() {
+            document.getElementById('recorderModal').classList.remove('hidden');
+
+            // Auto-populate from main form if available
+            const mainUrl = document.getElementById('url').value;
+            const mainUsername = document.getElementById('username').value;
+            const mainPassword = document.getElementById('password').value;
+
+            if (mainUrl) document.getElementById('recordUrl').value = mainUrl;
+            if (mainUsername) document.getElementById('recordUsername').value = mainUsername;
+            if (mainPassword) document.getElementById('recordPassword').value = mainPassword;
+
+            document.getElementById('recordTestTitle').value = '';
+        }
+
+        function closeRecorderModal() {
+            // Stop recording if active
+            if (currentRecordingSession) {
+                stopRecording();
+            }
+            document.getElementById('recorderModal').classList.add('hidden');
+            document.getElementById('recordingStatus').classList.add('hidden');
+            document.getElementById('recorderForm').classList.remove('hidden');
+            document.getElementById('stopRecordBtn').classList.add('hidden');
+        }
+
+        // Handle recorder form submission
+        document.getElementById('recorderForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await startRecording();
+        });
+
+        async function startRecording() {
+            const testTitle = document.getElementById('recordTestTitle').value;
+            const url = document.getElementById('recordUrl').value;
+            const username = document.getElementById('recordUsername').value;
+            const password = document.getElementById('recordPassword').value;
+            const suiteName = document.getElementById('suiteName').value || 'Recorded-Tests';
+            const headless = document.getElementById('headlessMode').checked;
+
+            if (!testTitle || !url) {
+                alert('Please fill in Test Title and Application URL');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/recorder/start', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        suite_name: suiteName,
+                        test_title: testTitle,
+                        url: url,
+                        username: username,
+                        password: password,
+                        headless: headless
+                    })
+                });
+
+                const data = await response.json();
+
+                // Debug logging
+                console.log('Recorder API Response:', data);
+                console.log('  status:', data.status);
+                console.log('  session_id:', data.session_id);
+
+                // Check if we got a session_id (this means success)
+                if (data.session_id) {
+                    currentRecordingSession = data.session_id;
+
+                    // Update UI
+                    document.getElementById('recorderForm').classList.add('hidden');
+                    document.getElementById('recordingStatus').classList.remove('hidden');
+                    document.getElementById('stopRecordBtn').classList.remove('hidden');
+
+                    // Start timer
+                    recordingStartTime = Date.now();
+                    recordingTimer = setInterval(updateRecordingDuration, 1000);
+
+                    console.log('✅ Recording started:', data);
+                    console.log(`   Session ID: ${data.session_id}`);
+                    console.log(`   Browser PID: ${data.pid}`);
+
+                    // Show success notification
+                    alert('✅ Recording Started!\n\nA Playwright browser window has opened.\n\nPerform your test actions in the browser, then click "Stop Recording".');
+                } else {
+                    alert('Failed to start recording: ' + (data.message || 'Unknown error'));
+                }
+            } catch (err) {
+                console.error('Error starting recording:', err);
+                alert('Network error: ' + err);
+            }
+        }
+
+        function updateRecordingDuration() {
+            if (!recordingStartTime) return;
+
+            const elapsed = Math.floor((Date.now() - recordingStartTime) / 1000);
+            const minutes = Math.floor(elapsed / 60);
+            const seconds = elapsed % 60;
+
+            const durationText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            document.getElementById('recordingDuration').textContent = durationText;
+        }
+
+        async function stopRecording() {
+            if (!currentRecordingSession) return;
+
+            try {
+                // Update UI to show processing status
+                const statusDiv = document.getElementById('recordingStatus');
+                const stopBtn = document.querySelector('#recorderModal button');
+
+                statusDiv.innerHTML = `
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 15px; border-radius: 8px;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div class="spinner" style="width: 20px; height: 20px; border: 3px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                            <div>
+                                <div style="font-weight: bold; color: white;">Processing Recording...</div>
+                                <div style="font-size: 0.85em; color: rgba(255,255,255,0.9); margin-top: 4px;">
+                                    This may take 15-30 seconds. Generating test steps from recorded actions...
+                                </div>
+                            </div>
+                        </div>
+                        <button onclick="closeRecorderModal()" style="margin-top: 12px; width: 100%; padding: 10px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: white; border-radius: 6px; cursor: pointer; font-weight: 500;">
+                            Cancel / Close
+                        </button>
+                    </div>
+                `;
+
+                // Disable the stop button
+                if (stopBtn) {
+                    stopBtn.disabled = true;
+                    stopBtn.textContent = 'Processing...';
+                }
+
+                // Stop timer
+                if (recordingTimer) {
+                    clearInterval(recordingTimer);
+                    recordingTimer = null;
+                }
+
+                console.log('🛑 Stopping recording session:', currentRecordingSession);
+
+                // Create abort controller for 180-second timeout (3 minutes)
+                // Server may reload after saving file, causing response delay
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 180000);
+
+                const response = await fetch('/api/recorder/stop', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_id: currentRecordingSession
+                    }),
+                    signal: controller.signal
+                });
+
+                clearTimeout(timeoutId);
+
+                const data = await response.json();
+
+                console.log('✅ Stop Recording Response:', data);
+                console.log('  status:', data.status);
+                console.log('  test_case:', data.test_case);
+
+                if (data.status === 'success') {
+                    console.log('Recording stopped:', data);
+
+                    // Display the recorded test
+                    if (data.test_case) {
+                        alert(`✅ Test recorded successfully!\n\nTest Suite: ${data.test_case.id}\nTitle: ${data.test_case.title}\nSteps: ${data.english_steps.length}`);
+
+                        // Refresh the test list
+                        await loadExistingSuites();
+                    }
+
+                    // Reset UI
+                    closeRecorderModal();
+                    currentRecordingSession = null;
+                } else {
+                    // Show error in the modal
+                    statusDiv.innerHTML = `
+                        <div style="background: #dc3545; padding: 15px; border-radius: 8px; color: white;">
+                            <div style="font-weight: bold;">❌ Failed to stop recording</div>
+                            <div style="font-size: 0.9em; margin-top: 8px;">${data.message || data.detail || 'Unknown error'}</div>
+                        </div>
+                    `;
+
+                    // Re-enable button
+                    if (stopBtn) {
+                        stopBtn.disabled = false;
+                        stopBtn.textContent = '🔴 Stop Recording';
+                    }
+                }
+            } catch (err) {
+                console.error('Error stopping recording:', err);
+
+                // Show network error
+                const statusDiv = document.getElementById('recordingStatus');
+                statusDiv.innerHTML = `
+                    <div style="background: #dc3545; padding: 15px; border-radius: 8px; color: white;">
+                        <div style="font-weight: bold;">❌ Network Error</div>
+                        <div style="font-size: 0.9em; margin-top: 8px;">
+                            ${err.message || 'Failed to communicate with server. Please try again.'}
+                        </div>
+                    </div>
+                `;
+
+                // Re-enable button
+                const stopBtn = document.querySelector('#recorderModal button');
+                if (stopBtn) {
+                    stopBtn.disabled = false;
+                    stopBtn.textContent = '🔴 Stop Recording';
+                }
+            }
+        }
     </script>
 </body>
 
 </html>
+```

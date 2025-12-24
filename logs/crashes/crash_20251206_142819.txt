@@ -1,0 +1,23 @@
+Timestamp: 2025-12-06 14:28:19.948389
+Context: generate_tests for suite 'Dec-06-Audit-Test' at URL: https://www.testlix.ai
+Exception: {'code': -32000, 'message': 'DOM Error while querying'}
+--------------------------------------------------
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 134, in generate_tests
+    raw_result = await explore_and_generate_tests(
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/explorer_agent.py", line 86, in explore_and_generate_tests
+    await secrets_manager.inject_login(temp_page)
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/secrets_manager.py", line 55, in inject_login
+    elements = await page.get_elements_by_css_selector(s)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/site-packages/browser_use/actor/page.py", line 376, in get_elements_by_css_selector
+    result = await self._client.send.DOM.querySelectorAll(query_params, session_id=session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/site-packages/cdp_use/cdp/dom/library.py", line 436, in querySelectorAll
+    return cast("QuerySelectorAllReturns", await self._client.send_raw(
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/site-packages/cdp_use/client.py", line 398, in send_raw
+    return await future
+           ^^^^^^^^^^^^
+RuntimeError: {'code': -32000, 'message': 'DOM Error while querying'}

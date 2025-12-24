@@ -2963,3 +2963,631 @@ Final Result: FAIL
 2025-12-03 12:48:49,208 - server - INFO - Returning 3 suites to frontend
 2025-12-03 12:48:53,737 - server - INFO - Fetching all test suites. Total suites: 3
 2025-12-03 12:48:53,737 - server - INFO - Returning 3 suites to frontend
+2025-12-06 13:20:27,031 - server - INFO - Loaded 3 test suites from data/test_suites.json
+2025-12-06 13:20:45,589 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-06 13:20:45,589 - server - INFO - Returning 3 suites to frontend
+2025-12-06 14:16:09,258 - server - INFO - Fetching all test suites. Total suites: 3
+2025-12-06 14:16:09,260 - server - INFO - Returning 3 suites to frontend
+2025-12-06 14:18:33,704 - server - INFO - Received generation request for suite 'Dec-06-Audit-Test' at URL: https://www.saucedemo.com
+2025-12-06 14:19:36,393 - server - INFO - Raw agent output length: 333 characters
+2025-12-06 14:19:36,395 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-06 14:19:36,395 - server - INFO - Successfully generated 1 test cases for suite 'Dec-06-Audit-Test'.
+2025-12-06 14:19:36,396 - server - INFO - Saved 4 test suites to data/test_suites.json
+2025-12-06 14:19:36,396 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-06 14:19:36,397 - server - INFO - Generated script: data/generated_tests/Dec-06-Audit-Test_TC001_add_product_to_cart_verify_and_remove.py
+2025-12-06 14:19:36,397 - server - INFO - Saved test metadata to: data/generated_tests/Dec-06-Audit-Test_metadata.json
+2025-12-06 14:19:38,689 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-06 14:19:42,159 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-06 14:19:42,160 - server - INFO - Returning 4 suites to frontend
+2025-12-06 14:20:22,315 - server - INFO - Received generation request for suite 'Dec-06-Audit-Test' at URL: https://www.saucedemo.com
+2025-12-06 14:23:54,514 - server - INFO - Raw agent output length: 697 characters
+2025-12-06 14:23:54,515 - server - INFO - Method 1: Direct JSON parse successful
+2025-12-06 14:23:54,516 - server - INFO - Successfully generated 1 test cases for suite 'Dec-06-Audit-Test'.
+2025-12-06 14:23:54,516 - server - INFO - Saved 4 test suites to data/test_suites.json
+2025-12-06 14:23:54,517 - server - INFO - Generating Playwright scripts for 1 test cases...
+2025-12-06 14:23:54,519 - server - INFO - Generated script: data/generated_tests/Dec-06-Audit-Test_TC001_purchase_sauce_labs_backpack_and_complete_checkout.py
+2025-12-06 14:23:54,519 - server - INFO - Saved test metadata to: data/generated_tests/Dec-06-Audit-Test_metadata.json
+2025-12-06 14:23:56,967 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-06 14:24:51,938 - server - INFO - Received execution request for test case: TC001 in suite: Dec-06-Audit-Test
+2025-12-06 14:24:51,941 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-06-Audit-Test_TC001_purchase_sauce_labs_backpack_and_complete_checkout.py
+2025-12-06 14:25:09,002 - server - INFO - Script execution output:  Clicking #add-to-cart-sauce-labs-backpack
+  - Clicking #shopping_cart_container a
+  - Clicking #checkout
+Step 4: Fill First Name field with 'John' using selector: #first-name
+Step 5: Fill Last Name field with 'Doe' using selector: #last-name
+Step 6: Fill Zip/Postal Code field with '12345' using selector: #postal-code
+  - Clicking #continue
+  - Clicking #finish
+Step 9: Verify successful order completion using selector: #back-to-products
+Test FAILED ✗: name 're' is not defined
+Final Result: FAIL
+
+2025-12-06 14:25:09,002 - server - INFO - Test execution result: PASS
+2025-12-06 14:25:33,838 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-06 14:25:33,838 - server - INFO - Returning 4 suites to frontend
+2025-12-06 14:27:53,079 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-06 14:27:53,081 - server - INFO - Returning 4 suites to frontend
+2025-12-06 14:28:09,515 - server - INFO - Received generation request for suite 'Dec-06-Audit-Test' at URL: https://www.testlix.ai
+2025-12-06 14:28:19,952 - server - ERROR - Crash occurred in generate_tests: {'code': -32000, 'message': 'DOM Error while querying'}. Report saved to logs/crashes/crash_20251206_142819.txt
+2025-12-23 23:15:32,585 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-23 23:25:04,401 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-23 23:25:04,402 - server - INFO - Returning 4 suites to frontend
+2025-12-23 23:51:53,970 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-23 23:52:23,907 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:01:52,091 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 00:01:52,091 - server - INFO - Returning 4 suites to frontend
+2025-12-24 00:05:55,486 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 00:05:55,488 - server - INFO - Returning 4 suites to frontend
+2025-12-24 00:06:58,042 - server - INFO - Starting recorder for suite 'Dec-06-Audit-Test' - Test: 'Login'
+2025-12-24 00:06:58,055 - server - INFO - Recorder started successfully: 89536891-b2da-4c88-9f7f-7cab16c82868
+2025-12-24 00:09:59,527 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 00:09:59,528 - server - INFO - Returning 4 suites to frontend
+2025-12-24 00:10:22,282 - server - INFO - Starting recorder for suite 'Dec-06-Audit-Test' - Test: 'Login'
+2025-12-24 00:10:22,295 - server - INFO - Recorder started successfully: e8ec99dd-bfcf-419f-a7f3-e457a503e1b1
+2025-12-24 00:24:10,328 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 00:24:10,333 - server - INFO - Returning 4 suites to frontend
+2025-12-24 00:24:30,346 - server - INFO - Starting recorder for suite 'Dec-06-Audit-Test' - Test: 'Login'
+2025-12-24 00:24:30,355 - server - INFO - Recorder started successfully: cee4274e-8896-4438-8a46-9c79136dc690
+2025-12-24 00:25:39,354 - server - INFO - Stopping recorder session: cee4274e-8896-4438-8a46-9c79136dc690
+2025-12-24 00:25:39,360 - server - INFO - Saved 4 test suites to data/test_suites.json
+2025-12-24 00:25:39,361 - server - INFO - Saved recorded test to suite 'Dec-06-Audit-Test'
+2025-12-24 00:25:42,241 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:25:42,246 - server - INFO - Stopping recorder session: cee4274e-8896-4438-8a46-9c79136dc690
+2025-12-24 00:25:42,246 - server - ERROR - Failed to stop recorder: Session cee4274e-8896-4438-8a46-9c79136dc690 not found
+2025-12-24 00:25:42,246 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 00:25:42,246 - server - INFO - Returning 4 suites to frontend
+2025-12-24 00:26:27,991 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:26:48,179 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:28:06,214 - server - INFO - Starting recorder for suite 'Dec-06-Audit-Test' - Test: 'Login and logout'
+2025-12-24 00:28:06,235 - server - INFO - Recorder started successfully: ab0d70fc-2497-4be7-92fe-98e65265d731
+2025-12-24 00:28:34,422 - server - INFO - Stopping recorder session: ab0d70fc-2497-4be7-92fe-98e65265d731
+2025-12-24 00:28:39,426 - server - ERROR - Failed to stop recorder: Failed to stop recording process
+2025-12-24 00:29:25,463 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:29:37,019 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:30:00,206 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:30:19,885 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:30:43,625 - server - INFO - Stopping recorder session: ab0d70fc-2497-4be7-92fe-98e65265d731
+2025-12-24 00:30:43,629 - server - ERROR - Failed to stop recorder: Session ab0d70fc-2497-4be7-92fe-98e65265d731 not found
+2025-12-24 00:30:47,500 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 00:30:47,500 - server - INFO - Returning 4 suites to frontend
+2025-12-24 00:31:05,140 - server - INFO - Starting recorder for suite 'Dec-06-Audit-Test' - Test: 'LoginLogout'
+2025-12-24 00:31:05,149 - server - INFO - Recorder started successfully: a4d58f19-3e9b-4d83-952c-e1f973db4bda
+2025-12-24 00:31:09,316 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:10,583 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:12,754 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:13,814 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:14,873 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:15,925 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:16,984 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:18,039 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:19,094 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:20,128 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:21,156 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:22,193 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:23,229 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:24,290 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:25,381 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:26,436 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:27,481 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:29,049 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:31,004 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:31:33,682 - server - INFO - Stopping recorder session: a4d58f19-3e9b-4d83-952c-e1f973db4bda
+2025-12-24 00:31:33,682 - server - ERROR - Failed to stop recorder: Session a4d58f19-3e9b-4d83-952c-e1f973db4bda not found
+2025-12-24 00:32:46,047 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:32:46,546 - server - INFO - Stopping recorder session: a4d58f19-3e9b-4d83-952c-e1f973db4bda
+2025-12-24 00:32:46,546 - server - ERROR - Failed to stop recorder: Session a4d58f19-3e9b-4d83-952c-e1f973db4bda not found
+2025-12-24 00:32:56,959 - server - INFO - Starting recorder for suite 'Dec-06-Audit-Test' - Test: 'Logout'
+2025-12-24 00:32:56,971 - server - INFO - Recorder started successfully: 92596462-f7f5-4db7-a064-5d729f1abb5f
+2025-12-24 00:33:01,382 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:02,490 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:03,617 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:04,838 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:05,936 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:07,022 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:08,112 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:09,192 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:10,266 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:11,333 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:12,409 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:13,525 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:14,628 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:15,785 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:16,868 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:18,173 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:19,802 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:33:24,781 - server - INFO - Stopping recorder session: 92596462-f7f5-4db7-a064-5d729f1abb5f
+2025-12-24 00:33:24,784 - server - ERROR - Failed to stop recorder: Session 92596462-f7f5-4db7-a064-5d729f1abb5f not found
+2025-12-24 00:33:24,784 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 470, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 122, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 92596462-f7f5-4db7-a064-5d729f1abb5f not found
+
+2025-12-24 00:33:38,834 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 00:44:40,504 - server - INFO - Stopping recorder session: 92596462-f7f5-4db7-a064-5d729f1abb5f
+2025-12-24 00:44:40,509 - server - ERROR - Failed to stop recorder: Session 92596462-f7f5-4db7-a064-5d729f1abb5f not found
+2025-12-24 00:44:40,509 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 470, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 123, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 92596462-f7f5-4db7-a064-5d729f1abb5f not found
+
+2025-12-24 00:44:44,961 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 00:44:44,962 - server - INFO - Returning 4 suites to frontend
+2025-12-24 00:45:03,460 - server - INFO - Starting recorder for suite 'Dec-06-Audit-Test' - Test: 'Logout'
+2025-12-24 00:45:03,479 - server - INFO - Recorder started successfully: 8cc22d18-e722-49dc-937f-7edb7aaf95de
+2025-12-24 00:45:38,585 - server - INFO - Stopping recorder session: 8cc22d18-e722-49dc-937f-7edb7aaf95de
+2025-12-24 00:45:43,594 - server - ERROR - Failed to stop recorder: Failed to stop recording process (timeout)
+2025-12-24 00:45:43,595 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 133, in stop_recording
+    stdout, stderr = process.communicate(timeout=5)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/subprocess.py", line 2116, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['playwright', 'codegen', '-o', '/var/folders/f5/zppt2lns7b15f0mm518x2rs80000gn/T/playwright_recordings/recording_8cc22d18-e722-49dc-937f-7edb7aaf95de.py', '--target', 'python-async', '--viewport-size', '1280,720', 'http://saucedemo.com']' timed out after 5 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 470, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 183, in stop_recording
+    raise Exception("Failed to stop recording process (timeout)")
+Exception: Failed to stop recording process (timeout)
+
+2025-12-24 00:47:02,743 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 08:51:10,333 - server - INFO - Stopping recorder session: 8cc22d18-e722-49dc-937f-7edb7aaf95de
+2025-12-24 08:51:10,352 - server - ERROR - Failed to stop recorder: Session 8cc22d18-e722-49dc-937f-7edb7aaf95de not found
+2025-12-24 08:51:10,352 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 470, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 123, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 8cc22d18-e722-49dc-937f-7edb7aaf95de not found
+
+2025-12-24 08:51:15,198 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 08:51:15,199 - server - INFO - Returning 4 suites to frontend
+2025-12-24 08:51:29,745 - server - INFO - Starting recorder for suite 'Dec-06-Audit-Test' - Test: 'Logout'
+2025-12-24 08:51:29,763 - server - INFO - Recorder started successfully: d59e490e-56e9-41df-953b-1e22f9a76ca1
+2025-12-24 08:52:03,220 - server - INFO - Stopping recorder session: d59e490e-56e9-41df-953b-1e22f9a76ca1
+2025-12-24 08:52:03,229 - server - INFO - Saved 4 test suites to data/test_suites.json
+2025-12-24 08:52:03,229 - server - INFO - Saved recorded test to suite 'Dec-06-Audit-Test'
+2025-12-24 08:52:06,319 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 08:52:06,319 - server - INFO - Returning 4 suites to frontend
+2025-12-24 08:52:06,320 - server - INFO - Stopping recorder session: d59e490e-56e9-41df-953b-1e22f9a76ca1
+2025-12-24 08:52:06,321 - server - INFO - Saved 4 test suites to data/test_suites.json
+2025-12-24 08:52:06,321 - server - INFO - Saved recorded test to suite 'Dec-06-Audit-Test'
+2025-12-24 08:52:08,637 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 08:52:08,637 - server - INFO - Returning 4 suites to frontend
+2025-12-24 08:52:16,496 - server - INFO - Received execution request for test case: TC002 in suite: Dec-06-Audit-Test
+2025-12-24 08:52:16,499 - server - WARNING - No Playwright script found for TC002, falling back to AI execution
+2025-12-24 08:53:25,384 - server - INFO - Received execution request for test case: TC002 in suite: Dec-06-Audit-Test
+2025-12-24 08:53:25,387 - server - WARNING - No Playwright script found for TC002, falling back to AI execution
+2025-12-24 08:57:03,913 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 08:57:05,813 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 08:57:18,807 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 08:57:49,639 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 08:58:20,327 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 08:58:59,648 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 09:01:01,224 - server - INFO - Starting recorder for suite 'Dec-24-Recording-Test' - Test: 'Login-Logout'
+2025-12-24 09:01:01,235 - server - INFO - Recorder started successfully: c2fd12ce-3987-45ea-84fd-f1c38c78c38b
+2025-12-24 09:01:30,503 - server - INFO - Stopping recorder session: c2fd12ce-3987-45ea-84fd-f1c38c78c38b
+2025-12-24 09:08:10,619 - server - INFO - Saved 5 test suites to data/test_suites.json
+2025-12-24 09:08:10,619 - server - INFO - 💾 Saved test case TC001 'Login-Logout' to suite 'Dec-24-Recording-Test'
+2025-12-24 09:08:10,621 - server - INFO - Stopping recorder session: c2fd12ce-3987-45ea-84fd-f1c38c78c38b
+2025-12-24 09:08:10,621 - server - WARNING - Session c2fd12ce-3987-45ea-84fd-f1c38c78c38b was already saved, returning cached result
+2025-12-24 09:08:10,621 - server - INFO - Stopping recorder session: c2fd12ce-3987-45ea-84fd-f1c38c78c38b
+2025-12-24 09:08:10,621 - server - WARNING - Session c2fd12ce-3987-45ea-84fd-f1c38c78c38b was already saved, returning cached result
+2025-12-24 09:08:10,622 - server - INFO - Stopping recorder session: c2fd12ce-3987-45ea-84fd-f1c38c78c38b
+2025-12-24 09:08:10,622 - server - WARNING - Session c2fd12ce-3987-45ea-84fd-f1c38c78c38b was already saved, returning cached result
+2025-12-24 09:08:12,486 - server - INFO - Fetching all test suites. Total suites: 5
+2025-12-24 09:08:12,487 - server - INFO - Returning 5 suites to frontend
+2025-12-24 09:08:22,315 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Recording-Test
+2025-12-24 09:08:22,317 - server - WARNING - No Playwright script found for TC001, falling back to AI execution
+2025-12-24 09:13:17,270 - server - INFO - Loaded 5 test suites from data/test_suites.json
+2025-12-24 09:14:53,619 - server - INFO - Loaded 5 test suites from data/test_suites.json
+2025-12-24 09:21:04,718 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 09:21:04,726 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,733 - server - INFO - Recorder started successfully: a56682a2-c3f9-4ee5-b2ed-f2c15711c964
+2025-12-24 09:21:04,734 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,744 - server - INFO - Recorder started successfully: 600a8ca6-ab8f-479c-a96c-74411361edd1
+2025-12-24 09:21:04,745 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,750 - server - INFO - Recorder started successfully: aba9bba2-ba21-4de5-9816-b2955f1ac856
+2025-12-24 09:21:04,751 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,756 - server - INFO - Recorder started successfully: eef05727-411e-40a4-9acd-eff5dcb637d4
+2025-12-24 09:21:04,757 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,763 - server - INFO - Recorder started successfully: c52120ca-4bac-4a5d-870d-369bc068391f
+2025-12-24 09:21:04,764 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,770 - server - INFO - Recorder started successfully: cacf72f5-2b2c-44a8-aa8b-cb5ceb504028
+2025-12-24 09:21:04,854 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,876 - server - INFO - Recorder started successfully: b6e62d6b-5a9a-459c-96e5-b0b4ca7056c3
+2025-12-24 09:21:04,879 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,898 - server - INFO - Recorder started successfully: fa2de51e-8a35-41ea-91a1-cf2ca87e382b
+2025-12-24 09:21:04,899 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,913 - server - INFO - Recorder started successfully: df4ef81c-2d86-4eaf-a65d-b57368967601
+2025-12-24 09:21:04,915 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,922 - server - INFO - Recorder started successfully: 5ba3cbc8-7443-417e-8913-63b6e1b4a881
+2025-12-24 09:21:04,923 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,928 - server - INFO - Recorder started successfully: 5b09dd92-a802-4306-beec-bc2ace2e4b8c
+2025-12-24 09:21:04,929 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,936 - server - INFO - Recorder started successfully: 46b64a8e-7a32-4924-ae5d-3dec577036dd
+2025-12-24 09:21:04,937 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,943 - server - INFO - Recorder started successfully: a563565f-713f-4632-92c7-77051d216951
+2025-12-24 09:21:04,945 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:21:04,951 - server - INFO - Recorder started successfully: d7255a93-0619-4a87-bee6-4de24752c4be
+2025-12-24 09:21:04,953 - server - INFO - Starting recorder for suite 'Dec-24-Recording-Test' - Test: 'New'
+2025-12-24 09:21:04,960 - server - INFO - Recorder started successfully: 08e616b1-72c3-4fee-ae34-7f9c7778812c
+2025-12-24 09:21:35,903 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 09:21:35,904 - server - INFO - Returning 4 suites to frontend
+2025-12-24 09:22:05,272 - server - INFO - Starting recorder for suite 'Dec-24' - Test: 'Login-Logout'
+2025-12-24 09:22:05,283 - server - INFO - Recorder started successfully: 79532854-34ee-4c0e-ab3b-f79cee822ed6
+2025-12-24 09:22:22,947 - server - INFO - Stopping recorder session: 79532854-34ee-4c0e-ab3b-f79cee822ed6
+2025-12-24 09:22:22,957 - server - INFO - Saved 5 test suites to data/test_suites.json
+2025-12-24 09:22:22,957 - server - INFO - 💾 Saved test case TC001 'Login-Logout' to suite 'Dec-24'
+2025-12-24 09:22:22,957 - server - INFO - 📄 Saved executable script to: data/generated_tests/Dec-24_TC001_loginlogout.py
+2025-12-24 09:22:25,506 - server - INFO - Loaded 5 test suites from data/test_suites.json
+2025-12-24 09:22:25,511 - server - INFO - Fetching all test suites. Total suites: 5
+2025-12-24 09:22:25,511 - server - INFO - Returning 5 suites to frontend
+2025-12-24 09:22:25,515 - server - INFO - Stopping recorder session: 79532854-34ee-4c0e-ab3b-f79cee822ed6
+2025-12-24 09:22:25,516 - server - ERROR - Failed to stop recorder: Session 79532854-34ee-4c0e-ab3b-f79cee822ed6 not found
+2025-12-24 09:22:25,516 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 486, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 134, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 79532854-34ee-4c0e-ab3b-f79cee822ed6 not found
+
+2025-12-24 09:26:28,378 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 09:26:57,816 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 09:26:57,817 - server - INFO - Returning 4 suites to frontend
+2025-12-24 09:27:08,862 - server - INFO - Starting recorder for suite 'Dec-24-Test' - Test: 'Login-Logout'
+2025-12-24 09:27:08,882 - server - INFO - Recorder started successfully: a611a3ca-9f25-4d0c-aedc-52b4b6368bcb
+2025-12-24 09:27:35,234 - server - INFO - Stopping recorder session: a611a3ca-9f25-4d0c-aedc-52b4b6368bcb
+2025-12-24 09:44:24,769 - server - INFO - Saved 5 test suites to data/test_suites.json
+2025-12-24 09:44:24,770 - server - INFO - 💾 Saved test case TC001 'Login-Logout' to suite 'Dec-24-Test'
+2025-12-24 09:44:24,770 - server - INFO - 📄 Saved executable script to: data/generated_tests/Dec-24-Test_TC001_loginlogout.py
+2025-12-24 09:44:28,401 - server - INFO - Loaded 5 test suites from data/test_suites.json
+2025-12-24 09:44:28,405 - server - INFO - Fetching all test suites. Total suites: 5
+2025-12-24 09:44:28,405 - server - INFO - Returning 5 suites to frontend
+2025-12-24 09:44:28,416 - server - INFO - Stopping recorder session: a611a3ca-9f25-4d0c-aedc-52b4b6368bcb
+2025-12-24 09:44:28,417 - server - ERROR - Failed to stop recorder: Session a611a3ca-9f25-4d0c-aedc-52b4b6368bcb not found
+2025-12-24 09:44:28,417 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 486, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 134, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session a611a3ca-9f25-4d0c-aedc-52b4b6368bcb not found
+
+2025-12-24 09:45:06,214 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test
+2025-12-24 09:45:06,217 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test_TC001_loginlogout.py
+2025-12-24 09:45:09,730 - server - INFO - Script execution output: 
+2025-12-24 09:45:09,730 - server - INFO - Test execution result: PASS
+2025-12-24 09:45:12,214 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test
+2025-12-24 09:45:12,216 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test_TC001_loginlogout.py
+2025-12-24 09:45:14,584 - server - INFO - Script execution output: 
+2025-12-24 09:45:14,585 - server - INFO - Test execution result: PASS
+2025-12-24 09:45:33,777 - server - INFO - Starting recorder for suite 'Dec-24-Test-New' - Test: 'Add to cart'
+2025-12-24 09:45:33,792 - server - INFO - Recorder started successfully: 1599a096-b553-448d-8cc0-2a9d8563210b
+2025-12-24 09:46:36,997 - server - INFO - Stopping recorder session: 1599a096-b553-448d-8cc0-2a9d8563210b
+2025-12-24 09:54:55,630 - server - INFO - Saved 6 test suites to data/test_suites.json
+2025-12-24 09:54:55,630 - server - INFO - 💾 Saved test case TC001 'Add to cart' to suite 'Dec-24-Test-New'
+2025-12-24 09:54:55,631 - server - INFO - 📄 Saved executable script to: data/generated_tests/Dec-24-Test-New_TC001_add_to_cart.py
+2025-12-24 09:54:58,113 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-24 09:54:59,789 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-24 09:54:59,793 - server - INFO - Stopping recorder session: 1599a096-b553-448d-8cc0-2a9d8563210b
+2025-12-24 09:54:59,794 - server - ERROR - Failed to stop recorder: Session 1599a096-b553-448d-8cc0-2a9d8563210b not found
+2025-12-24 09:54:59,794 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 486, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 134, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 1599a096-b553-448d-8cc0-2a9d8563210b not found
+
+2025-12-24 09:54:59,796 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test
+2025-12-24 09:54:59,796 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test_TC001_loginlogout.py
+2025-12-24 09:55:01,250 - server - INFO - Script execution output:  line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+2025-12-24 09:55:01,250 - server - INFO - Test execution result: FAIL
+2025-12-24 09:55:01,377 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-24 09:55:01,378 - server - INFO - Returning 6 suites to frontend
+2025-12-24 09:55:16,402 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test-New
+2025-12-24 09:55:16,405 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test-New_TC001_add_to_cart.py
+2025-12-24 09:55:18,858 - server - INFO - Script execution output: 
+2025-12-24 09:55:18,858 - server - INFO - Test execution result: PASS
+2025-12-24 09:55:23,512 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test-New
+2025-12-24 09:55:23,514 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test-New_TC001_add_to_cart.py
+2025-12-24 09:55:25,236 - server - INFO - Script execution output: 
+2025-12-24 09:55:25,237 - server - INFO - Test execution result: PASS
+2025-12-24 09:56:19,630 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test-New
+2025-12-24 09:56:19,633 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test-New_TC001_add_to_cart.py
+2025-12-24 09:56:21,773 - server - INFO - Script execution output:  line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+2025-12-24 09:56:21,774 - server - INFO - Test execution result: FAIL
+2025-12-24 09:56:43,259 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-24 09:58:41,293 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test-New
+2025-12-24 09:58:41,298 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test-New_TC001_add_to_cart.py
+2025-12-24 09:58:43,882 - server - INFO - Script execution output: 
+2025-12-24 09:58:43,883 - server - INFO - Test execution result: PASS
+2025-12-24 09:58:47,781 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test-New
+2025-12-24 09:58:47,782 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test-New_TC001_add_to_cart.py
+2025-12-24 09:58:49,484 - server - INFO - Script execution output: 
+2025-12-24 09:58:49,485 - server - INFO - Test execution result: PASS
+2025-12-24 09:59:08,431 - server - INFO - Starting recorder for suite 'Dec-24-Checkout' - Test: 'Checkout'
+2025-12-24 09:59:08,444 - server - INFO - Recorder started successfully: 172e674d-5c0d-4bef-b9fb-fb6d3df282fa
+2025-12-24 10:00:05,895 - server - INFO - Stopping recorder session: 172e674d-5c0d-4bef-b9fb-fb6d3df282fa
+2025-12-24 10:02:42,050 - server - INFO - Saved 7 test suites to data/test_suites.json
+2025-12-24 10:02:42,050 - server - INFO - 💾 Saved test case TC001 'Checkout' to suite 'Dec-24-Checkout'
+2025-12-24 10:02:42,051 - server - INFO - 📄 Saved executable script to: data/generated_tests/Dec-24-Checkout_TC001_checkout.py
+2025-12-24 10:02:42,053 - server - INFO - Stopping recorder session: 172e674d-5c0d-4bef-b9fb-fb6d3df282fa
+2025-12-24 10:02:42,053 - server - WARNING - Session 172e674d-5c0d-4bef-b9fb-fb6d3df282fa was already saved, returning cached result
+2025-12-24 10:02:42,053 - server - INFO - Stopping recorder session: 172e674d-5c0d-4bef-b9fb-fb6d3df282fa
+2025-12-24 10:02:42,053 - server - WARNING - Session 172e674d-5c0d-4bef-b9fb-fb6d3df282fa was already saved, returning cached result
+2025-12-24 10:02:44,636 - server - INFO - Loaded 7 test suites from data/test_suites.json
+2025-12-24 10:02:48,240 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test-New
+2025-12-24 10:02:48,241 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test-New_TC001_add_to_cart.py
+2025-12-24 10:02:50,330 - server - INFO - Script execution output: 
+2025-12-24 10:02:50,330 - server - INFO - Test execution result: PASS
+2025-12-24 10:03:00,935 - server - INFO - Fetching all test suites. Total suites: 7
+2025-12-24 10:03:00,936 - server - INFO - Returning 7 suites to frontend
+2025-12-24 10:03:05,622 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Checkout
+2025-12-24 10:03:05,623 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Checkout_TC001_checkout.py
+2025-12-24 10:03:07,821 - server - INFO - Script execution output:  line 69, in send
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sunilpandey/miniforge3/lib/python3.12/site-packages/playwright/_impl/_connection.py", line 559, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.Error: Page.goto: net::ERR_CONNECTION_RESET at https://www.saucedemo.com/
+Call log:
+  - navigating to "https://www.saucedemo.com/", waiting until "load"
+
+
+2025-12-24 10:03:07,821 - server - INFO - Test execution result: FAIL
+2025-12-24 10:04:29,542 - server - INFO - Starting recorder for suite 'Dec-24-Logout!' - Test: 'Logout'
+2025-12-24 10:04:29,560 - server - INFO - Recorder started successfully: fdc9f9bb-0d00-4a8c-b27c-8fd35b03803c
+2025-12-24 10:04:56,768 - server - INFO - Stopping recorder session: fdc9f9bb-0d00-4a8c-b27c-8fd35b03803c
+2025-12-24 10:07:30,633 - server - INFO - Saved 8 test suites to data/test_suites.json
+2025-12-24 10:07:30,634 - server - INFO - 💾 Saved test case TC001 'Logout' to suite 'Dec-24-Logout!'
+2025-12-24 10:07:30,634 - server - INFO - 📄 Saved executable script to: data/generated_tests/Dec-24-Logout!_TC001_logout.py
+2025-12-24 10:07:30,636 - server - INFO - Stopping recorder session: fdc9f9bb-0d00-4a8c-b27c-8fd35b03803c
+2025-12-24 10:07:30,636 - server - WARNING - Session fdc9f9bb-0d00-4a8c-b27c-8fd35b03803c was already saved, returning cached result
+2025-12-24 10:07:33,390 - server - INFO - Loaded 8 test suites from data/test_suites.json
+2025-12-24 10:07:33,397 - server - INFO - Fetching all test suites. Total suites: 8
+2025-12-24 10:07:33,397 - server - INFO - Returning 8 suites to frontend
+2025-12-24 10:07:38,411 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Logout!
+2025-12-24 10:07:38,413 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Logout!_TC001_logout.py
+2025-12-24 10:07:44,371 - server - INFO - Script execution output: 
+2025-12-24 10:07:44,372 - server - INFO - Test execution result: PASS
+2025-12-24 10:08:11,600 - server - INFO - Starting recorder for suite 'Dec-24-Logout!-1' - Test: 'Logout-1'
+2025-12-24 10:08:11,612 - server - INFO - Recorder started successfully: 9e894b56-e841-495f-b38b-ffd80dddb80b
+2025-12-24 10:08:36,003 - server - INFO - Stopping recorder session: 9e894b56-e841-495f-b38b-ffd80dddb80b
+2025-12-24 13:24:58,495 - server - INFO - Saved 9 test suites to data/test_suites.json
+2025-12-24 13:24:58,495 - server - INFO - 💾 Saved test case TC001 'Logout-1' to suite 'Dec-24-Logout!-1'
+2025-12-24 13:24:58,495 - server - INFO - 📄 Saved executable script to: data/generated_tests/Dec-24-Logout!-1_TC001_logout1.py
+2025-12-24 13:25:01,265 - server - INFO - Loaded 9 test suites from data/test_suites.json
+2025-12-24 13:25:21,944 - server - INFO - Stopping recorder session: 9e894b56-e841-495f-b38b-ffd80dddb80b
+2025-12-24 13:25:21,946 - server - ERROR - Failed to stop recorder: Session 9e894b56-e841-495f-b38b-ffd80dddb80b not found
+2025-12-24 13:25:21,947 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 486, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 134, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 9e894b56-e841-495f-b38b-ffd80dddb80b not found
+
+2025-12-24 13:25:22,628 - server - INFO - Stopping recorder session: 9e894b56-e841-495f-b38b-ffd80dddb80b
+2025-12-24 13:25:22,628 - server - ERROR - Failed to stop recorder: Session 9e894b56-e841-495f-b38b-ffd80dddb80b not found
+2025-12-24 13:25:22,628 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 486, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 134, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 9e894b56-e841-495f-b38b-ffd80dddb80b not found
+
+2025-12-24 13:25:24,629 - server - INFO - Stopping recorder session: 9e894b56-e841-495f-b38b-ffd80dddb80b
+2025-12-24 13:25:24,630 - server - ERROR - Failed to stop recorder: Session 9e894b56-e841-495f-b38b-ffd80dddb80b not found
+2025-12-24 13:25:24,631 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 486, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 134, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 9e894b56-e841-495f-b38b-ffd80dddb80b not found
+
+2025-12-24 13:25:27,414 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 13:25:27,415 - server - INFO - Returning 9 suites to frontend
+2025-12-24 13:36:33,322 - server - INFO - Loaded 9 test suites from data/test_suites.json
+2025-12-24 14:28:17,613 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:28:17,614 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:28:18,654 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:28:18,654 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:28:23,003 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:28:23,003 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:29:26,131 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:29:26,133 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:33,654 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:33,655 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:34,916 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:34,916 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:40,569 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:40,570 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:53,091 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:53,092 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:53,598 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:53,599 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:53,774 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:53,774 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:53,920 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:53,920 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:54,043 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:54,043 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:54,182 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:54,182 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:54,328 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:54,328 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:54,464 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:54,464 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:31:57,547 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:31:57,547 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:00,690 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:00,691 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:00,803 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:00,803 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:00,962 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:00,962 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:01,106 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:01,106 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:01,262 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:01,263 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:01,401 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:01,401 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:01,549 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:01,550 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:01,701 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:01,701 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:01,859 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:01,859 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:02,009 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:02,010 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:02,154 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:02,154 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:02,323 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:02,323 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:02,477 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:02,477 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:02,627 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:02,627 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:02,779 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:02,779 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:02,917 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:02,917 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:03,075 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:03,075 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:03,216 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:03,216 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:03,359 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:03,359 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:09,101 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:09,102 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:32:51,779 - server - INFO - Fetching all test suites. Total suites: 9
+2025-12-24 14:32:51,780 - server - INFO - Returning 9 suites to frontend
+2025-12-24 14:33:08,352 - server - INFO - Loaded 4 test suites from data/test_suites.json
+2025-12-24 14:33:17,869 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 14:33:17,869 - server - INFO - Returning 4 suites to frontend
+2025-12-24 14:33:29,928 - server - INFO - Fetching all test suites. Total suites: 4
+2025-12-24 14:33:29,928 - server - INFO - Returning 4 suites to frontend
+2025-12-24 14:34:16,513 - server - INFO - Starting recorder for suite 'Dec-24-Test-Suite-1' - Test: 'Checkout - end to end flow'
+2025-12-24 14:34:16,523 - server - INFO - Recorder started successfully: 247ceaa4-22ab-4985-972c-861374e03cf2
+2025-12-24 14:35:11,073 - server - INFO - Stopping recorder session: 247ceaa4-22ab-4985-972c-861374e03cf2
+2025-12-24 14:50:00,571 - server - INFO - Saved 5 test suites to data/test_suites.json
+2025-12-24 14:50:00,571 - server - INFO - 💾 Saved test case TC001 'Checkout - end to end flow' to suite 'Dec-24-Test-Suite-1'
+2025-12-24 14:50:00,572 - server - INFO - 📄 Saved executable script to: data/generated_tests/Dec-24-Test-Suite-1_TC001_checkout__end_to_end_flow.py
+2025-12-24 14:50:03,484 - server - INFO - Loaded 5 test suites from data/test_suites.json
+2025-12-24 14:50:04,911 - server - INFO - Loaded 5 test suites from data/test_suites.json
+2025-12-24 14:50:04,917 - server - INFO - Stopping recorder session: 247ceaa4-22ab-4985-972c-861374e03cf2
+2025-12-24 14:50:04,927 - server - ERROR - Failed to stop recorder: Session 247ceaa4-22ab-4985-972c-861374e03cf2 not found
+2025-12-24 14:50:04,927 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 486, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 134, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 247ceaa4-22ab-4985-972c-861374e03cf2 not found
+
+2025-12-24 14:50:04,927 - server - INFO - Starting recorder for suite 'Dec-24-Test-Suite-2' - Test: 'Checkout'
+2025-12-24 14:50:04,937 - server - INFO - Recorder started successfully: b604c1b6-1aa2-4b39-9d61-725864f49526
+2025-12-24 14:51:02,174 - server - INFO - Fetching all test suites. Total suites: 5
+2025-12-24 14:51:02,176 - server - INFO - Returning 5 suites to frontend
+2025-12-24 14:51:23,960 - server - INFO - Starting recorder for suite 'Dec-24-Test-Suite-2' - Test: 'Checkout-1'
+2025-12-24 14:51:23,969 - server - INFO - Recorder started successfully: 944a3dd7-4cac-4b30-a148-96060d3f2235
+2025-12-24 14:52:12,365 - server - INFO - Stopping recorder session: 944a3dd7-4cac-4b30-a148-96060d3f2235
+2025-12-24 14:52:14,375 - server - INFO - Saved 6 test suites to data/test_suites.json
+2025-12-24 14:52:14,375 - server - INFO - 💾 Saved test case TC001 'Checkout-1' to suite 'Dec-24-Test-Suite-2'
+2025-12-24 14:52:14,377 - server - INFO - 📄 Saved executable script to: data/generated_tests/Dec-24-Test-Suite-2_TC001_checkout1.py
+2025-12-24 14:52:17,145 - server - INFO - Loaded 6 test suites from data/test_suites.json
+2025-12-24 14:52:18,849 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-24 14:52:18,849 - server - INFO - Returning 6 suites to frontend
+2025-12-24 14:52:18,853 - server - INFO - Stopping recorder session: 944a3dd7-4cac-4b30-a148-96060d3f2235
+2025-12-24 14:52:18,855 - server - ERROR - Failed to stop recorder: Session 944a3dd7-4cac-4b30-a148-96060d3f2235 not found
+2025-12-24 14:52:18,855 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 486, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 134, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 944a3dd7-4cac-4b30-a148-96060d3f2235 not found
+
+2025-12-24 14:52:34,035 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Test-Suite-2
+2025-12-24 14:52:34,036 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Test-Suite-2_TC001_checkout1.py
+2025-12-24 14:52:46,246 - server - INFO - Script execution output: 
+2025-12-24 14:52:46,247 - server - INFO - Test execution result: PASS
+2025-12-24 20:01:30,059 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-24 20:01:30,061 - server - INFO - Returning 6 suites to frontend
+2025-12-24 20:06:58,403 - server - INFO - Fetching all test suites. Total suites: 6
+2025-12-24 20:06:58,404 - server - INFO - Returning 6 suites to frontend
+2025-12-24 20:08:16,507 - server - INFO - Starting recorder for suite 'Dec-24-Login-Logout' - Test: 'Login-Logout'
+2025-12-24 20:08:16,534 - server - INFO - Recorder started successfully: 07cd42d4-286a-4e49-b915-df8e1b42d1a8
+2025-12-24 20:09:01,294 - server - INFO - Stopping recorder session: 07cd42d4-286a-4e49-b915-df8e1b42d1a8
+2025-12-24 20:09:03,301 - server - INFO - Saved 7 test suites to data/test_suites.json
+2025-12-24 20:09:03,301 - server - INFO - 💾 Saved test case TC001 'Login-Logout' to suite 'Dec-24-Login-Logout'
+2025-12-24 20:09:03,302 - server - INFO - 📄 Saved executable script to: data/generated_tests/Dec-24-Login-Logout_TC001_loginlogout.py
+2025-12-24 20:09:06,033 - server - INFO - Loaded 7 test suites from data/test_suites.json
+2025-12-24 20:09:12,442 - server - INFO - Fetching all test suites. Total suites: 7
+2025-12-24 20:09:12,443 - server - INFO - Returning 7 suites to frontend
+2025-12-24 20:09:12,448 - server - INFO - Stopping recorder session: 07cd42d4-286a-4e49-b915-df8e1b42d1a8
+2025-12-24 20:09:12,450 - server - ERROR - Failed to stop recorder: Session 07cd42d4-286a-4e49-b915-df8e1b42d1a8 not found
+2025-12-24 20:09:12,451 - server - ERROR - Full traceback:
+Traceback (most recent call last):
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/core/server.py", line 486, in stop_recorder
+    result = await recorder.stop_recording(req.session_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/Sunil/AntigravityProjects/AI_Powered_Testing_Agent/src/agents/recorder_agent.py", line 134, in stop_recording
+    raise ValueError(f"Session {session_id} not found")
+ValueError: Session 07cd42d4-286a-4e49-b915-df8e1b42d1a8 not found
+
+2025-12-24 20:09:20,788 - server - INFO - Received execution request for test case: TC001 in suite: Dec-24-Login-Logout
+2025-12-24 20:09:20,790 - server - INFO - Executing generated Playwright script: data/generated_tests/Dec-24-Login-Logout_TC001_loginlogout.py
+2025-12-24 20:09:27,468 - server - INFO - Script execution output: 
+2025-12-24 20:09:27,468 - server - INFO - Test execution result: PASS

@@ -15,17 +15,31 @@ An **AI-powered autonomous testing platform** that uses Large Language Models (L
 ### 🎯 Key Features
 
 - **🔍 AI-Driven Exploration**: Browser-Use Agent autonomously navigates your web app
+- **🎬 Playwright Recorder**: Record browser interactions and auto-generate test cases (NEW!)
 - **🔐 Zero-Trust Security**: Credentials injected locally via Playwright, never sent to LLM
-- **🖥️ Audit Dashboard**: Web-based interface to prove credentials never leak to AI (NEW!)
+- **🖥️ Audit Dashboard**: Web-based interface to prove credentials never leak to AI
 - **⚡ Auto-Generated Scripts**: Creates executable Playwright test scripts with selectors
 - **🎭 Headless/Headed Modes**: Watch the agent work or run tests in background
 - **📊 Session Caching**: Smart session management to skip redundant logins
 - **🔁 Multi-LLM Support**: Works with Gemini 2.0, GPT-4, Claude 3.5, or local models
 - **📈 Real-Time Monitoring**: Track LLM interactions and detect leaks live
+- **🚀 Instant Test Generation**: Record tests in seconds with fallback step extraction
 
 ---
 
 ## 🎥 Demo Videos
+
+### 🎬 Record Test (Playwright Recorder)
+Record browser interactions in real-time and automatically generate executable test cases:
+
+![Record Test Demo](demo/RecordTest.mp4)
+
+**Features Shown:**
+- ✅ Start recording with one click
+- ✅ Perform actions in the browser (login, add to cart, checkout)
+- ✅ Stop recording and get instant test generation (~5 seconds)
+- ✅ English step descriptions extracted from Playwright code
+- ✅ Executable `.py` file auto-created in `data/generated_tests/`
 
 ### 🕵️ Exploratory Agent in Action
 Watch the AI agent autonomously explore the SauceDemo application and intelligently generate test cases:
@@ -150,7 +164,9 @@ AI_Powered_Testing_Agent/
 │   │   ├── audit_logger.py        # LLM request monitoring
 │   │   └── __init__.py
 │   ├── agents/
-│   │   └── explorer_agent.py      # 🤖 AI exploration logic
+│   │   ├── explorer_agent.py      # 🤖 AI exploration logic
+│   │   ├── recorder_agent.py      # 🎬 Playwright recorder
+│   │   └── recorder_logger.py     # 📝 Recorder logging
 │   ├── generators/
 │   │   └── playwright_generator.py # 📝 Script generation
 │   └── llm/
@@ -170,7 +186,8 @@ AI_Powered_Testing_Agent/
 │   ├── ARCHITECTURE_GUIDE.md      # 📚 Deep dive documentation
 │   ├── SECURITY_EXPLANATION.md    # 🛡️ Security model explained
 │   ├── SECURITY_AUDIT_GUIDE.md    # 🔬 Audit verification guide
-│   └── AUDIT_LOGGING_GUIDE.md     # 📖 Audit feature docs
+│   ├── AUDIT_LOGGING_GUIDE.md     # 📖 Audit feature docs
+│   └── RECORDING_FLOW.MD          # 🎬 Recorder flow documentation
 ├── demo/                          # 🎥 Demo videos
 ├── .env                           # 🔑 Secrets (git-ignored)
 └── requirements.txt
@@ -295,11 +312,30 @@ sequenceDiagram
     Server-->>UI: Update test status
 ```
 
+### 3️⃣ **Playwright Recorder Flow**
+
+```mermaid
+sequenceDiagram
+    User->>UI: Click "Record New Test"
+    UI->>Server: POST /api/recorder/start
+    Server->>RecorderAgent: Launch Playwright codegen
+    RecorderAgent->>Browser: Open + Inspector
+    User->>Browser: Perform actions
+    User->>UI: Click "Stop Recording"
+    UI->>Server: POST /api/recorder/stop
+    Server->>RecorderAgent: SIGKILL process (~2s)
+    RecorderAgent->>RecorderAgent: Extract steps (fallback)
+    Server->>Server: Save test + generate .py file
+    Server->>UI: Success (test case + steps)
+```
+
 ---
 
 ## 🛠️ Usage Example
 
-### Via Web UI
+### Option 1: AI-Driven Exploration
+
+#### Via Web UI
 
 1. **Configure Test**:
    - Suite Name: "Smoke Test A"
@@ -332,11 +368,44 @@ curl -X POST http://localhost:8000/api/execute \
   -H "Content-Type: application/json" \
   -d '{
     "suite_name": "Smoke Test",
-    "test_case_id": "TC001"
-  }'
+     "test_id": "TC001"
+   }'
 ```
 
+### Option 2: Playwright Recorder (NEW!)
+
+#### Via Web UI
+
+1. **Click "Record New Test"** button on main dashboard
+
+2. **Configure Recording**:
+   - Suite Name: "Checkout-Flow"
+   - Test Title: "Complete Purchase"
+   - URL: `https://www.saucedemo.com`
+   - (Username/Password are optional and not currently used)
+
+3. **Start Recording**: Playwright browser + Inspector window opens
+
+4. **Perform Actions**: Click, type, navigate as a real user would
+
+5. **Stop Recording**: Click "Stop Recording" button
+
+6. **Results** (~5 seconds):
+   - Test case saved to `data/test_suites.json`
+   - Executable script created in `data/generated_tests/`
+   - English steps auto-extracted from Playwright code
+
+**Key Features**:
+- ⚡ **Fast**: Stop recording completes in ~5 seconds
+- 🔒 **Local-Only**: No LLM calls, all processing on your machine
+- ✅ **Reliable**: Deterministic step extraction (no timeouts)
+- 📝 **Auto-Generated**: Python files with 500ms `slow_mo` for visibility
+
+**See**: [`docs/RECORDING_FLOW.MD`](docs/RECORDING_FLOW.MD) for detailed documentation
+
 ---
+
+### Via API
 
 ## 🔧 Advanced Features
 

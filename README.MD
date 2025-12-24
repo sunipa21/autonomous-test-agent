@@ -51,6 +51,11 @@ See the generated Playwright scripts execute with real browser automation:
 
 https://github.com/user-attachments/assets/3be3055c-394c-4a9f-bfbd-35aa85e82e22
 
+### 🎬 Record Test Steps
+
+Perform actions naturally in the browser while the recorder converts them into readable, step-by-step test cases.
+https://github.com/user-attachments/assets/7628fffb-4caa-41cf-b3cd-367540b0ed08
+
 ---
 
 ## 🏗️ Architecture Overview

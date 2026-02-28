@@ -2,7 +2,7 @@
 name = "autonomous-test-agent"
 version = "1.0.0"
 description = "Autonomous browser-based QA agent — generates and records manual & automated tests using AI"
-readme = "README.MD"
+readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }
 

@@ -48,6 +48,7 @@ data/generated_tests/
 # ─── Screenshots ─────────────────────────────────────────────────────────────
 failure_*.png
 *.screenshot.png
+data/screenshots/
 
 # ─── Testing ─────────────────────────────────────────────────────────────────
 .pytest_cache/

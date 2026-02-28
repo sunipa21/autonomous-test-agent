@@ -74,10 +74,10 @@ After ANY change to `.env`:
 lsof -t -i:8000 | xargs kill -9
 
 # Restart
-python server.py
+python -m uvicorn src.core.server:app --reload --host 0.0.0.0 --port 8000
 ```
 
-Or if server is running in terminal: `Ctrl+C` then `python server.py`
+Or if server is running in terminal: `Ctrl+C` then re-run the command above.
 
 ---
 
@@ -103,10 +103,10 @@ grep "GOOGLE_API_KEY" .env | grep -v "^#"
 ## Code Files (NO CHANGES NEEDED)
 
 These files already support both providers - NO modifications required:
-- ✅ `config.py` - Already has multi-provider config
-- ✅ `llm_factory.py` - Already has custom provider support
-- ✅ `server.py` - Provider-agnostic
-- ✅ `explorer_agent.py` - Works with any LLM
+- ✅ `src/core/config.py` - Already has multi-provider config
+- ✅ `src/llm/llm_factory.py` - Already has custom provider support
+- ✅ `src/core/server.py` - Provider-agnostic
+- ✅ `src/agents/explorer_agent.py` - Works with any LLM
 
 **Everything is already built to support switching!**
 

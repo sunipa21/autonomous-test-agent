@@ -113,8 +113,8 @@ https://github.com/user-attachments/assets/7628fffb-4caa-41cf-b3cd-367540b0ed08
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/AI_Powered_Testing_Agent.git
-cd AI_Powered_Testing_Agent
+git clone https://github.com/sunipa21/autonomous-test-agent.git
+cd autonomous-test-agent
 
 # Install dependencies
 pip install -r requirements.txt
@@ -160,7 +160,7 @@ Open your browser: **http://localhost:8000**
 ## 📂 Project Structure
 
 ```
-AI_Powered_Testing_Agent/
+autonomous-test-agent/
 ├── src/
 │   ├── core/
 │   │   ├── server.py              # FastAPI backend + audit endpoints
@@ -503,8 +503,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📚 [Architecture Guide](docs/ARCHITECTURE_GUIDE.md)
-- 🐛 [Report Issues](https://github.com/yourusername/AI_Powered_Testing_Agent/issues)
-- 💬 [Discussions](https://github.com/yourusername/AI_Powered_Testing_Agent/discussions)
+- 🐛 [Report Issues](https://github.com/sunipa21/autonomous-test-agent/issues)
+- 💬 [Discussions](https://github.com/sunipa21/autonomous-test-agent/discussions)
 
 ---
 

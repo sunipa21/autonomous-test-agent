@@ -131,14 +131,14 @@ GOAL: {user_description}
 
 INSTRUCTIONS:
 
-
 1. You are starting at the application's page
 2. PERFORM the goal step-by-step by ACTUALLY interacting with the UI:
    - Click buttons and links
    - Fill in forms with realistic test data
    - Navigate through pages
    - Complete the entire flow described in the GOAL
-3. Document EVERY action you take with the exact selector you used
+3. STOP immediately when the goal is achieved or if you cannot proceed.
+4. Document EVERY action you take with the exact selector you used
 
 CRITICAL - OUTPUT FORMAT:
 You MUST return ONLY a JSON structure with NO other text before or after:
@@ -153,11 +153,13 @@ RULES:
 - Each step MUST include the exact CSS selector you used
 - Use realistic test data for any forms (e.g., email: test@example.com, name: John Doe)
 - If registration/login is needed, include those steps explicitly
+- STOP exploring once you have enough steps to form a complete test case. Max 20 steps.
 
 EXAMPLE OUTPUT FORMAT:
 {{"test_cases": [{{"id": "TC001", "title": "Complete registration and checkout", "steps": ["Click 'Register' using selector: a[href='/register']", "Fill email field using selector: #Email", "Click 'Register button' using selector: #register-button"]}}]}}
 """
 
+    
     # ==== AUDIT LOG: LLM REQUEST ====
     audit_entry = None
     if audit_logger:
@@ -173,7 +175,8 @@ EXAMPLE OUTPUT FORMAT:
     agent = Agent(
         task=exploration_task,
         llm=llm,
-        browser=browser
+        browser=browser,
+        max_steps=25  # PREVENT INFINITE LOOPS: Hard limit on steps
     )
     
     print("🤖 Agent is now exploring the application...")

@@ -2234,7 +2234,7 @@ Browser → Explorer Agent → LLM Factory → LLM API
 ### Project Structure
 
 ```
-AI_Powered_Testing_Agent/
+autonomous-test-agent/
 ├── main.py                 # Entry point (runs FastAPI server)
 ├── requirements.txt        # Python dependencies
 ├── .env                    # Environment variables (git-ignored)
@@ -2505,7 +2505,7 @@ browser = Browser(
 
 ## Summary
 
-This AI-Powered Testing Agent is built on principles of:
+This Autonomous Test Agent is built on principles of:
 - **Security**: Zero-trust, local-first, never expose credentials
 - **Simplicity**: Minimal dependencies, easy to understand
 - **Flexibility**: Multi-provider LLM, extensible architecture

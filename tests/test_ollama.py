@@ -2,7 +2,7 @@
 Quick test to verify Ollama + Fara-7B connection
 """
 import asyncio
-from llm_factory import get_llm
+from src.llm.llm_factory import get_llm
 
 async def test_ollama():
     print("🔍 Testing Ollama + Fara-7B connection...")

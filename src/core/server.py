@@ -3,16 +3,18 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel
-import os
-import json
-import sys
-import glob
-import logging
 import asyncio
-from datetime import datetime
-from typing import List, Optional, Dict
+import glob
+import json
+import logging
+import os
 import re
+import subprocess
+import sys
+import traceback
+from datetime import datetime
 from pathlib import Path
+from typing import Dict, List, Optional
 
 from src.agents.explorer_agent import explore_and_generate_tests
 from src.agents.test_executor import execute_single_test
@@ -316,9 +318,7 @@ async def generate_tests(req: GenerateRequest):
 
 @app.post("/api/execute")
 async def execute_test(req: ExecuteRequest):
-    import subprocess
-    import glob
-    
+
     logger.info(f"Received execution request for test case: {req.test_case_id} in suite: {req.suite_name}")
     
     suite = TEST_SUITES.get(req.suite_name)
@@ -572,7 +572,6 @@ English Steps:
         }
         
     except Exception as e:
-        import traceback
         error_trace = traceback.format_exc()
         logger.error(f"Failed to stop recorder: {e}")
         logger.error(f"Full traceback:\n{error_trace}")

@@ -1,5 +1,58 @@
+# ─── Secrets & Environment ───────────────────────────────────────────────────
 .env
+*.env.local
 
-# Session Cache (contains auth tokens - DO NOT COMMIT)
-data/auth_cache/v
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+
+# ─── Virtual Environments ────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ─── IDE & OS ────────────────────────────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ─── Data & Runtime Artifacts ────────────────────────────────────────────────
+# Session cookies (auth tokens — never commit!)
+data/auth_cache/
+
+# Security audit logs (may contain sensitive request data)
+data/security_audit/
+
+# Lifecycle session logs
+data/lifecycle_logs/
+
+# Auto-generated Playwright test scripts (output artifacts)
+data/generated_tests/
+
+# ─── Screenshots ─────────────────────────────────────────────────────────────
+failure_*.png
+*.screenshot.png
+
+# ─── Testing ─────────────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ─── Misc ────────────────────────────────────────────────────────────────────
 data/recordings_temp/

@@ -1,12 +1,19 @@
-fastapi
-uvicorn
-jinja2
-python-multipart
-langchain-google-genai
-langchain-openai
-langchain-anthropic
-browser-use
-playwright
-python-dotenv
-pydantic
-colorama
+# ─── Web Framework ────────────────────────────────────────────────────────────
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.29,<1.0
+jinja2>=3.1,<4.0
+python-multipart>=0.0.9,<1.0
+
+# ─── AI / LLM ────────────────────────────────────────────────────────────────
+browser-use>=0.1,<1.0
+langchain-google-genai>=2.0,<3.0
+langchain-openai>=0.2,<1.0
+langchain-anthropic>=0.2,<1.0
+
+# ─── Browser Automation ───────────────────────────────────────────────────────
+playwright>=1.44,<2.0
+
+# ─── Config & Utilities ───────────────────────────────────────────────────────
+python-dotenv>=1.0,<2.0
+pydantic>=2.0,<3.0
+colorama>=0.4,<1.0
